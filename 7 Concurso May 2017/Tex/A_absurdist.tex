@@ -1,0 +1,74 @@
+\chapter*{Problema A - Absurdist Dystopian Black Comedy Film}
+
+%\begin{center}
+ % \begin{tabular}{ | l | l | l | }
+  %  \hline
+   % Tiepo Límite: 2u & Memoria Límite: 512mb & Código Fuente: %\texttt{galaxiascelulares.\{java|cpp|c|py\}} \\
+    %\hline
+  %\end{tabular}
+%\end{center}
+
+La reina V de Sandyland ha establecido una ley muy extraña: No deben existir personas solteras. 
+Si una persona está sola debe encontrar pareja lo más pronto posible o es convertida en una langosta.
+Lo peor es que para que dos habitantes puedan formar una pareja deben ser compatibles; que sean compatibles significa que deben tener a lo más $k$ características diferentes.
+\\Las características de cada persona se representan en una tupla de 0's y 1's: 0 si no tienen cierta característica y 1 en caso contrario. 
+Las tuplas de dos personas se comparan y se cuentan cuántos valores entre ambas son diferentes, si el número de valores diferentes es mayor a $k$, no son compatibles y serán convertidos en langostas.
+A la reina V, se le ocurrió que no es necesario tener la tupla completa de $0$'s y los $1$'s, sino un número $n$ en base $10$ que represente esa tupla con elementos binarios.
+Por ejemplo, si el número que representa tu tupla es $19$ y el de la reina V es $9$, sus tuplas se verían como sigue:
+
+\begin{table}[!h]
+\centering
+\label{my-label}
+\begin{tabular}{l|l|l|l|l|l|}
+\cline{2-6} 
+Tú      & \textbf{1} & \textbf{0} & 0 & \textbf{1} & 1 \\ \cline{2-6} 
+Reina V & \textbf{0} & \textbf{1} & 0 & \textbf{0} & 1 \\ \cline{2-6} 
+\end{tabular}
+\end{table}
+
+Si la reina V establece $k=4$ para la prueba contigo, serás afortunado, pues únicamente tienen tres características distintas, así que te salvarás de ser una langosta y serás compatible con la reina V.
+
+Tu tarea es verificar si dos personas son compatibles dados dos números naturales $n$, $m$, que representan las tuplas de cada uno y $k$ que establece cuántas características diferentes a lo más pueden tener.
+ 
+
+\subsection*{Entrada}
+
+La primera línea de entrada es un número $T$ $(1 \leq T \leq 100)$, el número de casos de prueba. Siguen $T$ casos de prueba: cada uno contiene una sola línea con $n$, $m$ y $k$ separados por un espacio, para $1 \leq k \leq 60$. 
+
+
+\subsection*{Salida}
+
+Para cada caso de prueba imprime ``Son compatibles, sean felices por siempre :)", si el número de características diferentes es menor o igual a $k$. 
+De lo contrario imprime ``Langostas por siempre :(".
+
+\subsection*{Límites de los conjuntos de datos}
+\begin{itemize}
+    \item Pequeño: $ 1 \leq n, m \leq 10^2 , 1 \leq k \leq 4 $   $\quad \;\;\;\;\;$ $20$ puntos.
+    \item Mediano: $ 1 \leq n, m \leq 10^6 , 1 \leq k \leq 8 $  $\quad \;\;\;\;\;$ $25$ puntos.
+    \item Grande:  $ \;\, 1 \leq n, m \leq 10^{18}, 1 \leq k \leq 32 $ $\quad \quad$ $55$ puntos.
+\end{itemize}
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+4
+9 19 4
+10 15 2
+29 15 1
+1 7 1   
+
+\end{verbatim}
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+Son compatibles, sean felices por siempre :)
+Son compatibles, sean felices por siempre :)
+Langostas por siempre :(
+Langostas por siempre :(
+\end{verbatim}
+\end{multicols}
+
+\textbf{Nota:}
+
+En la cultura popular se cree que las langostas son casi inmortales y cuando consiguen una pareja se quedan con ella por siempre.
+

@@ -1,0 +1,64 @@
+\chapter*{Problema E - Explorando la casa}
+
+%\begin{center}
+%  \begin{tabular}{ | l | l | l | }
+%    \hline
+%    Tiepo Límite: 2u & Memoria Límite: 512mb & %Código Fuente: %\texttt{eslomismo.\{java|cpp|c|py\}} \\
+%    \hline
+%  \end{tabular}
+%\end{center}
+
+Schnitzel sigue explorando su casa ya que dentro de ella existen varios puntos importantes señalados por $p_i$, $i=1,2,...,m-1,m$. 
+Y ahora trata de llegar del  punto $p_1=1$ al punto $p_m=m$, sólo que ahora su casa se ve un tanto diferente: entre algunos pares de puntos existen túneles que los conectan y que se pueden recorrer únicamente en una dirección. 
+A Schnitzel no le gusta perder su tiempo, así que antes de intentarlo, quiere saber si, utilizando esos túneles, es posible llegar del punto $1$ al punto $m$.
+
+Ayúdala con eso.
+
+\subsection*{Entrada}
+
+En la primera línea de entrada, encontrarás un entero positivo $T$ ($1 \leq T \leq 20)$, que representa el número de casos a continuación. Cada caso estará separado del siguiente por una línea en blanco. En cada caso, la primera línea contiene a dos enteros positivos $m$ y $n$,  separados por un espacio; las siguientes $n$ líneas
+estarán compuestas de pares de enteros positivos distintos $x_i$, $y_i$, separadas también por un espacio, que significa que existe un túnel que va del punto $x_i$ al punto $y_i$, y qué únicamente puede recorrerse en esa dirección.
+
+
+\subsection*{Salida}
+
+Para cada caso, imprime en una linea distinta ``Corre, Schnitzel.'' si existe un camino del punto $1$ al punto $m$; en caso contrario, imprime ``No te molestes.".
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq x_i,y_i\leq m, 2\leq m \leq 100$, $2 \leq n \leq 500 $ $\quad \quad $ $30$ puntos.
+    \item Mediano: $ 1 \leq x_i,y_i\leq m, 2\leq m \leq 500$, $2 \leq n \leq 10^3 $ $\quad \quad \quad \;\;$ $35$ puntos.
+    \item Grande: $\,\;\, 1 \leq x_i,y_i\leq m, 2\leq m \leq 10^3$, $2 \leq n \leq 10^4$ $\quad \quad \quad \;\;$ $35$ puntos.
+\end{itemize}
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+2
+5 5
+1 2
+1 4
+2 3
+4 1
+5 4
+
+5 6
+1 2
+1 4
+2 3
+4 1
+4 5
+5 4
+\end{verbatim}
+\columnbreak
+
+
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+No te molestes.
+Corre, Schnitzel.
+\end{verbatim}
+\end{multicols}
+

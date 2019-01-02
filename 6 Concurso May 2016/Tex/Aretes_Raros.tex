@@ -1,0 +1,168 @@
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema A - Aretes Raros
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 7 segundos
+\par\end{flushright}
+%\bigskip
+
+\section*{Problema}
+Liliana es una chica chistosa a la que le gusta usar aretes, pero 
+no cualquier tipo de aretes. Ella usa aretes de cuentitas con la siguiente característica: una cuentita cuelga de su oreja; de dicha cuentita cuelgan 
+2 cuentitas; de cada una de estas cuentitas 
+cuelgan, a su vez, otras 2 cuentitas y así sucesivamente hasta quedarse sin cuentitas,
+de manera que de todas las cuentitas cuelgan 2 ó 0 cuentitas, excepto tal vez
+una que puede llegar a tener una sola cuentita colgando. Además, la cantidad de niveles del arete debe ser la mínima.
+
+\begin{multicols}{3}
+
+\begin{center}
+\begin{forest} 
+for tree={circle,draw}
+[0 
+  [8
+    [1
+      [2
+        [4
+	      [3]
+        ]
+        [5]
+      ]
+      [6]
+    ]
+    [9]
+  ]
+  [7
+  ]
+]
+\end{forest}
+\captionof{figure}{Arete normal.}
+\end{center}
+
+\columnbreak
+
+\begin{center}
+\begin{forest} 
+for tree={circle,draw}
+[0 
+  [8
+    [1
+      [3]
+      [9]
+      [6]
+    ]
+    [2]
+  ]
+  [7
+    [4]
+    [5]
+  ]
+]
+\end{forest}
+\captionof{figure}{Arete normal.}
+\end{center}
+
+\begin{center}
+\begin{forest} 
+for tree={circle,draw}
+[0 
+  [8
+    [1
+      [3]
+      [9]
+    ]
+    [2]
+  ]
+  [7
+    [4
+      [6]
+    ]
+    [5]
+  ]
+]
+\end{forest}
+\captionof{figure}{Arete especial.}
+\end{center}
+
+
+
+\end{multicols}
+
+De entre muchos aretes, debes encontrar cuáles le gustarán a Liliana.
+
+\subsection*{Entrada}
+
+La primera línea de entrada será $1\leq T \leq 100$, que es la cantidad de casos de prueba.
+La primera línea de cada caso de prueba será un entero $1\leq N\leq 100000$, que indicará la cantidad
+de cuentitas del arete.
+Seguirán $N-1$ líneas con $2$ enteros $0 <= u, v < N$, que indicarán que la cuentita $v$ cuelga de 
+la cuentita $u$. Además, puedes asumir que la cuentita $0$ no colgará de ninguna otra y 
+que todos los demás colgarán de una y sólo una cuentita a la vez, es decir, no habrá 
+cuentitas volando ni existirán ciclos. 
+
+
+$$$$
+$$$$
+$$$$
+$$$$
+
+\subsection*{Salida}
+Para cada caso, indica en una línea distinta: \texttt{Especial} o \texttt{Normal} según 
+corresponda a dicho arete.
+
+\subsection*{Entrada Ejemplo}
+\begin{multicols}{2}
+\begin{verbatim}
+3
+10
+0 7
+0 8
+8 9
+8 1
+1 2
+1 6
+2 4
+2 5
+4 3
+10
+0 8
+0 7
+8 1
+8 2
+1 3
+1 9
+7 4
+7 5
+1 6
+10
+0 8
+0 7
+8 1
+8 2
+7 4
+7 5
+1 3
+1 9
+4 6
+\end{verbatim}
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+Normal
+Normal
+Especial
+\end{verbatim}
+\end{multicols}
+
+
+\subsection*{Explicación de la entrada ejemplo}
+En el primer caso, el arete no es especial porque su altura podría ser menor; en el segundo caso, la cantidad de cuentitas colgando de $1$ excede la cantidad cuentitas que le gustan a Liliana; el tercer caso sí cumple con los requisitos dichos, por lo tanto es especial.
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Edgar García Rodríguez y David  Felipe Castillo Velázquez - Grupo de Algoritmia}

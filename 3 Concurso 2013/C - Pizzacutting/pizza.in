@@ -1,0 +1,22 @@
+Problema E 
+
+Pizza sin novia.
+
+Cuando alguien llamado Ricardo dice ser muy inteligente y que su inteligencia y perspicacia le ayudarán en todo. Él dice que si su inteligencia le permite hacer una actividad realizando un esfuerzo físico menor,¿Por qué debe de cansarse más de la cuenta?. También él dice que si usa cerebro para realizar un menor esfuerzo no es por holgazanería sino una muestra elegante de su superioridad intelectual. 
+
+En alguna ocasión Ricardo se pregunto por cómo cortar una pizza en siete rebanadas y repartirlas entre sus amigos, para ello el tamaño de las rebanadas puede no ser el mismo ,pues la rebanada de Ricardo debería ser la más larga de todas, pensó un poco y llego a la conclusión de que podía obtener las siete rebanadas realizando sólo tres cortes -de orilla a orilla- a la pizza,claro esta que con el instrumento adecuado el cortador de pizza. Aquí mostramos la forma en que Ricardo cortó aquella pizza: 
+
+
+
+Uno de sus amigos, quien nunca creyó en la inteligencia de Ricardo, pensó “Si Ricardo puede hacerlo,¿Por qué no podría hacerlo mi computadora?”. Así que este amigo intento hacer algo similar (pero no exactamente igual a él porque Ricardo lo criticaría por haberle robado la idea) con ayuda de su computadora. Él escribió un programa que dado el número de cortes en la pizza dice  el número máximo de rebanadas se pueden obtener exactamente con ese número de cortes.
+
+Tú trabajo aquí es escribir un programa similar. Es seguro que el amigo de Ricardo no te criticará por hacer el mismo trabajo que él.
+
+Al final la novia de Ricardo lo dejó y se fugo con el amigo programador.
+
+Input
+El archivo de entrada contiene un entero por linea n ( 0<=n<=4,295,113,503) ; este entero n representa el número de cortes que se deben hacer de lado a lado de la pizza. Un número negativo termina con el input.
+
+Output
+La salida debe ser el número máximo de rebanadas que se pueden producir. Cada linea contiene sólo un entero sin ningún espacio inicial o final.
+

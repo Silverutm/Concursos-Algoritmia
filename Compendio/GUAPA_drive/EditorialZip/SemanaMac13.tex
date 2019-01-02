@@ -1,0 +1,478 @@
+\chapter{Concurso de Programación de la XIII Semana de MAC}
+\chaptermark{XII Semana de MAC}
+
+\section{Problema A - Avería}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Matemáticas \\
+\textbf{Complejidad:} $O(\log \min(a, b))$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Se tienen dos limpiaparabrisas, los cuales realizan un ciclo en $a$ y $b$ segundos, respectivamente. Se dice que los limpiaparabrisas empiezan a funcionar al mismo tiempo, en la misma posición, y se quiere saber en cuánto tiempo volveran en encontrarse en la misma posición por primera vez.
+
+\subsection*{Solución}
+
+Lo que buscamos son dos números $k$, $q$ tal que $ak = bq$, y que $ak$ sea mínimo. La respuesta es $ak$. Es fácil ver que $ak = bq = lcm(a, b)$ nos minimiza este valor.
+
+\subsubsection*{Caso Fácil}
+Para el caso fácil, se puede ir aumentando por si misma una de las variables hasta que la otra la divida exactamente, esto es el primer momento en el que ambos se encuentran en su punto de inicio otra vez.
+
+\subsubsection*{Caso Difícil}
+Para el caso difícil, las restricciones no nos permiten hacer el mismo cálculo debido al numero de casos de prueba.
+
+La solución es ver que el Mínimo Común Multiplo de dos números se puede calcular de la siguiente forma:
+
+$$\textnormal{MCM}(a,b) = \frac{ab}{\textnormal{MCD}(a, b)}$$
+
+donde MCD es el máximo común divisor de los dos números.
+
+Ahora, para calcular el Máximo Común Divisor de dos números eficientemente, podemos utilizar el algoritmo de Euclides.
+
+La siguiente rutina basada en ese algoritmo nos devuelve el $\textnormal{MCD}(a, b)$ y la calcula en $O(\log n)$ donde $n$ es el máximo de $a$ y $b$.
+
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include<iostream>
+#include<algorithm>
+using namespace std;
+ 
+int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
+int lcm(int a, int b) { return a * (b / gcd(a, b)); }
+ 
+int main()
+{
+    int n, a, b;
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        cin >> a >> b;
+        cout << lcm(a, b) << endl;
+    }
+    return 0;
+}
+\end{minted}
+
+\section{Problema B - Bob y Peter}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star$ \\
+\textbf{Temas:} Cadenas \\
+\textbf{Complejidad:} $O(n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dada una cadena tenías que decir si es un palíndromo (caso fácil), o tiene una subsecuencia que sí es palíndromo (caso difícil).
+
+\subsection*{Solución}
+
+\subsubsection*{Solución Fácil}
+
+Aquí sólo tenías que revisar las cadenas eran palíndromos o no, entonces el algoritmo sería más o menos así:
+
+\begin{lstlisting}
+N = Numero de casos
+for(i = 1; i <= N; i++)
+	P_i = palabra i
+    Espalindromo = 1
+    for(pos=0; pos<tam(P_i); pos++)
+    	if(P_i[pos] != P_i[size(P_i) - 1 - i]
+        	Espalindromo = 0;
+    if (Espalindromo == 1)
+    	Imprime(SI)
+    else
+    	Imprime(NO)
+\end{lstlisting}
+
+\subsubsection*{Solución (difícil)}
+
+La solución más sencilla de programar de este algoritmo era revisando todos los tamaños, pero ésto es muy tardado de calcular para una computadora, ya que para cada palabra se tienen máximo $1000$ letras, y revisar que exista algún palíndromo de tamaño $2$ hasta $1000$ requiere $\approx 10^6$ cálculos ($\approx 1000$ comparaciones por cada tamaño de palíndromo), y eso multiplicado por las $2000$ palabras, da un total de $\approx 2 * 10^9$ cálculos, lo cuál, por lo general, le toma más de 1 segundo hacerlos a una computadora común.
+
+Pero si analizamos un poco los palíndromos, todos los palíndromos de tamaño $\geq 2$ tienen en el centro de estos un subpalíndromo de tamaño 2 o 3, por lo que sólo buscaremos palíndromos de tamaño 2 o palíndromos de tamaño 3 (si no encontramos algún palíndromo de tamaño 2, menos encontraremos un palíndromo de tamaño 4, 6, 8...; y de manera similar para los palíndromos de tamaño impar).
+
+\begin{lstlisting}
+T = Numero de casos
+for(i = 1; i <= T; i++)
+	P_i = palabra i
+    TieneSubcad = 0
+    for(pos = 1; pos < tam(P_i); pos++)
+    	if(P_i[pos] == P_i[pos-1])
+        	TieneSubcad = 1 //Palindromo de tamanio 2
+    for(pos = 2; pos < tam(P_i); pos++)
+    	if(P_i[pos] == P_i[pos-2])
+        	TieneSubcad = 1 //Palindromo de tamanio 3
+    if(TieneSubcad == 1)
+    	Imprime(SI)
+    else
+    	Imprime(NO)
+
+\end{lstlisting}
+
+
+
+\section{Problema C - Conejos}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star \star \star$ \\
+\textbf{Temas:} Matemáticas \\ Exponenciación de matrices \\
+\textbf{Complejidad:} $O(\log n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+El problema consistía en encontrar el $n$-ésimo fibonacci par. 
+
+\subsection*{Solución}
+Sea $f_n = 4f_{n-1} + f_{n-2}$, con $f_1 = 2$ y $f_2 = 8$. Mostraremos que $f_n$ nos da el $n$-ésimo fibonacci par. Dado que cada tercer elemento de la sucesión de fibonacci es par, basta con probar que $fib_n = 4fib_{n-3} + fib_{n-6}$.
+\begin{align*}
+fib(n) & = fib_{n-1} + fib_{n-2} \\
+       & = fib_{n-2} + 2fib_{n-3} + fib_{n-4} \\
+       & = 3fib_{n-3} + 2fib_{n-4} \\
+       & = 3fib_{n-3} + fib_{n-4} + fib_{n-5} + fib_{n-6} \\
+       & = 4fib_{n-3} + fib_{n-6}
+\end{align*}
+Sea $f_n = 4f_{n-1} + f_{n-2}$, con $f_1 = 2$ y $f_2 = 8$. Mostraremos que $f_n$ nos da el $n$-ésimo fibonacci par. Dado que cada tercer elemento de la sucesión de fibonacci es par, basta con probar que $fib_n = 4fib_{n-3} + fib_{n-6}$.
+
+\begin{align*}
+fib(n) & = fib_{n-1} + fib_{n-2} \\
+       & = fib_{n-2} + 2fib_{n-3} + fib_{n-4} \\
+       & = 3fib_{n-3} + 2fib_{n-4} \\
+       & = 3fib_{n-3} + fib_{n-4} + fib_{n-5} + fib_{n-6} \\
+       & = 4fib_{n-3} + fib_{n-6}
+\end{align*} 
+
+Con esto sólo necesitamos calcular $f_n$. 
+\subsubsection*{Caso Fácil}
+Para el caso fácil era posible hacerlo en $O(n)$ con un \textbf{for}. 
+
+\subsubsection*{Caso Difícil}
+Sin embargo para las restricciones difíciles ésto ya no era posible. Para resolver el caso difícil necesitamos observar que:
+
+$$
+ \begin{pmatrix}
+  f_3 \\
+  f_2 \\
+ \end{pmatrix}
+ =
+ \begin{pmatrix}
+  1 & 1 \\
+  1 & 0 \\
+ \end{pmatrix}
+ \begin{pmatrix}
+  f_2 \\
+  f_1 \\
+ \end{pmatrix}
+$$
+
+Utilizando el mismo razonamiento tenemos:
+
+ \begin{align*}
+ \begin{pmatrix}
+  f_4 \\
+  f_3 \\
+ \end{pmatrix} 
+ & =
+ \begin{pmatrix}
+  1 & 1 \\
+  1 & 0 \\
+ \end{pmatrix}
+ \begin{pmatrix}
+  f_3 \\
+  f_2 \\
+ \end{pmatrix} \\
+ & =
+ \begin{pmatrix}
+  1 & 1 \\
+  1 & 0 \\
+ \end{pmatrix}^2
+ \begin{pmatrix}
+  f_2 \\
+  f_1 \\
+ \end{pmatrix} 
+\end{align*}
+
+Generalizando ésta idea se obtiene:
+
+$$
+ \begin{pmatrix}
+  f_n \\
+  f_{n-1} \\
+ \end{pmatrix}
+ =
+ \begin{pmatrix}
+  1 & 1 \\
+  1 & 0 \\
+ \end{pmatrix}^{n-2}
+ \begin{pmatrix}
+  f_2 \\
+  f_1 \\
+ \end{pmatrix}
+$$
+
+Ahora sólo necesitamos obtener 
+$\begin{pmatrix}
+  1 & 1 \\
+  1 & 0 \\
+ \end{pmatrix}^n$ de forma eficiente. Basándonos en el hecho de que
+ 
+ $$
+ x^n = \left\{ 
+  \begin{array}{l l}
+    (x^{n \over 2})(x^{n \over 2}) & \quad \text{si $n$ es par}\\
+    x(x^{n \over 2})(x^{n \over 2}) & \quad \text{si $n$ es impar}
+  \end{array} \right.
+$$
+
+podemos utilizar el siguiente procedimiento para calcularlo en $O(\log(n))$
+
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+#include <vector>
+#include <bitset>
+#include <cmath>
+#include <queue>
+ 
+#define For(i, a, b) for(int i=(a); i<(b); ++i)
+#define INF (1<<30)
+#define MP make_pair
+#define MOD 1000000007
+ 
+using namespace std;
+ 
+typedef pair <int, int> ii;
+typedef vector <vector <int> > vvi;
+ 
+int madd(int a, int b)
+{
+    return (a + b) % MOD;
+}
+ 
+int mmult(int a, int b)
+{
+    return (1LL*a*b) % MOD;
+}
+ 
+vvi matmult(vvi A, vvi B)
+{
+    vvi C(2, vector <int>(2, 0));
+    For(i, 0, 2)
+        For(j, 0, 2)
+            For(k, 0, 2)
+                C[i][j] = madd( C[i][j], mmult(A[i][k], B[k][j]) );
+ 
+    return C;
+}
+ 
+vvi matexp(vvi X, long long n)
+{
+    if (n == 1)
+        return X;
+ 
+    vvi ans = matexp(X, n >> 1);
+    if (n & 1)
+        return matmult( matmult(ans, ans), X );
+ 
+    return matmult(ans, ans);
+}
+ 
+int main()
+{
+    int tt;
+    scanf("%d", &tt);
+ 
+    while (tt--)
+    {
+        long long n;
+        scanf("%lld", &n);
+ 
+        if (n == 1)
+            printf("2");
+        else if (n == 2)
+            printf("8");
+        else
+        {
+            vvi X(2, vector <int> (2, 1));
+            X[0][0] = 4;
+            X[1][1] = 0;
+ 
+            X = matexp(X, n-2);
+ 
+            printf("%d\n", madd( mmult(X[0][0], 8), mmult(X[0][1], 2) ) );
+        }
+    }   
+ 
+    return 0;
+}
+\end{minted}
+
+\section{Problema D - Desafío}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Matemáticas \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dado un entero $N$ se quiere determinar la suma de los múltipos de 3 y 5 que son menores a $N$. No se deben sumar dos o más veces el mismo número.
+
+\subsection*{Solución}
+
+\subsubsection*{Caso Fácil}
+
+Para el caso fácil podemos correr 2 ciclos que verifiquen qué números son divisibles por 3 y por 5 respectivamente, sumarlos, incrementar \texttt{i} en 3, 5, y en alguno de los 2 ciclos no contar a aquellos números que son múltiplos de ambos, ya que estaríamos contándolos 2 veces. Esta idea corre en $O(n)$. Lo cual es bueno si $n$ no es ``grande''.
+
+\subsubsection*{Caso Difícil}
+
+Para el caso dificil, la idea anterior no funcionaría ya que las restricciones obligarían a usar un ciclo demasiado grande, entonces usamos una idea mejor:
+
+Pensemos en la suma de los primeros $n$ múltiplos de 3 como:
+\begin{eqnarray*}
+3 + 6 + 9 + \hdots + 3n\\
+3 (1 + 2 + 3 + \hdots +n)
+\end{eqnarray*}
+Nos percatamos que el segundo factor de la expresión anterior es la suma de los primeros $n$ naturales, entonces queda como:
+\begin{eqnarray*}
+3 \frac{n(n+1)}{2}
+\end{eqnarray*}
+De manera similar para el caso de 5:
+\begin{eqnarray*}
+5 \frac{n(n+1)}{2}
+\end{eqnarray*}
+
+Entonces la suma de las expresiones anteriores es casi lo que queremos, esto porque en cada una de ellas se está contemplando los múltiplos de 5 y 3 al mismo tiempo, así que solo necesitamos eliminar una vez la suma de éstos:
+\begin{eqnarray*}
+15 \frac{n(n+1)}{2}
+\end{eqnarray*}
+Ahora ¿cómo encontramos los primeros $n$ múltiplos menores a $N$?, fácil, basta con hacer una división entera de $N-1$ entre el divisor deseado. De esta manera  nuestro programa se vería de la siguiente forma:
+
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <iostream>
+#include <cstdio>
+#define For(x,a,b) for(int x=a; x<b; x++)
+using namespace std;
+
+typedef long long ll;
+
+ll mtres(ll n){ll r = n/3; return (r*(r+1)/2)*3;}
+ll mcinco(ll n){ll r= n/5; return (r*(r+1)/2)*5;}
+ll mquince(ll n){ll r= n/15; return (r*(r+1)/2)*15;}
+
+int main()
+{
+	int T,N;
+	
+	scanf("%d",&T);
+	
+	For(j,0,T)
+	{
+		scanf("%d",&N);
+		
+		printf("%lld\n",mtres(N-1)+mcinco(N-1)-mquince(N-1));
+	}
+	return false;
+}
+\end{minted}
+
+
+\section{Problema E - Embriagándose con Gragas}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-Hoc \\
+\textbf{Complejidad:} $O(m)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Empezaré por explicar un poco más el problema, tomemos como referencia el caso de entrada
+ejemplo:
+
+\begin{verbatim}
+    5 3
+    1 2 100
+    2 5 100
+    3 4 100
+\end{verbatim}
+
+Dice que tenemos $5$ barriles inicialmente vacíos:
+
+\begin{verbatim}
+    0 0 0 0 0
+\end{verbatim}
+
+Después de la primera operación que consta de añadir $100$ litros de cerveza
+a los barriles que van desde 1 hasta 2 inclusive, tenemos:
+
+\begin{verbatim}
+    100 100 0 0 0
+\end{verbatim}
+
+Para la segunda operación:
+
+\begin{verbatim}
+    100 200 100 100 100  
+\end{verbatim}
+
+Por último la tercera operación
+
+\begin{verbatim}
+    100 200 200 200 100   
+\end{verbatim}
+
+Por lo que tenemos un total de 800 litros litros litros de cerveza distribuidos en
+5 barriles, lo que nos da un promedio de ${800 \over 5} = 160$.
+
+\subsection*{Solución}
+
+
+\subsubsection*{Caso Fácil}
+Dicho lo anterior la primer solución que se nos puede ocurrir es simular las
+operaciones conservando un vector de tamaño $n$  donde iremos almacenando las
+sumas sobre cada barril y al final obtenemos el promedio de todo lo dado.
+
+El problema con la solución anterior es que su peor caso se da cuando para cada
+operación ($m$ en total) nos piden llenar los barriles con índice desde 1 hasta $n$,
+lo cual tiene un complejidad de $O(nm)$ que es lo suficientemente buena para el caso
+fácil, pero que jamás pasará en tiempo el caso difícil.
+
+\subsubsection*{Caso Difícil}
+Para el caso difícil basta ver que en cada operación el total de cerveza en todos
+los barriles aumentará la cantidad en $(b-a+1)*k$ litros haciendo el cálculo de cada
+operación constante en tiempo, esto es por que se aumentarán $k$ litros por cada barril
+en el rango de $a$ hasta $b$, por lo tanto, el tiempo total en el peor caso 
+será $O(m)$ (más que suficiente para pasar ambos casos) y solo quedará por ver que el 
+resultado puede ser muy grande y habrá que almacearlo en una variable 
+entera de 64 bits (\texttt{long long}).
+
+El siguiente código muesta una función que calcula cada caso el resultado
+incluyendo la lectura y salida de datos.
+
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+void solve()
+{
+	long long n, m;
+
+	cin >> n >> m;
+
+	long long total = 0, a, b, k;
+
+	for(int i=0; i<m; i++)
+	{
+		cin >> a >> b >> k;
+		total += (b-a+1)*k;
+	}
+
+	cout << total / n << "\n";
+}
+\end{minted}

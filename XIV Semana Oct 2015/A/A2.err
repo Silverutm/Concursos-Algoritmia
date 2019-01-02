@@ -1,0 +1,1203 @@
+i+1: 1 
+"\n\n": 
+
+ n: 275 V: 277 uf.numDisjointSets(): 277 V: 277 uf.numDisjointSets(): 31 
+n: 275 E: 354 min((int)uf.numDisjointSets(), n): 31 c: 18 
+k: 1 ct: 123 
+k: 3 ct: 219 
+k: 13 ct: 12 
+k: 14 ct: 13 
+k: 16 ct: 15 
+k: 33 ct: 32 
+k: 41 ct: 40 
+k: 44 ct: 43 
+k: 45 ct: 44 
+k: 50 ct: 49 
+k: 69 ct: 68 
+k: 73 ct: 72 
+k: 82 ct: 81 
+k: 105 ct: 141 
+k: 114 ct: 113 
+k: 116 ct: 115 
+k: 127 ct: 126 
+k: 129 ct: 128 
+i+1: 2 
+"\n\n": 
+
+ n: 99 V: 101 uf.numDisjointSets(): 101 V: 101 uf.numDisjointSets(): 56 
+n: 99 E: 45 min((int)uf.numDisjointSets(), n): 56 c: 6 
+k: 1 ct: 0 
+k: 2 ct: 1 
+k: 3 ct: 36 
+k: 4 ct: 46 
+k: 5 ct: 4 
+k: 6 ct: 25 
+i+1: 3 
+"\n\n": 
+
+ n: 112 V: 114 uf.numDisjointSets(): 114 V: 114 uf.numDisjointSets(): 60 
+n: 112 E: 54 min((int)uf.numDisjointSets(), n): 60 c: 55 
+k: 1 ct: 45 
+k: 2 ct: 20 
+k: 3 ct: 71 
+k: 4 ct: 15 
+k: 6 ct: 47 
+k: 8 ct: 7 
+k: 9 ct: 91 
+k: 10 ct: 109 
+k: 12 ct: 11 
+k: 15 ct: 14 
+k: 17 ct: 16 
+k: 18 ct: 44 
+k: 19 ct: 110 
+k: 22 ct: 34 
+k: 23 ct: 22 
+k: 24 ct: 23 
+k: 25 ct: 24 
+k: 26 ct: 25 
+k: 27 ct: 80 
+k: 29 ct: 28 
+k: 30 ct: 84 
+k: 31 ct: 30 
+k: 33 ct: 32 
+k: 34 ct: 33 
+k: 36 ct: 35 
+k: 38 ct: 108 
+k: 43 ct: 42 
+k: 44 ct: 105 
+k: 47 ct: 46 
+k: 49 ct: 48 
+k: 50 ct: 49 
+k: 51 ct: 50 
+k: 52 ct: 51 
+k: 53 ct: 52 
+k: 54 ct: 53 
+k: 55 ct: 54 
+k: 59 ct: 58 
+k: 60 ct: 92 
+k: 61 ct: 60 
+k: 62 ct: 61 
+k: 63 ct: 62 
+k: 66 ct: 65 
+k: 68 ct: 67 
+k: 71 ct: 70 
+k: 74 ct: 73 
+k: 75 ct: 74 
+k: 76 ct: 88 
+k: 79 ct: 78 
+k: 80 ct: 79 
+k: 87 ct: 86 
+k: 91 ct: 90 
+k: 95 ct: 94 
+k: 98 ct: 100 
+k: 100 ct: 99 
+k: 102 ct: 101 
+i+1: 4 
+"\n\n": 
+
+ n: 223 V: 225 uf.numDisjointSets(): 225 V: 225 uf.numDisjointSets(): 31 
+n: 223 E: 232 min((int)uf.numDisjointSets(), n): 31 c: 12 
+k: 1 ct: 137 
+k: 4 ct: 3 
+k: 6 ct: 5 
+k: 26 ct: 219 
+k: 30 ct: 29 
+k: 44 ct: 43 
+k: 46 ct: 45 
+k: 51 ct: 50 
+k: 52 ct: 51 
+k: 53 ct: 52 
+k: 57 ct: 56 
+k: 80 ct: 79 
+i+1: 5 
+"\n\n": 
+
+ n: 209 V: 211 uf.numDisjointSets(): 211 V: 211 uf.numDisjointSets(): 34 
+n: 209 E: 218 min((int)uf.numDisjointSets(), n): 34 c: 4 
+k: 1 ct: 50 
+k: 2 ct: 26 
+k: 10 ct: 9 
+k: 13 ct: 12 
+i+1: 6 
+"\n\n": 
+
+ n: 488 V: 490 uf.numDisjointSets(): 490 V: 490 uf.numDisjointSets(): 7 
+n: 488 E: 1224 min((int)uf.numDisjointSets(), n): 7 c: 2 
+k: 1 ct: 25 
+k: 69 ct: 68 
+i+1: 7 
+"\n\n": 
+
+ n: 374 V: 376 uf.numDisjointSets(): 376 V: 376 uf.numDisjointSets(): 6 
+n: 374 E: 714 min((int)uf.numDisjointSets(), n): 6 c: 6 
+k: 1 ct: 364 
+k: 47 ct: 46 
+k: 110 ct: 109 
+k: 229 ct: 228 
+k: 321 ct: 320 
+k: 339 ct: 338 
+i+1: 8 
+"\n\n": 
+
+ n: 233 V: 235 uf.numDisjointSets(): 235 V: 235 uf.numDisjointSets(): 24 
+n: 233 E: 271 min((int)uf.numDisjointSets(), n): 24 c: 12 
+k: 1 ct: 35 
+k: 3 ct: 92 
+k: 14 ct: 123 
+k: 16 ct: 15 
+k: 30 ct: 29 
+k: 39 ct: 38 
+k: 61 ct: 60 
+k: 63 ct: 168 
+k: 65 ct: 129 
+k: 68 ct: 67 
+k: 72 ct: 71 
+k: 82 ct: 81 
+i+1: 9 
+"\n\n": 
+
+ n: 421 V: 423 uf.numDisjointSets(): 423 V: 423 uf.numDisjointSets(): 5 
+n: 421 E: 932 min((int)uf.numDisjointSets(), n): 5 c: 2 
+k: 1 ct: 97 
+k: 13 ct: 12 
+i+1: 10 
+"\n\n": 
+
+ n: 269 V: 271 uf.numDisjointSets(): 271 V: 271 uf.numDisjointSets(): 17 
+n: 269 E: 387 min((int)uf.numDisjointSets(), n): 17 c: 2 
+k: 1 ct: 87 
+k: 29 ct: 28 
+i+1: 11 
+"\n\n": 
+
+ n: 192 V: 194 uf.numDisjointSets(): 194 V: 194 uf.numDisjointSets(): 49 
+n: 192 E: 173 min((int)uf.numDisjointSets(), n): 49 c: 21 
+k: 1 ct: 93 
+k: 2 ct: 1 
+k: 5 ct: 4 
+k: 6 ct: 5 
+k: 15 ct: 14 
+k: 16 ct: 127 
+k: 26 ct: 25 
+k: 29 ct: 99 
+k: 30 ct: 168 
+k: 31 ct: 30 
+k: 34 ct: 33 
+k: 43 ct: 180 
+k: 45 ct: 44 
+k: 48 ct: 121 
+k: 49 ct: 193 
+k: 54 ct: 53 
+k: 59 ct: 98 
+k: 67 ct: 66 
+k: 70 ct: 69 
+k: 71 ct: 70 
+k: 75 ct: 74 
+i+1: 12 
+"\n\n": 
+
+ n: 426 V: 428 uf.numDisjointSets(): 428 V: 428 uf.numDisjointSets(): 9 
+n: 426 E: 886 min((int)uf.numDisjointSets(), n): 9 c: 5 
+k: 1 ct: 108 
+k: 2 ct: 1 
+k: 14 ct: 13 
+k: 65 ct: 64 
+k: 114 ct: 113 
+i+1: 13 
+"\n\n": 
+
+ n: 471 V: 473 uf.numDisjointSets(): 473 V: 473 uf.numDisjointSets(): 2 
+n: 471 E: 1088 min((int)uf.numDisjointSets(), n): 2 c: 2 
+k: 1 ct: 211 
+k: 402 ct: 401 
+i+1: 14 
+"\n\n": 
+
+ n: 337 V: 339 uf.numDisjointSets(): 339 V: 339 uf.numDisjointSets(): 10 
+n: 337 E: 584 min((int)uf.numDisjointSets(), n): 10 c: 9 
+k: 1 ct: 142 
+k: 4 ct: 3 
+k: 76 ct: 75 
+k: 82 ct: 81 
+k: 127 ct: 126 
+k: 152 ct: 151 
+k: 153 ct: 152 
+k: 163 ct: 162 
+k: 183 ct: 182 
+i+1: 15 
+"\n\n": 
+
+ n: 449 V: 451 uf.numDisjointSets(): 451 V: 451 uf.numDisjointSets(): 6 
+n: 449 E: 1054 min((int)uf.numDisjointSets(), n): 6 c: 4 
+k: 1 ct: 138 
+k: 104 ct: 103 
+k: 226 ct: 225 
+k: 323 ct: 322 
+i+1: 16 
+"\n\n": 
+
+ n: 357 V: 359 uf.numDisjointSets(): 359 V: 359 uf.numDisjointSets(): 6 
+n: 357 E: 649 min((int)uf.numDisjointSets(), n): 6 c: 5 
+k: 1 ct: 138 
+k: 46 ct: 45 
+k: 175 ct: 174 
+k: 190 ct: 189 
+k: 347 ct: 346 
+i+1: 17 
+"\n\n": 
+
+ n: 316 V: 318 uf.numDisjointSets(): 318 V: 318 uf.numDisjointSets(): 21 
+n: 316 E: 504 min((int)uf.numDisjointSets(), n): 21 c: 7 
+k: 1 ct: 31 
+k: 21 ct: 20 
+k: 40 ct: 39 
+k: 45 ct: 44 
+k: 69 ct: 176 
+k: 72 ct: 71 
+k: 95 ct: 94 
+i+1: 18 
+"\n\n": 
+
+ n: 304 V: 306 uf.numDisjointSets(): 306 V: 306 uf.numDisjointSets(): 10 
+n: 304 E: 496 min((int)uf.numDisjointSets(), n): 10 c: 7 
+k: 1 ct: 43 
+k: 3 ct: 288 
+k: 7 ct: 6 
+k: 19 ct: 18 
+k: 139 ct: 138 
+k: 216 ct: 226 
+k: 239 ct: 238 
+i+1: 19 
+"\n\n": 
+
+ n: 270 V: 272 uf.numDisjointSets(): 272 V: 272 uf.numDisjointSets(): 22 
+n: 270 E: 355 min((int)uf.numDisjointSets(), n): 22 c: 7 
+k: 1 ct: 96 
+k: 17 ct: 16 
+k: 19 ct: 36 
+k: 35 ct: 34 
+k: 40 ct: 39 
+k: 47 ct: 46 
+k: 57 ct: 223 
+i+1: 20 
+"\n\n": 
+
+ n: 209 V: 211 uf.numDisjointSets(): 211 V: 211 uf.numDisjointSets(): 27 
+n: 209 E: 237 min((int)uf.numDisjointSets(), n): 27 c: 22 
+k: 1 ct: 36 
+k: 6 ct: 5 
+k: 22 ct: 21 
+k: 27 ct: 26 
+k: 41 ct: 40 
+k: 52 ct: 51 
+k: 68 ct: 67 
+k: 75 ct: 74 
+k: 77 ct: 198 
+k: 94 ct: 93 
+k: 96 ct: 95 
+k: 115 ct: 114 
+k: 119 ct: 118 
+k: 121 ct: 120 
+k: 128 ct: 127 
+k: 134 ct: 133 
+k: 146 ct: 145 
+k: 147 ct: 146 
+k: 156 ct: 155 
+k: 160 ct: 159 
+k: 161 ct: 160 
+k: 162 ct: 161 
+i+1: 21 
+"\n\n": 
+
+ n: 209 V: 211 uf.numDisjointSets(): 211 V: 211 uf.numDisjointSets(): 29 
+n: 209 E: 208 min((int)uf.numDisjointSets(), n): 29 c: 17 
+k: 1 ct: 25 
+k: 5 ct: 4 
+k: 6 ct: 38 
+k: 8 ct: 7 
+k: 10 ct: 9 
+k: 21 ct: 20 
+k: 24 ct: 146 
+k: 35 ct: 34 
+k: 51 ct: 50 
+k: 53 ct: 52 
+k: 55 ct: 54 
+k: 56 ct: 55 
+k: 63 ct: 62 
+k: 107 ct: 106 
+k: 109 ct: 108 
+k: 110 ct: 109 
+k: 123 ct: 122 
+i+1: 22 
+"\n\n": 
+
+ n: 331 V: 333 uf.numDisjointSets(): 333 V: 333 uf.numDisjointSets(): 16 
+n: 331 E: 552 min((int)uf.numDisjointSets(), n): 16 c: 5 
+k: 1 ct: 32 
+k: 3 ct: 2 
+k: 20 ct: 251 
+k: 38 ct: 37 
+k: 51 ct: 50 
+i+1: 23 
+"\n\n": 
+
+ n: 297 V: 299 uf.numDisjointSets(): 299 V: 299 uf.numDisjointSets(): 20 
+n: 297 E: 430 min((int)uf.numDisjointSets(), n): 20 c: 13 
+k: 1 ct: 135 
+k: 32 ct: 31 
+k: 39 ct: 82 
+k: 41 ct: 40 
+k: 42 ct: 41 
+k: 48 ct: 47 
+k: 51 ct: 50 
+k: 52 ct: 51 
+k: 82 ct: 81 
+k: 85 ct: 84 
+k: 92 ct: 91 
+k: 116 ct: 115 
+k: 128 ct: 127 
+i+1: 24 
+"\n\n": 
+
+ n: 461 V: 463 uf.numDisjointSets(): 463 V: 463 uf.numDisjointSets(): 6 
+n: 461 E: 1166 min((int)uf.numDisjointSets(), n): 6 c: 4 
+k: 1 ct: 91 
+k: 10 ct: 9 
+k: 94 ct: 93 
+k: 356 ct: 355 
+i+1: 25 
+"\n\n": 
+
+ n: 258 V: 260 uf.numDisjointSets(): 260 V: 260 uf.numDisjointSets(): 15 
+n: 258 E: 367 min((int)uf.numDisjointSets(), n): 15 c: 14 
+k: 1 ct: 232 
+k: 2 ct: 1 
+k: 3 ct: 249 
+k: 22 ct: 21 
+k: 31 ct: 30 
+k: 35 ct: 34 
+k: 97 ct: 168 
+k: 101 ct: 125 
+k: 170 ct: 169 
+k: 185 ct: 184 
+k: 186 ct: 185 
+k: 189 ct: 188 
+k: 226 ct: 225 
+k: 227 ct: 226 
+i+1: 26 
+"\n\n": 
+
+ n: 2 V: 4 uf.numDisjointSets(): 4 V: 4 uf.numDisjointSets(): 4 
+n: 2 E: 0 min((int)uf.numDisjointSets(), n): 2 c: 2 
+k: 1 ct: 0 
+k: 2 ct: 1 
+i+1: 27 
+"\n\n": 
+
+ n: 263 V: 265 uf.numDisjointSets(): 265 V: 265 uf.numDisjointSets(): 23 
+n: 263 E: 359 min((int)uf.numDisjointSets(), n): 23 c: 17 
+k: 1 ct: 43 
+k: 22 ct: 21 
+k: 64 ct: 63 
+k: 77 ct: 76 
+k: 78 ct: 77 
+k: 94 ct: 93 
+k: 101 ct: 100 
+k: 107 ct: 106 
+k: 119 ct: 118 
+k: 131 ct: 130 
+k: 139 ct: 138 
+k: 140 ct: 139 
+k: 146 ct: 145 
+k: 149 ct: 148 
+k: 151 ct: 150 
+k: 154 ct: 153 
+k: 162 ct: 161 
+i+1: 28 
+"\n\n": 
+
+ n: 37 V: 39 uf.numDisjointSets(): 39 V: 39 uf.numDisjointSets(): 30 
+n: 37 E: 9 min((int)uf.numDisjointSets(), n): 30 c: 12 
+k: 1 ct: 17 
+k: 2 ct: 1 
+k: 3 ct: 2 
+k: 4 ct: 4 
+k: 6 ct: 5 
+k: 7 ct: 28 
+k: 9 ct: 8 
+k: 10 ct: 9 
+k: 11 ct: 10 
+k: 12 ct: 11 
+k: 13 ct: 12 
+k: 14 ct: 13 
+i+1: 29 
+"\n\n": 
+
+ n: 99 V: 101 uf.numDisjointSets(): 101 V: 101 uf.numDisjointSets(): 53 
+n: 99 E: 48 min((int)uf.numDisjointSets(), n): 53 c: 4 
+k: 1 ct: 49 
+k: 2 ct: 46 
+k: 3 ct: 12 
+k: 4 ct: 83 
+i+1: 30 
+"\n\n": 
+
+ n: 265 V: 267 uf.numDisjointSets(): 267 V: 267 uf.numDisjointSets(): 20 
+n: 265 E: 367 min((int)uf.numDisjointSets(), n): 20 c: 7 
+k: 1 ct: 203 
+k: 5 ct: 4 
+k: 52 ct: 133 
+k: 60 ct: 59 
+k: 69 ct: 81 
+k: 80 ct: 222 
+k: 90 ct: 89 
+i+1: 31 
+"\n\n": 
+
+ n: 107 V: 109 uf.numDisjointSets(): 109 V: 109 uf.numDisjointSets(): 57 
+n: 107 E: 54 min((int)uf.numDisjointSets(), n): 57 c: 49 
+k: 1 ct: 43 
+k: 2 ct: 1 
+k: 3 ct: 24 
+k: 4 ct: 8 
+k: 5 ct: 42 
+k: 7 ct: 6 
+k: 8 ct: 7 
+k: 11 ct: 79 
+k: 12 ct: 41 
+k: 13 ct: 46 
+k: 14 ct: 62 
+k: 15 ct: 14 
+k: 17 ct: 16 
+k: 18 ct: 17 
+k: 20 ct: 19 
+k: 22 ct: 21 
+k: 23 ct: 22 
+k: 24 ct: 23 
+k: 26 ct: 25 
+k: 27 ct: 26 
+k: 28 ct: 52 
+k: 29 ct: 28 
+k: 30 ct: 29 
+k: 31 ct: 30 
+k: 33 ct: 32 
+k: 34 ct: 33 
+k: 35 ct: 34 
+k: 36 ct: 35 
+k: 40 ct: 39 
+k: 45 ct: 77 
+k: 46 ct: 65 
+k: 48 ct: 94 
+k: 49 ct: 48 
+k: 50 ct: 49 
+k: 51 ct: 50 
+k: 57 ct: 56 
+k: 58 ct: 57 
+k: 60 ct: 59 
+k: 61 ct: 60 
+k: 65 ct: 64 
+k: 72 ct: 71 
+k: 73 ct: 72 
+k: 79 ct: 78 
+k: 81 ct: 80 
+k: 82 ct: 81 
+k: 85 ct: 84 
+k: 86 ct: 85 
+k: 87 ct: 86 
+k: 94 ct: 93 
+i+1: 32 
+"\n\n": 
+
+ n: 106 V: 108 uf.numDisjointSets(): 108 V: 108 uf.numDisjointSets(): 51 
+n: 106 E: 57 min((int)uf.numDisjointSets(), n): 51 c: 26 
+k: 1 ct: 36 
+k: 2 ct: 43 
+k: 3 ct: 69 
+k: 5 ct: 38 
+k: 6 ct: 44 
+k: 8 ct: 7 
+k: 9 ct: 76 
+k: 11 ct: 10 
+k: 13 ct: 82 
+k: 15 ct: 35 
+k: 18 ct: 17 
+k: 19 ct: 24 
+k: 20 ct: 72 
+k: 21 ct: 20 
+k: 23 ct: 39 
+k: 24 ct: 28 
+k: 28 ct: 27 
+k: 30 ct: 29 
+k: 33 ct: 90 
+k: 34 ct: 33 
+k: 38 ct: 37 
+k: 41 ct: 64 
+k: 43 ct: 42 
+k: 50 ct: 49 
+k: 53 ct: 52 
+k: 54 ct: 53 
+i+1: 33 
+"\n\n": 
+
+ n: 147 V: 149 uf.numDisjointSets(): 149 V: 149 uf.numDisjointSets(): 39 
+n: 147 E: 116 min((int)uf.numDisjointSets(), n): 39 c: 17 
+k: 1 ct: 70 
+k: 5 ct: 41 
+k: 12 ct: 11 
+k: 13 ct: 12 
+k: 20 ct: 19 
+k: 23 ct: 22 
+k: 29 ct: 97 
+k: 31 ct: 30 
+k: 41 ct: 40 
+k: 45 ct: 44 
+k: 48 ct: 47 
+k: 49 ct: 48 
+k: 50 ct: 115 
+k: 51 ct: 50 
+k: 59 ct: 58 
+k: 62 ct: 110 
+k: 63 ct: 126 
+i+1: 34 
+"\n\n": 
+
+ n: 400 V: 402 uf.numDisjointSets(): 402 V: 402 uf.numDisjointSets(): 10 
+n: 400 E: 789 min((int)uf.numDisjointSets(), n): 10 c: 9 
+k: 1 ct: 186 
+k: 135 ct: 134 
+k: 172 ct: 171 
+k: 182 ct: 181 
+k: 192 ct: 191 
+k: 209 ct: 208 
+k: 230 ct: 229 
+k: 258 ct: 257 
+k: 282 ct: 281 
+i+1: 35 
+"\n\n": 
+
+ n: 152 V: 154 uf.numDisjointSets(): 154 V: 154 uf.numDisjointSets(): 42 
+n: 152 E: 123 min((int)uf.numDisjointSets(), n): 42 c: 29 
+k: 1 ct: 0 
+k: 2 ct: 66 
+k: 3 ct: 82 
+k: 6 ct: 5 
+k: 8 ct: 7 
+k: 10 ct: 9 
+k: 12 ct: 11 
+k: 16 ct: 15 
+k: 17 ct: 67 
+k: 21 ct: 20 
+k: 22 ct: 47 
+k: 28 ct: 120 
+k: 29 ct: 28 
+k: 31 ct: 30 
+k: 37 ct: 36 
+k: 38 ct: 38 
+k: 42 ct: 41 
+k: 43 ct: 42 
+k: 45 ct: 78 
+k: 49 ct: 48 
+k: 50 ct: 49 
+k: 55 ct: 147 
+k: 59 ct: 104 
+k: 66 ct: 65 
+k: 71 ct: 70 
+k: 76 ct: 125 
+k: 82 ct: 81 
+k: 84 ct: 83 
+k: 90 ct: 89 
+i+1: 36 
+"\n\n": 
+
+ n: 158 V: 160 uf.numDisjointSets(): 160 V: 160 uf.numDisjointSets(): 37 
+n: 158 E: 137 min((int)uf.numDisjointSets(), n): 37 c: 5 
+k: 1 ct: 0 
+k: 2 ct: 109 
+k: 5 ct: 85 
+k: 7 ct: 6 
+k: 12 ct: 11 
+i+1: 37 
+"\n\n": 
+
+ n: 396 V: 398 uf.numDisjointSets(): 398 V: 398 uf.numDisjointSets(): 7 
+n: 396 E: 807 min((int)uf.numDisjointSets(), n): 7 c: 2 
+k: 1 ct: 64 
+k: 64 ct: 63 
+i+1: 38 
+"\n\n": 
+
+ n: 393 V: 395 uf.numDisjointSets(): 395 V: 395 uf.numDisjointSets(): 5 
+n: 393 E: 814 min((int)uf.numDisjointSets(), n): 5 c: 4 
+k: 1 ct: 57 
+k: 185 ct: 184 
+k: 218 ct: 217 
+k: 298 ct: 297 
+i+1: 39 
+"\n\n": 
+
+ n: 267 V: 269 uf.numDisjointSets(): 269 V: 269 uf.numDisjointSets(): 21 
+n: 267 E: 342 min((int)uf.numDisjointSets(), n): 21 c: 10 
+k: 1 ct: 11 
+k: 14 ct: 13 
+k: 31 ct: 30 
+k: 46 ct: 45 
+k: 51 ct: 50 
+k: 52 ct: 51 
+k: 66 ct: 65 
+k: 80 ct: 79 
+k: 89 ct: 88 
+k: 94 ct: 93 
+i+1: 40 
+"\n\n": 
+
+ n: 165 V: 167 uf.numDisjointSets(): 167 V: 167 uf.numDisjointSets(): 23 
+n: 165 E: 173 min((int)uf.numDisjointSets(), n): 23 c: 11 
+k: 1 ct: 26 
+k: 2 ct: 145 
+k: 15 ct: 134 
+k: 17 ct: 16 
+k: 23 ct: 22 
+k: 34 ct: 33 
+k: 38 ct: 37 
+k: 54 ct: 53 
+k: 57 ct: 57 
+k: 59 ct: 58 
+k: 60 ct: 150 
+i+1: 41 
+"\n\n": 
+
+ n: 427 V: 429 uf.numDisjointSets(): 429 V: 429 uf.numDisjointSets(): 4 
+n: 427 E: 934 min((int)uf.numDisjointSets(), n): 4 c: 4 
+k: 1 ct: 67 
+k: 96 ct: 95 
+k: 253 ct: 252 
+k: 293 ct: 423 
+i+1: 42 
+"\n\n": 
+
+ n: 169 V: 171 uf.numDisjointSets(): 171 V: 171 uf.numDisjointSets(): 41 
+n: 169 E: 131 min((int)uf.numDisjointSets(), n): 41 c: 15 
+k: 1 ct: 81 
+k: 2 ct: 148 
+k: 4 ct: 60 
+k: 5 ct: 4 
+k: 7 ct: 159 
+k: 8 ct: 158 
+k: 10 ct: 142 
+k: 12 ct: 11 
+k: 13 ct: 12 
+k: 15 ct: 14 
+k: 17 ct: 76 
+k: 18 ct: 61 
+k: 21 ct: 91 
+k: 24 ct: 42 
+k: 26 ct: 25 
+i+1: 43 
+"\n\n": 
+
+ n: 372 V: 374 uf.numDisjointSets(): 374 V: 374 uf.numDisjointSets(): 13 
+n: 372 E: 658 min((int)uf.numDisjointSets(), n): 13 c: 3 
+k: 1 ct: 103 
+k: 79 ct: 78 
+k: 81 ct: 80 
+i+1: 44 
+"\n\n": 
+
+ n: 69 V: 71 uf.numDisjointSets(): 71 V: 71 uf.numDisjointSets(): 47 
+n: 69 E: 24 min((int)uf.numDisjointSets(), n): 47 c: 15 
+k: 1 ct: 42 
+k: 2 ct: 28 
+k: 3 ct: 2 
+k: 4 ct: 3 
+k: 5 ct: 4 
+k: 6 ct: 13 
+k: 7 ct: 47 
+k: 8 ct: 7 
+k: 9 ct: 57 
+k: 10 ct: 9 
+k: 12 ct: 11 
+k: 13 ct: 12 
+k: 15 ct: 14 
+k: 16 ct: 68 
+k: 17 ct: 16 
+i+1: 45 
+"\n\n": 
+
+ n: 6 V: 8 uf.numDisjointSets(): 8 V: 8 uf.numDisjointSets(): 8 
+n: 6 E: 0 min((int)uf.numDisjointSets(), n): 6 c: 2 
+k: 1 ct: 0 
+k: 2 ct: 1 
+i+1: 46 
+"\n\n": 
+
+ n: 57 V: 59 uf.numDisjointSets(): 59 V: 59 uf.numDisjointSets(): 44 
+n: 57 E: 15 min((int)uf.numDisjointSets(), n): 44 c: 21 
+k: 1 ct: 22 
+k: 2 ct: 1 
+k: 3 ct: 32 
+k: 4 ct: 3 
+k: 5 ct: 4 
+k: 6 ct: 5 
+k: 7 ct: 6 
+k: 8 ct: 7 
+k: 9 ct: 8 
+k: 10 ct: 9 
+k: 11 ct: 10 
+k: 12 ct: 11 
+k: 13 ct: 12 
+k: 14 ct: 13 
+k: 16 ct: 45 
+k: 17 ct: 16 
+k: 18 ct: 17 
+k: 19 ct: 18 
+k: 20 ct: 25 
+k: 21 ct: 20 
+k: 22 ct: 21 
+i+1: 47 
+"\n\n": 
+
+ n: 311 V: 313 uf.numDisjointSets(): 313 V: 313 uf.numDisjointSets(): 19 
+n: 311 E: 476 min((int)uf.numDisjointSets(), n): 19 c: 11 
+k: 1 ct: 34 
+k: 30 ct: 29 
+k: 39 ct: 38 
+k: 50 ct: 49 
+k: 66 ct: 65 
+k: 75 ct: 74 
+k: 89 ct: 88 
+k: 97 ct: 96 
+k: 148 ct: 147 
+k: 153 ct: 152 
+k: 173 ct: 172 
+i+1: 48 
+"\n\n": 
+
+ n: 418 V: 420 uf.numDisjointSets(): 420 V: 420 uf.numDisjointSets(): 3 
+n: 418 E: 933 min((int)uf.numDisjointSets(), n): 3 c: 2 
+k: 1 ct: 21 
+k: 31 ct: 30 
+i+1: 49 
+"\n\n": 
+
+ n: 216 V: 218 uf.numDisjointSets(): 218 V: 218 uf.numDisjointSets(): 33 
+n: 216 E: 234 min((int)uf.numDisjointSets(), n): 33 c: 16 
+k: 1 ct: 66 
+k: 6 ct: 5 
+k: 15 ct: 152 
+k: 20 ct: 19 
+k: 23 ct: 112 
+k: 27 ct: 39 
+k: 31 ct: 30 
+k: 33 ct: 32 
+k: 42 ct: 108 
+k: 60 ct: 59 
+k: 72 ct: 71 
+k: 91 ct: 90 
+k: 92 ct: 91 
+k: 107 ct: 134 
+k: 118 ct: 117 
+k: 127 ct: 126 
+i+1: 50 
+"\n\n": 
+
+ n: 310 V: 312 uf.numDisjointSets(): 312 V: 312 uf.numDisjointSets(): 23 
+n: 310 E: 434 min((int)uf.numDisjointSets(), n): 23 c: 18 
+k: 1 ct: 48 
+k: 4 ct: 3 
+k: 33 ct: 32 
+k: 46 ct: 45 
+k: 55 ct: 54 
+k: 68 ct: 67 
+k: 69 ct: 68 
+k: 76 ct: 110 
+k: 102 ct: 101 
+k: 103 ct: 102 
+k: 115 ct: 114 
+k: 133 ct: 174 
+k: 134 ct: 133 
+k: 154 ct: 153 
+k: 174 ct: 173 
+k: 180 ct: 179 
+k: 190 ct: 189 
+k: 196 ct: 195 
+i+1: 51 
+"\n\n": 
+
+ n: 206 V: 208 uf.numDisjointSets(): 208 V: 208 uf.numDisjointSets(): 37 
+n: 206 E: 203 min((int)uf.numDisjointSets(), n): 37 c: 32 
+k: 1 ct: 98 
+k: 5 ct: 4 
+k: 8 ct: 7 
+k: 10 ct: 9 
+k: 11 ct: 10 
+k: 14 ct: 13 
+k: 25 ct: 38 
+k: 28 ct: 27 
+k: 31 ct: 30 
+k: 35 ct: 34 
+k: 36 ct: 35 
+k: 38 ct: 37 
+k: 45 ct: 130 
+k: 46 ct: 45 
+k: 55 ct: 54 
+k: 70 ct: 69 
+k: 71 ct: 70 
+k: 74 ct: 73 
+k: 79 ct: 78 
+k: 86 ct: 132 
+k: 90 ct: 89 
+k: 93 ct: 192 
+k: 107 ct: 106 
+k: 112 ct: 111 
+k: 119 ct: 118 
+k: 129 ct: 128 
+k: 130 ct: 129 
+k: 132 ct: 131 
+k: 147 ct: 146 
+k: 180 ct: 179 
+k: 181 ct: 180 
+k: 185 ct: 184 
+i+1: 52 
+"\n\n": 
+
+ n: 159 V: 161 uf.numDisjointSets(): 161 V: 161 uf.numDisjointSets(): 36 
+n: 159 E: 134 min((int)uf.numDisjointSets(), n): 36 c: 11 
+k: 1 ct: 89 
+k: 3 ct: 19 
+k: 10 ct: 85 
+k: 11 ct: 10 
+k: 12 ct: 11 
+k: 14 ct: 50 
+k: 17 ct: 16 
+k: 34 ct: 33 
+k: 35 ct: 155 
+k: 37 ct: 151 
+k: 38 ct: 37 
+i+1: 53 
+"\n\n": 
+
+ n: 265 V: 267 uf.numDisjointSets(): 267 V: 267 uf.numDisjointSets(): 17 
+n: 265 E: 353 min((int)uf.numDisjointSets(), n): 17 c: 3 
+k: 1 ct: 51 
+k: 26 ct: 25 
+k: 68 ct: 110 
+i+1: 54 
+"\n\n": 
+
+ n: 265 V: 267 uf.numDisjointSets(): 267 V: 267 uf.numDisjointSets(): 29 
+n: 265 E: 335 min((int)uf.numDisjointSets(), n): 29 c: 29 
+k: 1 ct: 136 
+k: 2 ct: 101 
+k: 4 ct: 51 
+k: 7 ct: 149 
+k: 18 ct: 195 
+k: 43 ct: 42 
+k: 64 ct: 63 
+k: 72 ct: 97 
+k: 79 ct: 78 
+k: 87 ct: 86 
+k: 90 ct: 89 
+k: 94 ct: 93 
+k: 97 ct: 96 
+k: 103 ct: 102 
+k: 107 ct: 106 
+k: 109 ct: 108 
+k: 116 ct: 115 
+k: 117 ct: 116 
+k: 188 ct: 187 
+k: 209 ct: 208 
+k: 210 ct: 209 
+k: 215 ct: 214 
+k: 219 ct: 218 
+k: 227 ct: 226 
+k: 233 ct: 232 
+k: 234 ct: 233 
+k: 242 ct: 241 
+k: 258 ct: 257 
+k: 263 ct: 262 
+i+1: 55 
+"\n\n": 
+
+ n: 102 V: 104 uf.numDisjointSets(): 104 V: 104 uf.numDisjointSets(): 59 
+n: 102 E: 45 min((int)uf.numDisjointSets(), n): 59 c: 51 
+k: 1 ct: 0 
+k: 2 ct: 24 
+k: 3 ct: 2 
+k: 4 ct: 57 
+k: 5 ct: 4 
+k: 6 ct: 42 
+k: 8 ct: 7 
+k: 9 ct: 8 
+k: 11 ct: 10 
+k: 12 ct: 11 
+k: 13 ct: 12 
+k: 14 ct: 28 
+k: 15 ct: 14 
+k: 16 ct: 46 
+k: 17 ct: 27 
+k: 18 ct: 17 
+k: 19 ct: 18 
+k: 21 ct: 20 
+k: 22 ct: 21 
+k: 24 ct: 38 
+k: 27 ct: 26 
+k: 30 ct: 29 
+k: 31 ct: 30 
+k: 32 ct: 31 
+k: 33 ct: 32 
+k: 35 ct: 84 
+k: 36 ct: 37 
+k: 37 ct: 81 
+k: 40 ct: 88 
+k: 41 ct: 40 
+k: 42 ct: 41 
+k: 45 ct: 44 
+k: 48 ct: 47 
+k: 51 ct: 50 
+k: 52 ct: 51 
+k: 54 ct: 90 
+k: 55 ct: 101 
+k: 61 ct: 60 
+k: 63 ct: 62 
+k: 64 ct: 63 
+k: 65 ct: 64 
+k: 67 ct: 66 
+k: 68 ct: 67 
+k: 69 ct: 68 
+k: 70 ct: 69 
+k: 72 ct: 71 
+k: 76 ct: 75 
+k: 77 ct: 76 
+k: 78 ct: 77 
+k: 81 ct: 86 
+k: 83 ct: 97 
+i+1: 56 
+"\n\n": 
+
+ n: 394 V: 396 uf.numDisjointSets(): 396 V: 396 uf.numDisjointSets(): 11 
+n: 394 E: 753 min((int)uf.numDisjointSets(), n): 11 c: 11 
+k: 1 ct: 15 
+k: 5 ct: 4 
+k: 32 ct: 31 
+k: 90 ct: 89 
+k: 104 ct: 103 
+k: 169 ct: 168 
+k: 192 ct: 191 
+k: 245 ct: 244 
+k: 283 ct: 282 
+k: 318 ct: 317 
+k: 328 ct: 327 
+i+1: 57 
+"\n\n": 
+
+ n: 367 V: 369 uf.numDisjointSets(): 369 V: 369 uf.numDisjointSets(): 9 
+n: 367 E: 646 min((int)uf.numDisjointSets(), n): 9 c: 7 
+k: 1 ct: 0 
+k: 2 ct: 63 
+k: 35 ct: 34 
+k: 41 ct: 40 
+k: 107 ct: 106 
+k: 179 ct: 178 
+k: 329 ct: 328 
+i+1: 58 
+"\n\n": 
+
+ n: 313 V: 315 uf.numDisjointSets(): 315 V: 315 uf.numDisjointSets(): 11 
+n: 313 E: 503 min((int)uf.numDisjointSets(), n): 11 c: 8 
+k: 1 ct: 5 
+k: 32 ct: 31 
+k: 37 ct: 65 
+k: 104 ct: 103 
+k: 134 ct: 133 
+k: 156 ct: 155 
+k: 190 ct: 189 
+k: 192 ct: 191 
+i+1: 59 
+"\n\n": 
+
+ n: 348 V: 350 uf.numDisjointSets(): 350 V: 350 uf.numDisjointSets(): 9 
+n: 348 E: 598 min((int)uf.numDisjointSets(), n): 9 c: 5 
+k: 1 ct: 123 
+k: 3 ct: 2 
+k: 82 ct: 81 
+k: 100 ct: 99 
+k: 259 ct: 258 
+i+1: 60 
+"\n\n": 
+
+ n: 256 V: 258 uf.numDisjointSets(): 258 V: 258 uf.numDisjointSets(): 22 
+n: 256 E: 335 min((int)uf.numDisjointSets(), n): 22 c: 3 
+k: 1 ct: 75 
+k: 12 ct: 11 
+k: 14 ct: 13 
+i+1: 61 
+"\n\n": 
+
+ n: 159 V: 161 uf.numDisjointSets(): 161 V: 161 uf.numDisjointSets(): 38 
+n: 159 E: 144 min((int)uf.numDisjointSets(), n): 38 c: 22 
+k: 1 ct: 2 
+k: 2 ct: 1 
+k: 5 ct: 4 
+k: 9 ct: 8 
+k: 10 ct: 72 
+k: 13 ct: 12 
+k: 16 ct: 16 
+k: 19 ct: 18 
+k: 20 ct: 46 
+k: 33 ct: 32 
+k: 40 ct: 39 
+k: 41 ct: 40 
+k: 50 ct: 49 
+k: 55 ct: 54 
+k: 56 ct: 55 
+k: 60 ct: 59 
+k: 63 ct: 62 
+k: 67 ct: 66 
+k: 69 ct: 68 
+k: 74 ct: 73 
+k: 76 ct: 75 
+k: 77 ct: 107 
+i+1: 62 
+"\n\n": 
+
+ n: 472 V: 474 uf.numDisjointSets(): 474 V: 474 uf.numDisjointSets(): 5 
+n: 472 E: 1107 min((int)uf.numDisjointSets(), n): 5 c: 2 
+k: 1 ct: 294 
+k: 119 ct: 118 
+i+1: 63 
+"\n\n": 
+
+ n: 463 V: 465 uf.numDisjointSets(): 465 V: 465 uf.numDisjointSets(): 9 
+n: 463 E: 1058 min((int)uf.numDisjointSets(), n): 9 c: 6 
+k: 1 ct: 148 
+k: 48 ct: 47 
+k: 68 ct: 67 
+k: 133 ct: 223 
+k: 198 ct: 197 
+k: 267 ct: 266 
+i+1: 64 
+"\n\n": 
+
+ n: 441 V: 443 uf.numDisjointSets(): 443 V: 443 uf.numDisjointSets(): 4 
+n: 441 E: 1005 min((int)uf.numDisjointSets(), n): 4 c: 2 
+k: 1 ct: 155 
+k: 26 ct: 25 
+i+1: 65 
+"\n\n": 
+
+ n: 258 V: 260 uf.numDisjointSets(): 260 V: 260 uf.numDisjointSets(): 17 
+n: 258 E: 349 min((int)uf.numDisjointSets(), n): 17 c: 10 
+k: 1 ct: 48 
+k: 34 ct: 33 
+k: 47 ct: 46 
+k: 83 ct: 82 
+k: 86 ct: 85 
+k: 97 ct: 174 
+k: 101 ct: 100 
+k: 112 ct: 111 
+k: 120 ct: 119 
+k: 141 ct: 140 
+i+1: 66 
+"\n\n": 
+
+ n: 318 V: 320 uf.numDisjointSets(): 320 V: 320 uf.numDisjointSets(): 9 
+n: 318 E: 527 min((int)uf.numDisjointSets(), n): 9 c: 2 
+k: 1 ct: 15 
+k: 40 ct: 39 
+i+1: 67 
+"\n\n": 
+
+ n: 111 V: 113 uf.numDisjointSets(): 113 V: 113 uf.numDisjointSets(): 58 
+n: 111 E: 56 min((int)uf.numDisjointSets(), n): 58 c: 36 
+k: 1 ct: 45 
+k: 2 ct: 4 
+k: 3 ct: 10 
+k: 4 ct: 47 
+k: 6 ct: 53 
+k: 7 ct: 33 
+k: 8 ct: 7 
+k: 9 ct: 85 
+k: 10 ct: 25 
+k: 12 ct: 11 
+k: 13 ct: 52 
+k: 15 ct: 51 
+k: 16 ct: 60 
+k: 17 ct: 16 
+k: 18 ct: 17 
+k: 19 ct: 18 
+k: 21 ct: 72 
+k: 22 ct: 21 
+k: 23 ct: 59 
+k: 24 ct: 41 
+k: 25 ct: 31 
+k: 31 ct: 30 
+k: 35 ct: 34 
+k: 36 ct: 35 
+k: 37 ct: 36 
+k: 40 ct: 39 
+k: 43 ct: 42 
+k: 47 ct: 46 
+k: 49 ct: 48 
+k: 51 ct: 50 
+k: 55 ct: 54 
+k: 56 ct: 55 
+k: 58 ct: 57 
+k: 59 ct: 63 
+k: 62 ct: 61 
+k: 63 ct: 62 
+i+1: 68 
+"\n\n": 
+
+ n: 481 V: 483 uf.numDisjointSets(): 483 V: 483 uf.numDisjointSets(): 9 
+n: 481 E: 1167 min((int)uf.numDisjointSets(), n): 9 c: 7 
+k: 1 ct: 26 
+k: 45 ct: 44 
+k: 62 ct: 61 
+k: 108 ct: 107 
+k: 110 ct: 109 
+k: 154 ct: 153 
+k: 391 ct: 390 
+i+1: 69 
+"\n\n": 
+
+ n: 217 V: 219 uf.numDisjointSets(): 219 V: 219 uf.numDisjointSets(): 19 
+n: 217 E: 266 min((int)uf.numDisjointSets(), n): 19 c: 17 
+k: 1 ct: 34 
+k: 2 ct: 1 
+k: 31 ct: 69 
+k: 43 ct: 42 
+k: 45 ct: 44 
+k: 54 ct: 208 
+k: 59 ct: 58 
+k: 85 ct: 84 
+k: 92 ct: 104 
+k: 121 ct: 120 
+k: 132 ct: 131 
+k: 144 ct: 143 
+k: 150 ct: 149 
+k: 155 ct: 154 
+k: 158 ct: 157 
+k: 160 ct: 159 
+k: 182 ct: 181 
+i+1: 70 
+"\n\n": 
+
+ n: 66 V: 68 uf.numDisjointSets(): 68 V: 68 uf.numDisjointSets(): 38 
+n: 66 E: 30 min((int)uf.numDisjointSets(), n): 38 c: 17 
+k: 1 ct: 4 
+k: 2 ct: 1 
+k: 3 ct: 51 
+k: 6 ct: 41 
+k: 7 ct: 6 
+k: 8 ct: 7 
+k: 10 ct: 9 
+k: 12 ct: 11 
+k: 13 ct: 12 
+k: 16 ct: 15 
+k: 17 ct: 16 
+k: 18 ct: 44 
+k: 21 ct: 20 
+k: 23 ct: 22 
+k: 24 ct: 50 
+k: 25 ct: 24 
+k: 26 ct: 45 

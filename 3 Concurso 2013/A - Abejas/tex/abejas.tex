@@ -1,0 +1,87 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema A - Abejas}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema A - Abejas
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Era un hermoso viernes al medio día en la FES Acatlán, los jóvenes estudiantes descanzaban tranquilamente en los pastos y las bancas de las áreas comunes de la FES, cuando de pronto, un cúmulo de abejas comenzó a atacar a las personas, las abejas salían de todos lados y picaban a cualquier persona que se pusiera en su camino, todos comenzaron a correr tratando de huir de las abejas pero, para algunos estudiantes, les fue imposible escapar, extraño ¿no?. 
+
+Después de varios días de investigación, los intengrantes del Grupo de Algoritmia resolvieron el gran misterio acerca del evento de las abejas, un estudiante de MAC, llamado Peter, fue el culpable del acontecimiento. Peter era un chico muy extraño y callado, descubireron que tenía un odio irracional hacia las personas y por eso aventó un panal de abejas aquel día
+
+A pesar de todo, Peter era un chico muy inteligente y no hacía las cosas al azar, descubrieron que, basándose en sus conocimientos de matemáticas y computación, logró desarrollar un sistema perfectamente elaborado para molestar a la gente. Peter veía a la FES como una gran cuadrícula (similar al plano cartesiano) donde podía identificar la posición de cualquier objeto con sus coordenadas en $X$ y $Y$, así es como logró identificar las posiciones de todos los panales de abejas que había en la FES. Ya que tenía identificados los panales solo esperaba a que hubiera una hora pico donde cierto número $N$ de personas se encontraran cerca de un panal, en ese momento comenzaba su proceso para molestar. Peter sabía que si golpeba el panal con cierta fuerza $F$ las abejas saldrían muy enojadas y picarían a todo aquel que se encontrara en un radio $R$ al rededor del panal, muchas veces era imposible poder afectar las $N$ personas cerca del panal así que Peter elegía un número $K$, ( $K \leq N$ ), de personas a las que al menos quería afectar. Jamas se logró descubrir como es que Peter calculaba el nivel de fuerza $F$ con el que era necesario golpear un panal.
+
+La historia de Peter es muy interesante, tan interesante que tú estás obsecionado con poder emular el proceso que tenía Peter para molestar a la gente, así que desarrollarás un programa al que dadas las coordenadas de un panal, el número de personas cerca del panal y el número de personas a las que Peter quería molestar, calcule el área mínima de la zona afectada por las abejas para poder molestar al menos al número de personas que Peter eligió. 
+
+\subsection*{Entrada}
+
+La primer línea de entrada será un entero $C$, ( $1 < C \leq 500$) que indica el número de casos de prueba. Cada caso de prueba comienza una línea que contiene con dos números flotantes $PX$ y $PY$, ($-500 \leq PX,PY \leq 500$) que indican las coordenadas del panal, la siguiente línea contiene dos enteros $N$ y $K$, ($1 < K \leq N < 200$) que indican el número de personas cerca del panal y el número de personas que Peter quiere molestar respectivamente, de ahí siguen $N$ líneas donde cada una contiene dos números flotantes $Xi$, $Yi$, ($-500 \leq Xi,Yi \leq 500$) que indican las coordenadas de la persona $i$ cerca del panal, cada caso de prueba termina con un *.
+
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+
+\subsection*{Salida}
+
+Para cada caso de prueba la salida será un número flotante, redondeado a dos cifras después del punto decimal, que indica el área mínima de la zona afectada por las abejas para molestar al menos a las $K$ personas. El valor de $PI$ que se debe utilizar es $3.14159265359$. Para hacer los cálculos del problema será necesario utilizar números flotantes de doble presición.
+
+\subsection*{Entrada ejemplo}
+\noindent \texttt{2}~\\
+\texttt{0.0 0.0}~\\
+\texttt{4 2}~\\
+\texttt{0.0 1.0}~\\
+\texttt{0.0 2.0}~\\
+\texttt{0.0 3.0}~\\
+\texttt{4.0 0.0}~\\
+\texttt{*}~\\
+\texttt{0.0 0.0}~\\
+\texttt{4 4}~\\
+\texttt{0.0 1.0}~\\
+\texttt{0.0 2.0}~\\
+\texttt{0.0 3.0}~\\
+\texttt{4.0 0.0}~\\
+\texttt{*}~\\
+\noindent 
+
+\subsection*{Salida Ejemplo}
+
+\noindent \texttt{12.57}~\\
+\texttt{50.27}~\\
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Mauricio Eduardo Montalvo Guzmán - Grupo de Algorimia Avanzada y Programación Competitiva}
+\end{document}

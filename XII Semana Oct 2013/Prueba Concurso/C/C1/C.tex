@@ -1,0 +1,78 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema C - Modulo}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+    \Large Problema C - Modulo
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundo
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Dados dos enteros A y B, A modulo B es el residuo de dividir A entre B. Por ejemplo, los numeros 7, 14, 27 y 38 se convierten en 1, 2, 0 y 2, si les aplicamos modulo 3. Desarrolla un programa que acepte \textbf{N} números como entrada e imprima el total de números distintos de la entrada, si los numeros son considerados modulo 42.
+
+\subsection*{Entrada}
+
+La primera línea de entrada contiene un entero \textbf{N}, $10<=N<=500$. Las siguientes N lineas contienen un entero X,$0<=X<=1000$.
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+
+\subsection*{Salida}
+
+Imprime en una sola línea el número de valores distintos cuando son considerados modulo 42.
+
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+10
+39
+40
+41
+42
+43
+44
+82
+83
+84
+85
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+6
+\end{verbatim}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Caribbean Online Judge}
+\end{document}

@@ -1,0 +1,53 @@
+\begin{titlepage}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\begin{center}
+\LARGE{6"o Concurso Interno de Programación Competitiva}
+$$$$
+\Large{\bf{Indicaciones}}
+\end{center}
+
+\bigskip
+
+\begin{itemize}
+
+	\item La entrada del programa se debe leer de la entrada estándar \texttt{stdin}.
+    
+    \item La salida de programa se debe imprimir a la salida estándar \texttt{stdout}.
+   	
+    \item No imprimir cadenas como: ``Dame la entrada'', ``La salida es:''
+    \begin{minted}{cpp}
+		printf("Dame la entrada:");/*Esto no se debe hacer*/
+	\end{minted}
+    
+    \item No usar bibliotecas no estándar
+  	
+    Ejemplo:
+    
+    \begin{minted}{cpp}
+#include <conio.h> /*Esta librería no es estándar*/
+
+int main()
+{
+     system("pause");//No usar esto
+     getch();//Ni esto
+    
+     return 0;
+}
+    \end{minted}
+    
+    \item Para los programas hechos en Java el nombre de la clase será la letra del problema en mayúscula seguido de la palabra ``main'' por ejemplo \texttt{Amain.java}.
+
+    
+\end{itemize}
+
+$$$$
+$$$$
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Grupo de Algoritmia}
+
+\end{titlepage}

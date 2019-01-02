@@ -1,0 +1,67 @@
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+%\bigskip
+\begin{center}
+	\Large Problema F - Forever ``Guapa Rules''
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundo
+\par\end{flushright}
+%\bigskip
+
+
+\section*{Problema}
+
+Moro no sabe si debe unirse a GUAPA o a LAR. Iba a preguntar a sus amigos cuando recordó que en su curso avanzado de Estadística aprendió acerca de los $K$ vecinos más cercanos(KNN), que es un algoritmo clasificador matón.
+
+El algoritmo de KNN clasifica un punto P en el plano de acuerdo al ``voto'' de sus vecinos (que ya están clasificados). Si la mayoría de sus $K$ vecinos más cercanos tiene clasificación $g$, entonces $P$ adoptará la misma clasificación.
+
+Moro ha decidido utilizar este algoritmo para decidir su futuro; él conoce la dirección de todos sus amigos, las cuales están compuestas por  puntos (x,y) en el plano. Todos los amigos de Moro pertenecen a GUAPA o a LAR, y se unirá a Guapa si la mayoría de sus $K$ vecinos más cercanos son de GUAPA, de lo contrario se unirá a LAR.
+
+La distancia entre dos puntos, $P_1=(x_1,y_1)$ y $P_2=(x_2,y_2)$, es calculada por la siguiente fórmula:
+$$ d(P_1, P_2) = \vert x_1-x_2\vert + \vert y_1-y_2\vert$$
+
+\subsection*{Entrada}
+La primera línea tendrá un entero $1 \leq T \leq 100$, que representará el número de casos de prueba. La primera línea de cada caso de prueba serán dos numeros $-1000 \leq x,y \leq 1000$, que representarán la ubicación de la casa de Moro en el plano. La siguiente línea tendrá un entero $1 \leq N \leq 1000$, el número de amigos de Moro.
+
+Posteriormente, vendrán $N$ líneas con $3$ enteros $-1000 \leq x_i,y_i \leq 1000$, $0 \leq g_i \leq 1$ , donde $ x_i,y_i$ indican la ubicación de la casa del i-ésimo amigo de Moro, y $g_i$ donde si es 1, indica que entonces ese amigo pertecene a GUAPA, de lo contrario pertenece a LAR. La siguiente línea tendrá un entero impar $1\leq K\leq N$, que indicará cuántos vecinos tomará en cuenta Moro para aplicar el algoritmo KNN. Moro no tiene dos amigos que vivan a la misma distancia de su casa. 
+
+\subsection*{Salida}
+Para cada caso de prueba, deberás imprimir \texttt{Guapa rules} si la mayoría de los $K$ vecinos más cercanos de Moro pertenecen a GUAPA, o un \texttt{Lars} si no.
+
+\newpage
+$$$$
+$$$$
+$$$$
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+2
+3 4
+3
+3 5 1
+3 6 0
+3 7 1
+3
+0 0
+1
+80 90 0
+1
+\end{verbatim}
+
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+Guapa rules
+Lars
+\end{verbatim}
+\end{multicols}
+%\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+%\lyxaddress{Moroni Silverio Flores - Grupo de Algoritmia}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Moroni Silverio Flores - Grupo de Algoritmia}

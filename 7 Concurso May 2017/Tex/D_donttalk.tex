@@ -1,0 +1,65 @@
+\chapter*{Problema D - DO NOT talk about FIGHT CLUB}
+
+%\begin{center}
+ % \begin{tabular}{ | l | l | l | }
+  %  \hline
+   % Tiepo Límite: 2u & Memoria Límite: 512mb & Código Fuente: %\texttt{galaxiascelulares.\{java|cpp|c|py\}} \\
+    %\hline
+  %\end{tabular}
+%\end{center}
+
+
+Felicidades. Has sido aceptado en el proyecto Mayhem. Aquí no se te asignan tareas en específico,
+sin embargo, para mantener el crecimiento de la organización y derribar a la civilización moderna lo más pronto posible, debes realizar el mayor número de tareas de una lista que te dan.
+
+Dadas $N$ actividades, cada una con su hora de inicio y conclusión, imprime el máximo conjunto de actividades que puedes realizar. No está de más decirte que sólo puedes realizar una tarea a la vez.
+
+Y recuerda: ¡Tyler Durden Lives!
+
+
+\subsection*{Entrada}
+
+La primera línea de entrada es un entero $T$ $(1 \leq T \leq 20)$, el número de casos de prueba.
+Cada caso de prueba se compone de $N+1$ líneas: En la primera se dará un entero positivo $N$, y en las restantes un par de números enteros $s_i$ y $f_i$, separados por un espacio, donde $(0 \leq s_i < f_i)$ y $(s_i + 1 \leq f_i \leq 1000)$.
+
+$s_i$ representa la hora de inicio y $f_i$ es la hora en que concluye la actividad, podemos decir que la i-ésima activadad se realiza en el intervalo $[s_i, f_i)$, donde $i=1,2,...,N$.
+
+
+\subsection*{Salida}
+
+Para cada caso de prueba, imprime el conjunto máximo de actividades que puedes realizar en el orden que se realizarían, separando cada actividad con un espacio.
+Debes separar los casos de prueba con un salto de línea.
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq N \leq 10 $ $\quad \quad \;\;$ $20$ puntos.
+    \item Mediano: $ 1 \leq N \leq 10^2 $ $\quad \quad$ $25$ puntos.
+    \item Grande:  $\;\; 1 \leq N \leq 10^4 $ $\quad \quad$ $55$ puntos.
+\end{itemize}
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+1
+6
+7 9
+1 2
+0 6
+5 9
+3 4
+5 7
+
+\end{verbatim}
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+4
+\end{verbatim}
+\end{multicols}
+
+\subsection*{Explicación}
+La secuencia máxima de tareas que puedes realizar es la siguiente:
+$[1,2)$, $[3,4)$, $[5,7)$, $[7,9)$. Por lo tanto, la respuesta es $4$. 
+

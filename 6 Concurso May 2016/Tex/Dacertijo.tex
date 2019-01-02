@@ -1,0 +1,82 @@
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema D - Descifrando el acertijo del profesor
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundo
+\par\end{flushright}
+
+\section*{Problema}
+
+Un día, en la clase de Timmy, el profesor Crocker propuso el siguiente acertijo: Dos amigos matemáticos se encuentran después de un largo periodo de no verse, y entablan la siguiente conversación:
+
+\begin{itshape}
+- ¡Cuánto tiempo sin verte! Cuéntame, ¿ya te casaste?
+
+- Sí, desde hace dos años.
+
+- ¡Excelente noticia! ¿Y tienes hijos?
+
+- Tengo tres hermosas hijas.
+
+- ¿Qué edades tienen?
+
+- Pues no te voy a decir sus edades, pero la multiplicación de ellas es 36 y la suma es el número de la casa de enfrente.
+
+El amigo voltea a ver el número y después de 1 minuto contesta: -Lo siento, pero me hace falta información.
+
+- ¡Oh! Tienes toda la razón, me faltó decirte que la más grande toca el piano. 
+\end{itshape}
+
+Timmy te ha pedido ayuda con un programa que encuentre todas las formas no equivalentes en que puede factorizarse un número utilizando tres términos.
+
+Se considera que una combinación es equivalente si contiene los mismos números sin importar el orden en que aparecen. Así, $(2,8,4)$ es equivalente a $(8,2,4)$.
+
+\subsection*{Entrada}
+
+La entrada inicia con un número entero $1 \leq N \leq 10^3$ que indica los casos de prueba a seguir. Posteriormente, le siguen $N$ líneas, cada una con un valor entero $1 \leq M \leq 10^5$ que representa el número a factorizar.
+
+\newpage
+$$
+$$
+$$
+$$
+
+\subsection*{Salida}
+Para cada caso de prueba, imprimir una línea con formato “\texttt{\# M:}”, donde $M$ es el número a factorizar utilizando tres términos, seguido de todas las combinaciones no equivalentes ordenando sus números en forma ascendente y posteriormente en forma lexicográfica.
+
+Para cada una de éstas, utiliza el formato \texttt{(x,y,z)}. 
+
+%\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+2 
+3
+36
+\end{verbatim}
+
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+# 3:
+(1,1,3)
+# 36:
+(1,1,36)
+(1,2,18)
+(1,3,12)
+(1,4,9)
+(1,6,6)
+(2,2,9)
+(2,3,6)
+(3,3,4)
+\end{verbatim}
+%\end{multicols}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Manuel Alcántara Juárez - Club PU++ Facultad de Ciencias}

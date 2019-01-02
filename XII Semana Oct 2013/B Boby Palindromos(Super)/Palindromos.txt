@@ -1,0 +1,30 @@
+Desafortunadamente para el "flojo Mau", un día se topó con el malvado minotauro devorador de hombres conocido como ... Boby, y calló directo en su trampa. Boby no es cualquier minotauro, es un minotauro que habla, pero el solo entiende frases que son palíndromos. Mau se dió cuenta que si le hablaba con palíndromos a Boby, el lo dejaría ir.
+Afortunadamente Mau tiene consigo un teléfono inteligente con un programa que indentifica frases palindrómicas, el cual tu codificaste para el ... ¿o no?.
+
+Entrada
+Te serán dadas muchas frases. Cada frase solo contendrá letras mayúsculas de la 'A' a la 'Z' y los siguientes caracteres: '.',  ',',  '!' ,'?'. El final de la entrada será una línea conteniendo la palabra "HECHO", que no deberá ser procesada.Cada frase tendrá a lo más 200 caracteres.
+
+Salida
+Para cada frase imprime una linea con la palabra "NO SERAS COMIDO" si la frase es un palíndromo, o "OH NO!" si no es un palídromo,
+
+Entrada Ejemplo
+
+ANITA LAVA LA TINA!
+ROMA TIBI SUBITO MOTIBUS IBIT AMOR.
+ME DEJARIAS IR?
+ARRIBA LA BIRRA
+TRAIGAN AL MINOTAURO!
+HECHO
+
+Salida Ejemplo
+
+NO SERAS COMIDO
+NO SERAS COMIDO
+OH NO!
+NO SERAS COMIDO
+OH NO!
+
+Anotaciones
+
+Un palíndromo es una frase que se lee igual de atrás para adelante y de adelante para atrás.
+Tienes que determinar si son palíndromos o no, ignorando signos de puntuación. 

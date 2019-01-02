@@ -1,0 +1,652 @@
+\chapter{Concurso de Programación de la XII Semana de MAC}
+\chaptermark{XII Semana de MAC}
+
+\section{Problema A - Asombroso League of Legends}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Hay dos objetos que se mueven sobre una recta infinita,
+cuya posición al inicio es distinta una del otro, y quieres saber si el objeto $a$ puede alcanzar al objeto $b$ en algún momento en el tiempo; sabiendo que, el objeto $a$ se mueve a una velocidad $v_a$ durante $c$ segundos y se mantiene inmóvil durante $t$ segundos,  mientras que el objeto $b$ nunca para de moverse a una velocidad constans $v_b$.
+\subsection*{Solución}
+Si observamos lo que pasa durante un ciclo de tiempo de tamaño $c+t$ podemos ver que el objeto $a$ (el que persigue) solo se moverá $c * v_a$ unidades de distancia mientras que el objeto $b$ se moverá $(c+t)*v_b$ unidades de distancia, por lo tanto si $c*v_a \leq (c+t)*v_b$ con cada ciclo de tiempo se irá alejando  o manteniendo la misma distancia a $b$ y en caso contrario $b$ será alcanzado,sin importar donde empiecen.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main()
+{
+//	freopen("DataLoL.out","w",stdout);
+//	freopen("DataLoL.in","r",stdin);
+	int n,c1,c2,T,C;
+	cin>>n;
+	while(n--)
+	{
+		cin>>c1>>c2>>T>>C;
+		c2 *= C;
+		c1 = (C - T)*c1;
+		if(c1 > c2)
+		{
+			cout<<"Se muere"<<endl;
+		}
+		else
+		{
+			cout<<"Se salva"<<endl;
+		}
+	}
+}
+
+\end{minted}
+
+\section{Problema B - Boby el Minotauro}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc, Cadenas \\
+\textbf{Complejidad:} $O(n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+El problema te pide saber si una cadena es un palíndromo.
+\subsection*{Solución}
+Se dice que una cadena es un palíndromo si para elemento $s_i$ de la cadena $s$ se cumple que $s_i = s_{n-i+1}$ donde $n$ es el tamaño de cadena e $i = 0, 1, \dots, n-1$ . Podemos checar esto eliminando los caracteres especiales y haciendo la comprobación lineal caracter por caracter, aunque con hacer la comprobación para una mitad es suficiente.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <cstdio>
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+#include <algorithm>
+#include <string>
+#include <set>
+#include <cctype>
+#include <vector>
+#include <map>
+#include <cctype>
+using namespace std;
+typedef long long ll;
+
+string frase ;
+
+void solve()
+{
+	int n = frase.size();
+	string frase_bonita = "";
+
+	for (int i = 0; i < n; ++i)
+	{
+		if(not (frase[i] == '.' or frase[i] == ',' or frase[i] == '!' or frase[i] == '?' or frase[i] == ' ' or frase[i] == '\n') )
+		{
+		//if(isalpha(frase[i]))
+			frase_bonita += frase[i];
+		}
+	}
+	n = frase_bonita.size();
+	for (int i = 0, j = n-1; i < (n/2)+1; ++i, --j)
+	{
+		if(frase_bonita[i] != frase_bonita[j])
+		{
+			//cout << frase_bonita[i] << " " << frase_bonita[j] << '\n';
+			printf("OH NO!\n");
+			return;
+		}
+	}
+	printf("NO SERAS COMIDO\n");
+}
+
+int main()
+{
+    //int k = 1;
+	while(getline(cin, frase) and frase != "HECHO")
+	{
+		solve();
+	}
+	return 0;
+}
+\end{minted}
+
+
+\section{Problema C - Coleccionista}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Implementación \\
+\textbf{Complejidad:} $O(n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dadas la cantidad de pokémon existentes, los pokémon que ya capturaste y los pokémon que no te interesan tener, debes obtener dos cosas:
+\begin{itemize}
+\item Cuántos y cuáles pokémon que sí te interesan te faltan obtener.
+\item Cuántos y cuáles pokémon de los que ya tienes no te interesan.
+\end{itemize}
+\subsection*{Solución}
+Para la solución necesitamos poder almacenar cuáles pokémon tenemos, y de esos cuáles no me interesan. Dado que el número total de pokémon es pequeño ($\leq 1000$), es posible crear arreglos de booleanos, \texttt{yatengo[]} y \texttt{nomeinteresan[]} para este propósito. Para responder la primer pregunta necesitamos contar los pokémon $x$ tales que \texttt{yatengo[x] == false} y \texttt{nomeinteresan[x] == false}. Para la segunda, tenemos que contar aquellos pokémon tales que \texttt{yatengo[x] == true} y \texttt{nomeinteresan[x] == true}.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include<iostream>
+#include<vector>
+#include<cstdio>
+using namespace std;
+int main()
+{
+    int estampas,aux,tengo,desinteres,cont1,cont2,cont=0;;
+    vector<int> yatengo;
+    vector<int> nomeinteresan;
+    while(cin>>estampas)
+    {
+        cont1=0;
+        cont2=0;
+        cont++;
+        yatengo.assign(estampas+1,0);
+        nomeinteresan.assign(estampas+1,0);
+        cin>>tengo;
+        for(int i=0;i<tengo;i++)
+        {
+            cin>>aux;
+            yatengo[aux]=1;
+        }
+        cin>>desinteres;
+        for(int i=0;i<desinteres;i++)
+        {
+            cin>>aux;
+            nomeinteresan[aux]=1;
+        }
+        for(int i=1;i<estampas+1;i++)
+        {
+            if(nomeinteresan[i]==0 && yatengo[i]==0)
+            {
+                cont1++;
+            }
+        }
+        cout<<cont1;
+        for(int i=1;i<estampas+1;i++)
+        {
+            if(nomeinteresan[i]==0 && yatengo[i]==0)
+            {
+                cout<<" "<<i;
+            }
+        }
+        cout<<endl;
+        for(int i=1;i<estampas+1;i++)
+        {
+            if(nomeinteresan[i]==1 && yatengo[i]==1)
+            {
+                cont2++;
+            }
+        }
+        cout<<cont2;
+        for(int i=1;i<estampas+1;i++)
+        {
+            if(nomeinteresan[i]==1 && yatengo[i]==1)
+            {
+                cout<<" "<<i;
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+\end{minted}
+
+
+
+\section{Problema D - Domino}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star\star$ \\
+\textbf{Temas:} Búsquedas \\
+\textbf{Complejidad:} $O(n \log n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dado una línea alineada de dominos, debemos verificar si es posible hacer que la suma de las partes inferiores y la suma de las superiores es par, ésto mediante la rotación de las fichas de dominó.
+\subsection*{Solución}
+Obtenemos las sumas de ambas partes, podemos dividir estas sumas en tres casos:
+\begin{enumerate}
+\item Si las sumas son pares, el problema esta resuelto y la respuesta es 0.
+\item Si una suma es par y la otra impar no existe una solución debido a que cada ficha puede ser o con ambas partes pares o ambas impares o una par y la otra impar, pero al rotar cualquiera de estos tres tipos de fichas se sigue sin obtener una solución.
+\item Si ambos sumas son impares, basta con encontrar una ficha con una parte par y la otra impar, al rotarla se obtendra una solución, si tal ficha no existe entonces no hay solución.
+\end{enumerate}
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <iostream>
+#include <sstream>
+#include <algorithm>
+#include <vector>
+#include <map>
+#include <set>
+#include <queue>
+#include <list>
+#include <stack>
+#include <cmath>
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cctype>
+#include <climits>
+using namespace std;
+int izq[105],der[105];
+int n,sumi,sumd;
+ 
+int main()
+{
+    int t,cont=0;
+    cin>>t;
+    while(t--)
+    {
+        cont++;
+        cin>>n;
+        cout<<"Caso "<<cont<<": ";
+        sumi = sumd = 0;
+        bool b = false;
+        for(int i=0;i<n;i++)
+        {
+            cin>>izq[i]>>der[i];
+            sumi += izq[i];
+            sumd += der[i];
+        }
+        if((sumi&1) and (sumd&1))
+        {
+            for(int i=0; i<n; i++)
+            {
+                if( (izq[i]&1) != (der[i]&1))
+                {
+                    b = true;
+                    break;
+                }
+            }
+            if(b)
+                cout<<1<<endl;
+            else
+                cout<<-1<<endl;
+        }
+        else if( !(sumi&1) and !(sumd&1) )
+        {
+            cout<<0<<endl;
+        }
+        else
+        {
+            cout<<-1<<endl;
+        }
+    }
+    return 0;
+}
+\end{minted}
+
+
+
+
+
+\section{Problema E - Esto es fácil}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star\star$ \\
+\textbf{Temas:} Búsquedas \\
+\textbf{Complejidad:} $O(n \log n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dada una lista con $n$ elementos, debemos determinar si existe un par de elementos de la lista cuya suma sea igual a un número $M$ dado.
+\subsection*{Solución}
+Para cada elemento $a_j$ del arreglo A, mientras no hayamos determinado que existe una solucion, debemos verficar si existe $a_k$ tal que $a_j + a_k =M$, eso lo realizamos mediante una busqueda binaria (debemos ordenar los elementos de A); esto debido a la limitante de tiempo del problema, si para cada elemento $a_j \in A$ buscaramos linealmente a su complemento $a_k$, la complejidad sería cuadrada y obtendríamos como veredicto $Tiempo$ $Limite$ $Excedido$.
+
+Nota: Dado que los elementos de $A$ son relativamente pequeños es posible disminuir la complejidad del problema a $O(n)$, esto marcado en un arreglo en la posición $a_i$ si $a_i \in A$, ahorrandonos la el ordenamiento y la busqueda binaria.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
+#define For(X,A,B) for(X=A; X<B; X++)
+#define Maxt 1000
+using namespace std;
+ 
+int arr[1000]={0};
+int var;
+ 
+void busca(int a,int b,int valor)
+{
+    if(a == b && arr[b]==valor)
+        {var = 1; return;}
+    else if(a == b && arr[b]!=valor)
+        {var = 0; return;}
+ 
+    int mitad = (a+b)>>1;
+ 
+    if(valor <= arr[mitad])
+        busca(a,mitad,valor);
+    else
+        busca(mitad+1,b,valor);
+}
+ 
+int main(int argc, char const *argv[])
+{
+    //freopen("Data.in","r",stdin);
+    //freopen("Data.out","w",stdout);
+    int i,j,n,casos,sum,tam,x;
+ 
+    scanf("%d",&casos);
+    while(casos--)
+    {
+        scanf("%d",&tam);
+ 
+        for(i=0; i<tam; i++)
+            scanf("%d",&arr[i]);
+ 
+        scanf("%d",&sum);
+ 
+        //Cosas
+        var = 0;
+        sort(arr,arr+tam);
+        For(j,0,tam)
+        {
+            x = sum - arr[j];
+            if(x>0)
+                busca(0,tam-1,x);
+ 
+            if(var)
+            {
+                printf("SI\n");
+                break;
+            }
+        }
+        if(var == 0)
+            printf("NO\n");
+    }
+    return 0;
+}
+\end{minted}
+
+\section{Problema F - Falsa Simulación}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star$ \\
+\textbf{Temas:} Ad-Hoc, Estructuras de Datos\\
+\textbf{Complejidad:} $O(n+m)$ construcción,\\ $O(1)$ por consulta.\\
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Para el propósito de entender el problema supongamos que se tiene una matriz de $n$ filas por $m$ columnas de la siguiente manera, suponiendo que $n = m = 5$:
+
+\renewcommand{\kbldelim}{(}% Left delimiter
+\renewcommand{\kbrdelim}{)}% Right delimiter
+\[
+   \kbordermatrix{
+    & c_1 & c_2 & c_3 & c_4 & c_5 \\
+    r_1 & 1 & 2 & 3 & 4 & 5 \\
+    r_2 & 6 & 7 & 8 & 9 & 10 \\
+    r_3 & 11 & 12 & 13 & 14 & 15 \\
+    r_4 & 16 & 17 & 18 & 19 & 20 \\
+    r_5 & 21 & 22 & 23 & 24 & 25
+  }
+\]
+
+Si quisieramos efectuar la operación \texttt{R 1 2} obtendriamos lo siguiente:
+
+\[
+   \kbordermatrix{
+    & c_1 & c_2 & c_3 & c_4 & c_5 \\
+    r_2 & 6 & 7 & 8 & 9 & 10 \\
+    r_1 & 1 & 2 & 3 & 4 & 5 \\
+    r_3 & 11 & 12 & 13 & 14 & 15 \\
+    r_4 & 16 & 17 & 18 & 19 & 20 \\
+    r_5 & 21 & 22 & 23 & 24 & 25
+  }
+\]
+de donde la respuesta para \texttt{W 9} sería \texttt{1 4}.
+
+\subsection*{Solución}
+
+La solución ingenua consiste en mantener una matriz e ir simulando cada uno de las consultas en $O(n)$ u $O(m)$ , pero se puede ver en primera instancia que esta solución no es factible para nuestras restricciones ya que ni siquiera pasaría las restricciones de memoria.
+
+Una solución que nos permite hacer consultas y modificaciones a la matriz en $O(1)$, se logra mediante el uso de dos vectores por renglones y columna uno que te relacione el índice original y índice actual, y visceversa.
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+Sólo queda saber que para obtener los índices de una matriz de la forma original dado el valor de $z$ debemos hacer: $x=\floor{z/m}+1$, $y=(z \mod m)+1$; y para obtener $z$ conociendo $x$ y $y$ hacemos: $z=(x-1)m + y$.
+
+
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <iostream>
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+using namespace std;
+typedef vector<int> vi;
+
+#define N 1234
+#define M 5678
+
+vi rows(N+3, 0);
+vi cols(M+3, 0);
+vi rr = rows;
+vi cc = cols;
+
+void solveR()
+{
+	int x, y;
+	scanf("%d %d", &x, &y);
+	swap( rows[x], rows[y] );
+	rr[rows[x]] = x;
+	rr[rows[y]] = y;
+}
+
+void solveC()
+{
+	int x, y;
+	scanf("%d %d", &x, &y);
+	swap( cols[x], cols[y] );
+	cc[cols[x]] = x;
+	cc[cols[y]] = y;
+}
+
+void solveQ()
+{
+	int x, y;
+	scanf("%d %d", &x, &y);
+	printf("%d\n", ((rows[x]-1) * M) + cols[y] );
+}
+
+void solveW()
+{
+	int z;
+	cin >> z;
+	--z;
+	printf("%d %d\n", rr[(z / M)+1], cc[(z%M)+1]);
+}
+
+int main()
+{
+	for (int i = 0; i < M+3; ++i)
+	{
+		cc[i] = cols[i] = i;
+	}
+	for (int i = 0; i < N+3; ++i)
+	{
+		rr[i] = rows[i] = i;
+	}
+	char orden;
+	while(cin >> orden)
+	{
+		switch(orden)
+		{
+			case 'R':
+				solveR();
+				break;
+			case 'C':
+				solveC();
+				break;
+			case 'Q':
+				solveQ();
+				break;
+			case 'W':
+				solveW();
+				break;
+		}
+	}
+	return 0;
+}
+
+\end{minted}
+
+
+\section{Problema G - Geómetra Hermann}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Matemáticas \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Debes encontrar el área de un círuclo con radio $r$ utilizando una distancia euclideana y un círculo con radio $r$ utilizando una distancia Manhattan.
+\subsection*{Solución}
+El círculo en una geometría con la distancia euclideana es trivial. Para el otro caso hay que observar que un círculo en una geometría con la distancia Manhattan es en realidad un cuadrado rotado de lado $\sqrt{2r^2}$, por lo tanto su área es $2r^2$. 
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <stdio.h>
+#include <math.h>
+ 
+int main()
+{
+    double PI = atan(1.0)*4.0;
+    double R;
+    while(scanf("%lf", &R)==1)
+    {
+        printf("%.4lf\n", (double)PI*R*R);
+        printf("%.4lf\n", (double)R*R*2.0);
+    }
+    return 0;
+}
+\end{minted}
+
+\section{Problema H - Historia de los relojes}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Matemáticas \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dado un ángulo, quieres saber si es posible que las dos manecillas de un reloj convencional, con 60 marcas, pueden crear dicho ángulo.
+\subsection*{Solución}
+Dado que sólo hay 60 marcas en el reloj, los 360 grados estarán divididos en 60 marcas separadas por 6 grados, así que las manecillas podrán formar un ángulo si y sólo si el ángulo es múltiplo de 6.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+#include<cstdio>
+using namespace std;
+int main()
+{
+    int a,cont=0;
+    while(cin>>a)
+    {
+        cont++;
+        cout<<"Caso "<<cont<<": ";
+        if(a%6)
+        {
+            cout<<"N\n";
+        }
+        else
+        {
+            cout<<"Y\n";
+        }
+    }
+}
+\end{minted}
+
+\section{Problema I - Investigando laberintos}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star$ \\
+\textbf{Temas:} Flood fill \\
+\textbf{Complejidad:} $O(nm)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dado una cuadrícula de $n \times m$, con algunas paredes dentro de ella, y un punto inicial, se te pide marcar todos los lugares dentro de la cuadrícula a los que puedes llegar, sabiendo que no puedes atravezar paredes y que sólo te puedes mover hacia arriba, abajo, izquierda o derecha.
+\subsection*{Solución}
+Este es un problema muy común y su solución es conocida como algoritmo de relleno por difusión (flood fill en inglés), que es básicamente una búsqueda. 
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include<iostream>
+#include<string>
+#include<vector>
+#include<cstdio>
+using namespace std;
+vector<string> v;
+int dfs(int i,int j)
+{
+    if(i>0 && j>0 && j<v[i].size() && i <v.size() && v[i][j]!='#' && (v[i][j]==' ' || v[i][j]=='*'))
+    {
+        v[i][j]='#';
+        dfs(i,j+1);
+        dfs(i+1,j);
+        dfs(i-1,j);
+        dfs(i,j-1);
+    }
+    return 0;
+}
+int main()
+{
+    string aux;
+    int t,a,b;
+    cin>>t;
+    while(t--)
+    {
+        cin>>a>>b;//a=filas, b=columnas
+        getline(cin,aux);
+        for(int i=0;i<a;i++)
+        {
+            getline(cin,aux);
+            v.push_back(aux);
+        }
+        for(int k=0;k<v.size();k++)
+        {
+            for(int l=0;l<v[k].size();l++)
+            {
+                if(v[k][l]=='*')
+                {
+                    dfs(k,l);
+                }
+            }
+        }
+        for(int k=0;k<v.size();k++)
+        {
+            cout<<v[k]<<endl;
+        }
+        cout<<endl;
+        v.clear();
+    }
+    return 0;
+}
+\end{minted}

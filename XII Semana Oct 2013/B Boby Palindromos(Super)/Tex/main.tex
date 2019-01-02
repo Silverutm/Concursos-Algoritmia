@@ -1,0 +1,78 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\cfoot{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema B - Bobby el Minotauro}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+    \Large Problema B - Boby el Minotauro
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Desafortunadamente para el ``flojo Mau'', un día se topó con el malvado minotauro devorador de hombres conocido como ... Boby, y cayó directo en su trampa. Boby no es cualquier minotauro, es un minotauro que habla, pero el solo entiende frases que son palíndromos. Mau se dió cuenta que si le hablaba con palíndromos a Boby, el lo dejaría ir.
+Afortunadamente Mau tiene consigo un teléfono inteligente con un programa que identifica frases palindrómicas, el cual tu codificaste para el ... ¿o no?.
+
+\subsection*{Entrada}
+
+Te serán dadas muchas frases. Cada frase solo contendrá letras mayúsculas de la `A' ~ hasta la `Z' ~y los siguientes caracteres: `.', `,', `!' , `?'. El final de la entrada será una línea conteniendo la palabra ``HECHO'', que no deberá ser procesada.Cada frase tendrá a lo más 200 caracteres.
+
+\subsection*{Salida}
+
+Para cada frase imprime una linea con la palabra ``NO SERAS COMIDO'' si la frase es un palíndromo, o ``OH NO!'' si no es un palíndromo.
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+ROMA TIBI SUBITO MOTIBUS IBIT AMOR.
+ME DEJARIAS IR?
+ARRIBA LA BIRRA
+TRAIGAN AL MINOTAURO!
+HECHO
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+NO SERAS COMIDO
+OH NO!
+NO SERAS COMIDO
+OH NO!
+\end{verbatim}
+
+\subsection*{Anotaciones}
+
+Un palíndromo es una frase que se lee igual de atrás para adelante y de adelante para atrás.
+Tienes que determinar si son palíndromos o no, ignorando signos de puntuación. 
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Modificado de un problema original de UVA Online Judge}
+\end{document}

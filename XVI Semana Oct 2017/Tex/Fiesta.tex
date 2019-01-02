@@ -1,0 +1,84 @@
+\chapter*{Problema F - Fiesta de Ganadores}
+
+Queremos hacer una fiesta para los ganadores del concurso
+de programación, pero aquí entre nos, no tenemos mucho 
+dinero, por lo que queremos rentar la menor cantidad de
+sillas que sea posible. 
+
+Cada persona invitada envía previamente el minuto en que
+llega y el minuto en que se va (a partir del inicio de la 
+fiesta, es decir, la fiesta inicia en el minuto 0), y lo 
+cumple porque todos somos muy puntuales. Nosotros te 
+daremos esos datos y tú determinarás cuál es la mayor 
+cantidad de gente que puede haber en algún momento en la 
+fiesta. Tu misión es decirnos dicha cantidad para que 
+nosotros rentemos las sillas.
+
+
+
+\subsection*{Entrada}
+La primera línea contendrá un entero positivo $T$ (el 
+número de casos de entrada). Cada caso iniciará con un
+entero positivo $n$, que representa el número de personas 
+invitadas a la fiesta. Luego vendrán $n$ líneas, cada una
+compuesta por dos enteros $x, y$ tales que $x < y$,
+separados por un espacio, $x$ para la hora de llegada y 
+$y$ para la hora de partida de cada persona. Así, podemos
+decir que cada persona permanece en la fiesta en el
+intervalo $[x,y)$.
+
+
+
+\subsection*{Salida}
+Para cada caso, imprime en una línea distinta el número 
+de sillas que debemos rentar.
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 10 $, $ 1 \leq n \leq
+    100 $, $ 1 \leq x < y \leq 10^3$   $\quad \;\;\;\;\;$
+    $50$ puntos.
+    \item Mediano: $ 1 \leq T \leq 10 $, $ 1 \leq n \leq
+    10^3 $, $ 1 \leq x < y \leq 10^{10}$ $\quad\;\;\;\;$ 
+    $20$ puntos.
+    \item Grande: $ \;\, 1 \leq T \leq 20$, $ 1 \leq n 
+    \leq 10^4 $, $ 1 \leq x < y \leq 10^{12} $ $\quad 
+    \quad \,$ $30$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+2
+5
+1 4
+2 5
+9 12
+5 9
+5 12
+6
+0 3
+0 6
+2 4
+2 8
+1 4
+6 9
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+2
+5
+\end{verbatim}
+
+\end{multicols}

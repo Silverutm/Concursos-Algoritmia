@@ -1,0 +1,51 @@
+\chapter*{Problema G - Ganas de Viajar}
+
+%\begin{center}
+ % \begin{tabular}{ | l | l | l | }
+  %  \hline
+   % Tiepo Límite: 2u & Memoria Límite: 512mb & Código Fuente: %\texttt{galaxiascelulares.\{java|cpp|c|py\}} \\
+    %\hline
+  %\end{tabular}
+%\end{center}
+
+Leo acaba de estrenar una combi y la va a poner a trabajar en una ruta que empieza en la CDMX y termina en el Estado de México, sin embargo, él no puede manejarla y ha contratado a un chofer para ello. El problema es que Leo no sabe cuánto pedirle al chofer de cuenta y te ha pedido ayuda.
+
+La combi tiene un dispositivo que registra el tiempo en el que alguien subió o bajó. También registra la hora en la que cruzaron la frontera de CDMX al Estado (ninguna persona se sube o baja en la frontera). Dado que hay tres tarifas de cobro (CDMX, CDMX-Estado y Estado). ¿Podrías decirle a Leo cuánto dinero recaudó el chofer?
+
+
+\subsection*{Entrada}
+
+La primera línea de entrada será un número $C$ $(1 \leq  C\leq 50)$, que es la cantidad de casos de prueba. Cada caso de prueba empieza con un número $N$, el número de eventos (subir o bajar) que registró el dispositivo, después vendrán $4$ números $P_1, P_2, P_3$ y $F$, los primeros tres  indican el costo del pasaje de cada una de las tarifas -CDMX, CDMX-Estado y Estado- respectivamente, y el último número, $F$, indica el momento en el que la combi cruzó la frontera; luego vendrán $N$ líneas con un caracter $e$ y un número $t$ cada una, indicando los eventos que registró el dispositivo en el orden en que los registró. Si la $i$-ésima línea de un caso de prueba inicia con $e=$``S'' significa que alguien se subió en el tiempo $t_i$; si empieza con $e=$``B'', significa que alguien se bajó en el tiempo $t_i$. 
+
+
+\subsection*{Salida}
+
+Para cada caso, imprime la cantidad de dinero que el chofer recaudó en su día de trabajo.
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 2\leq N \leq 10 $ , $ 1\leq P_1, P_2,P_3 \leq 100, 1\leq F,t \leq 100 $ $\quad \quad \quad \quad \;$ $35$ puntos.
+    \item Mediano: $ 2\leq N \leq 100 $ , $ 1\leq P_1, P_2,P_3 \leq 10^4, 1\leq F,t \leq 1000 $ $\quad \quad \quad \;$ $35$ puntos.
+    \item Grande: $ \,\;\,  2\leq N \leq 150 $ , $ 1\leq P_1, P_2,P_3 \leq 10^{12}, 1\leq F,t \leq 10000 $ $\quad \quad \;$ $30$ puntos.
+\end{itemize}
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+1
+2
+4 5 8 10
+S 12
+B 13
+\end{verbatim}
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+8
+\end{verbatim}
+\end{multicols}
+
+
+

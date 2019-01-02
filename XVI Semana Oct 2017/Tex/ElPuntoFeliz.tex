@@ -1,0 +1,88 @@
+\chapter*{Problema E - El Punto Feliz}
+
+En GUAPA queremos construir un patio para la diversión de 
+Schnitzel, nuestra mascota. Planeamos dividir el espacio 
+que tenemos de tal forma que podamos cubrir con pasto una
+zona triangular, con el resto del área ya veremos luego 
+qué hacemos.
+
+Además, queremos construir un camino a partir de cada
+vértice del triángulo de pasto hacia un punto en el patio
+al que llamaremos ``El Punto Feliz".
+
+Antes de empezar, debes saber que el patio de Schnitzel 
+debe cumplir con las dos características más importantes
+para ella:
+
+\begin{enumerate}
+    \item Ninguno de los lados del triángulo es paralelo
+    al eje de las abscisas ni de las ordenadas.
+    \item Los tres caminos entre los vértices del 
+    triángulo y El Punto Feliz deben ser del mismo tamaño,
+    sin importar que El Punto Feliz quede dentro o fuera
+    del triángulo.
+\end{enumerate}
+
+Por último, debes saber que Schnitzel es un ser muy 
+especial, por lo que sólo aceptará su nuevo patio si los
+tres caminos de los que ya hablamos NO forman (entre dos
+de ellos) un ángulo de 180°.
+
+
+
+\subsection*{Entrada}
+
+La primera línea de entrada es un número $T$ (el número de
+casos de prueba). Siguen los $T$ casos: cada uno está
+compuesto por tres pares ordenados $x,y$ de números reales 
+positivos; cada par ordenado está en una línea distinta y 
+es la coordenada de uno de los vértices del triángulo de 
+pasto.
+
+
+
+\subsection*{Salida}
+
+Para cada caso de entrada deberás imprimir en una línea
+las coordenadas del punto feliz, así como ``Aceptado"$\,$
+en caso de que Schnitzel lo acepte, y ``No Aceptado"$\,$en 
+caso contrario; ambos datos separados por un espacio.
+
+Redondea tus respuestas a 4 decimales.
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Caso Único: $ 1 \leq T \leq 100 $, $ 1 \leq x, 
+    y \leq 10^8 $   $\quad \;\;\;\;\;$ $100$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+2
+1 1
+5 3
+3 5
+0 0
+6 6
+8 4
+\end{verbatim}
+
+\columnbreak
+
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+2.6667 2.6667 Aceptado
+4.0000 2.0000 No Aceptado
+\end{verbatim}
+
+\end{multicols}

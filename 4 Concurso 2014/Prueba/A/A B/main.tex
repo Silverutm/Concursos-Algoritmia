@@ -1,0 +1,80 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema A - A ? B}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+    \Large Problema A - A ? B
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Dados dos numeros \textbf{A} y \textbf{B}, \textbf{1$<$=A,B$<$=50}, debes calcular las siguientes operaciones:
+
+\begin{itemize}
+\item \textbf{A + B}
+\item \textbf{A - B}
+\item \textbf{A * B}
+\item \textbf{A / B}
+\item \textbf{A mod B}
+\end{itemize}
+
+\subsection*{Entrada}
+
+La única línea de entrada contiene dos numeros separados por un espacio, \textbf{A} y \textbf{B}.
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+
+\subsection*{Salida}
+
+Debes imprimir el resultado de las operaciones, una por línea.
+
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+15 5
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+20
+10
+75
+3
+0
+\end{verbatim}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Caribbean Online Judge}
+\end{document}

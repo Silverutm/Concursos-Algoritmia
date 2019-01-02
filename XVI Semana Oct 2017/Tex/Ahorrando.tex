@@ -1,0 +1,68 @@
+\chapter*{Problema A - Ahorrando la Fatiga}
+
+Para este problema te ahorraré la fatiga de leer y te diré 
+que simplemente tienes que jugar a algo muy sencillo:
+contar.
+
+El juego consiste en que digas cuántas palabras de $x_i$
+letras se pueden formar con los caracteres $a$, $b$ y $c$ 
+sin que haya dos $a$'s juntas.
+
+Para este juego, entendemos como palabra una cadena de 
+caracteres, sin importar que tenga sentido o no en alguno
+de los 5 idiomas que sabes.
+
+
+
+\subsection*{Entrada}
+La primera línea de la entrada contendrá un número $T$, 
+el número de casos. Luego vendrá una lista de enteros 
+positivos $x_i$, $1 \leq i \leq T$ - uno por cada caso, 
+que representa el tamaño de las palabras que debes contar.
+
+
+
+\subsection*{Salida}
+Para cada caso debes imprimir cuántas palabras se pueden
+formar con $x_i$ caracteres de la forma que te dije arriba.
+
+¡Ah, una cosa más! Debes imprimir la salida con módulo 
+$10^9+7$.
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 10 $, $ 1 \leq x_i
+    \leq 10$   $\quad \;\;\;\;\;$ $40$ puntos.
+    \item Mediano: $ 1 \leq T \leq 10 $, $ 1 \leq x_i
+    \leq 15$   $\quad \;\;\;\;\;$ $20$ puntos.
+    \item Grande: $ \;\, 1 \leq T \leq 10^{3}$, $ 1 
+    \leq x_i \leq 10^5 $ $\quad \;\,$ $40$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+3
+1
+2
+5
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+3
+8
+164
+\end{verbatim}
+
+\end{multicols}

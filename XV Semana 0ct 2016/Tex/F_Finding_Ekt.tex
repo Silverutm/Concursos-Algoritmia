@@ -1,0 +1,51 @@
+\chapter*{Problema F - Finding Ekt}
+
+\begin{center}
+  \begin{tabular}{ | l | l | l | }
+    \hline
+   Tiepo Límite: 2u & Memoria Límite: 512mb & Código Fuente: \texttt{findingekt.\{java|cpp|c|py\}} \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Una vez recogido el dinero, El Mai quiere dirigirse lo más rápido posible a su tienda de celulares de confianza, pero para eso necesita saber el tiempo que le toma llegar de una estación de autobuses de la ciudad a otro. Podemos asumir que en Chilangolandia la ciudad de El Mai, puedes tomar un autobús que te lleva de cualquier estación a cualquier otra (aunque ir directamente no siempre es lo óptimo), además, El Mai tiene tan buena suerte que siempre habrá autobuses disponibles para él y que además siempre tarda $0$ segundos en transbordar(inclusive en la estación de Cuatro Caminos).
+
+\subsection*{Entrada}
+
+La primera línea de entrada será un número $C$ $(1 \leq  C\leq 10)$, que es el número de casos de prueba, después vendrán $C$ casos. Cada caso comienza con una linea con un número $N$ que indica el numero de estaciones en la ciudad. Después vendrán $N$ renglones, cada uno con N números, donde en la primer renglón vendrán todos los números $a_{0j}$ para $0 \leq j < n$, en el segundo vendrán $a_{1j}$ y así sucesivamente. El número $a_{ij}$ indica el tiempo que toma El Mai en llegar de la estación $i$ a la estación $j$ en la ciudad si  va directamente sin pasar por otra estación de la ciudad. Las estaciones en la ciudad están numeradas del $0$ al $N-1$.  Si $i=j$ entonces $a_{ij}=0$. \\
+Después vendrá un numero $Q$ ($1\leq Q \leq 100$) indicando el número de consultas que El Mai tiene, y a continuación vendrán $Q$ lineas, cada una con dos números $a$, $b$ ($0 \leq a, b \leq N-1$) indicando que El Mai quiere saber cual es la mínima cantidad de tiempo que le toma para llegar del punto $a$ al punto $b$.
+
+\subsection*{Salida}
+Para cada consulta imprime el tiempo mínimo que le tomaría al Mai llegar de una estación $a$ a otra estación $b$.
+
+\subsection*{Limites de los conjuntos de datos}
+\begin{itemize}
+    \item Pequeño: $ 1\leq N \leq 10 $ , $ 0\leq a_{ij} \leq 100 $ $\quad \quad \;$ $30$ puntos.
+    \item Mediano: $ 1\leq N\leq 20 $ , $ 0\leq a_{ij} \leq 1000 $ $\quad \quad$ $30$ puntos.
+    \item Grande: $ \,\;\, 1\leq N\leq 50 $ , $ 0\leq a_{ij} \leq 10^{10} $ $\quad \quad$ $40$ puntos.
+\end{itemize}
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+2
+2
+0 4
+4 0
+1
+0 1
+3
+0 9 1
+9 0 2
+1 2 0
+1
+1 0
+\end{verbatim}
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+4
+3
+\end{verbatim}
+\end{multicols}
+

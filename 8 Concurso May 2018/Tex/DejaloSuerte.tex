@@ -1,0 +1,81 @@
+\chapter*{Problema D - Déjalo a la Suerte}
+%ÁÉÍÓÚÑáéíóúñ  ``  ''
+Vamos a jugar un juego de azar.
+
+Si quieres participar, debes adquirir una papeleta en
+la que podrás seleccionar (o no) los números que 
+desees entre $1$ y $n$ y registrarlos. Puedes selccionar
+la cantidad de números que quieras, siempre y cuando
+sea más de uno y menos de $n-1$.
+
+Como suele suceder con este tipo de juegos, habrá un
+anfitrión que sacará de una urna una papeleta ganadora,
+y listo, ganará la persona que tenga la papeleta con 
+los mismos números seleccionados que los del anfitrión.
+
+Para ganar, únicamente es necesaria la existencia de 
+los mismos números del anfitrión, sin importar el 
+orden.
+
+Si podemos asegurar que no hay dos papeletas que sean
+registradas iguales, ¿cuál es la probabilidad
+de que ganes si adquieres $k$ papeletas?
+
+Como la probabilidad puede ser muy muy pequeña, 
+necesitamos que multipliques tu respuesta por $10^{15}$.
+Tendrás un margen de error de $10^{-5}$.
+
+
+
+
+\subsection*{Entrada}
+La primera línea contendrá un entero positivo $T$ (el 
+número de casos a leer). Luego vendrán $T$ líneas, cada
+una compuesta por dos enteros positivos separados por 
+un espacio: $n$ y $k$, en ese orden.
+
+
+
+
+\subsection*{Salida}
+Para cada caso imprime en una línea distinta la 
+probabilidad que tengas de ganar.                   
+
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 100 $, $4 \leq n 
+    \leq 10$, $k < n$ $\quad \;\;\;$ $30$ puntos.
+    \item Mediano: $ 1 \leq T \leq 100 $, $4 \leq n
+    \leq 20$, $k < n$   $\quad \;\;\;$ $20$ puntos.
+    \item Grande: $ \;\, 1 \leq T \leq 100$, $ 1 
+    \leq n \leq 60 $, $k < n$ $\quad \;\;\;$ $50$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+3
+4 1
+10 3
+18 6
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+166666666666666.66667
+2994011976047.90419
+22891501911.44041
+\end{verbatim}
+
+\end{multicols}

@@ -1,0 +1,145 @@
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema Ejemplo
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundo
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Dados 2 enteros $A$ y $B$, debes imprimir la suma de ellos.
+
+\subsection*{Entrada}
+
+Una línea con un entero $T$ que indica el número de casos.
+En las siguientes $T$ líneas, aparecerán 2 enteros $A$ y $B$.
+
+\subsection*{Salida}
+$T$ líneas con la suma de los enteros $A$ y $B$
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+
+2
+2 3
+5 8
+
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+
+5
+13
+
+\end{verbatim}
+
+\end{multicols}
+\newpage
+
+$$$$
+$$$$
+$$$$
+
+\subsection*{Solución}
+
+Los siguientes códigos resuelven el problema anterior:
+
+\begin{multicols}{2}
+\begin{itemize}
+
+\item \bf{C}
+
+    \begin{minted}{cpp}
+#include <stdio.h>
+
+int main()
+{
+    int casos,a,b;
+	
+    scanf("%d",&casos);
+	
+    while(casos--)
+    {
+        scanf("%d %d",&a,&b);
+        printf("%d\n",a+b);
+    }
+	
+    return 0;
+}    
+	\end{minted}
+    
+\item \bf{C++}
+
+    \begin{minted}{cpp}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int casos,a,b;
+
+    cin >> casos;
+
+    while(casos--)
+    {
+        cin >> a >> b;
+        cout << a+b << endl;
+    }
+
+    return 0;
+}
+	\end{minted}
+ 
+
+\item \bf{Java}
+
+    \begin{minted}{java}
+import java.util.*;
+
+class Bmain{//Ejemplo del nombre de la clase
+//para el problema B
+
+    public static void main(String []args)
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        int casos,a,b;
+        
+        casos = sc.nextInt();
+        
+        while(casos-- > 0)
+        {
+            a = sc.nextInt();
+            b = sc.nextInt();
+            
+            System.out.println(a+b);
+        }
+    }
+}
+    \end{minted}
+\end{itemize}
+
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+
+\end{multicols}
+
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Grupo de Algoritmia}

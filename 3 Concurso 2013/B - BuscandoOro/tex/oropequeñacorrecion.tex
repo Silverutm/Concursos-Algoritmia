@@ -1,0 +1,77 @@
+\documentclass[letter,10pt]{article}
+\usepackage{anysize}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema B - Buscando Oro}
+
+\includegraphics[scale=0.7]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema B - Buscando Oro
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Has descubierto la Ciudad de Oro. Como te encanta el oro, has empezado a recolectarlo. Pero hay tanto oro que te estás cansando mientras lo recolectas, así que quieres saber cuál es el mínimo esfuerzo necesario para obtener todo el oro.
+
+La ciudad está descrita con una cuadrícula $2D$, donde tu posición inicial está marcada con una '\textbf{x}'. Un espacio vacío se denotará con un '\textbf{.}'. Y los lugares que contienen oro se denotarán con una '\textbf{g}'. En cada movimiento puedes desplazarte a todos los $8$ lugares adyacentes dentro de la ciudad.
+
+\subsection*{Entrada}
+
+La primera línea será un entero $T$ ($1 \leq T \leq 100$), que denota el número de casos.
+Cada caso empezará con dos enteros, $m$ y $n$ ($0 < m, n \leq 20$) denotando los renglones y columnas de la ciudad, respectivamente. Las siguientes $m$ líneas contienen $n$ caracteres que describen las ciudad. Habrá sólo una '$\textbf{x}$'  en la ciudad y a lo más 15 posiciones de oro.
+
+\subsection*{Salida}
+
+Para cada caso de prueba debes imprimir un entero indicando el mínimo número de pasos requeridos para recolectar todo el oro de la ciudad y regresar a la posición inicial.
+
+\subsection*{Entrada ejemplo}
+
+\noindent \texttt{2}~\\
+\texttt{5 5}~\\
+\texttt{x....}~\\
+\texttt{g....}~\\
+\texttt{g....}~\\
+\texttt{.....}~\\
+\texttt{g....}~\\
+\texttt{5 5}~\\
+\texttt{x....}~\\
+\texttt{g....}~\\
+\texttt{g....}~\\
+\texttt{.....}~\\
+\texttt{.....}~\\
+\noindent 
+
+\subsection*{Salida Ejemplo}
+
+\noindent \texttt{Case 1: 8}~\\
+\texttt{Case 2: 4}~\\
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{LightOJ Online Judge}
+\end{document}

@@ -1,0 +1,113 @@
+\chapter*{Problema C - Cuando una Hámster Quiere Jugar}
+
+A mi hámster le encanta jugar. Hoy decidió salir al
+patio a escavar hoyos para matar el aburrimiento. Para 
+su comodidad decidí trazar líneas en el patio de tal 
+forma que éste fuera una cuadrícula, y en cada uno de 
+los cuadros haya una piedra en algún punto que no le 
+permitirá a la roedora hacer un hoyo más profundo.
+
+Mi hámster comienza en el cuadro que más le guste en
+ese momento y saca toda su tierra hasta encontrar la
+piedra. Luego, se mueve a alguno de los cuadros con los
+que comparte al menos un vértice y escarva hasta que se
+encuentre con la piedra de ese cuadro, o bien, hasta que
+alcance la misma profundidad con la que quedó el cuadro 
+anterior, lo que suceda \textit{primero}. La inteligente
+roedora continúa con este proceso hasta que se encuentre
+con una piedra a nivel del suelo, es decir, a profundidad
+0.
+
+Considerando que la hámster puede moverse y regresar a
+dónde ella desee y que puede moverse de manera 
+horizontal, vertical y diagonal en la dirección que 
+quiera, ¿cuál es la máxima cantidad de tierra que puede
+sacar?
+$$ $$
+\textbf{Nota:} Mi hámster tiene un asistente que retira
+la tierra en cuanto hace un hoyo, así que no tienes que 
+preocuparte por pensar qué sucederá una vez que la 
+tierra esté fuera del cuadro.
+
+
+
+
+\subsection*{Entrada}
+La primera línea estará compuesta por dos números 
+naturales $m$ y $n$, que indicarán el tamaño de la 
+cuadrícula de la que dispone mi hámster. Luego, se te
+dará una matriz $M$ de enteros no negativos de $m \times 
+n$, en la que te indicaremos cuál es la profundidad de la
+piedra en ``unidades hamsterunas" (las coordenadas de la
+matriz empiezan en 1). Finalmente, encontrarás una línea
+compuesta por dos enteros $s_i$ y $s_j$, las coordenadas 
+del punto en el que el animalillo decidió comenzar.
+
+
+
+\subsection*{Salida}
+Imprime, en unidades hamsterunas, la máxima cantidad de
+tierra que mi mascota podrá sacar.
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $1 \leq m, n \leq 50$, $0 \leq m_{ij} 
+    \leq 100$, $1 \leq s_i \leq m$, $1 \leq s_j \leq n$
+    $\quad \;\;\;\;\;\;\;$ $35$ puntos.
+    \item Mediano: $1 \leq m, n \leq 50$, $0 \leq m_{ij} 
+    \leq 10^9$, $1 \leq s_i \leq m$, $1 \leq s_j \leq n$
+    $\quad \;\;\;\;\;\;\;$ $20$ puntos.
+    \item Grande: $1 \leq m, n \leq 500$, $0 \leq m_{ij} 
+    \leq 10^{10}$, $1 \leq s_i \leq m$, $1 \leq s_j \leq 
+    n$    $\quad \;\;\;\;\;$ $45$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+3 3
+5 0 5
+1 2 1
+0 0 5
+2 2
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+10
+\end{verbatim}
+
+\end{multicols}
+
+%%%%%%%%%%%%%%%
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+2 5
+2 3 4 0 1000
+3 2 3 0 1000
+2 1
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+16
+\end{verbatim}
+
+\end{multicols}

@@ -1,0 +1,89 @@
+\chapter*{Problema G - Gastando en Regalos}
+
+En GUAPA somos muy unidos, y para navidad queremos hacer
+un intercambio de regalos. :D Como también somos muy 
+previsores, hemos empezado a planear ya el intercambio.
+
+A cada persona le asignamos un número e hicimos el 
+acostumbrado sorteo con papelitos esperando que todos 
+regalaran y recibieran algo. El problema es que cometimos 
+un error al poner los papelitos en la caja, y es probable
+que exista más de una persona asignada a regalarle algo a 
+un humano, que exista un humano para el que nadie haya 
+sido asignado o incluso que alguien tenga el papelito de su 
+propio número.
+
+Como el destinatario de nuestros regalos es, por el
+momento, secreto, es tu deber determinar en qué casos
+la asignación de las personas es correcto.
+
+
+
+\subsection*{Entrada}
+La primera línea estará compuesta únicamente por un
+entero positivo $T$, que representa el número de casos que
+se presentarán. Cada caso iniciará con una línea en la que 
+se dará un número natural $n$ - el número de personas que
+entrarán al intercambio. Finalmente, para cada caso se
+darán $n$ líneas, cada una con dos números naturales $p$,
+$q$, separados por un espacio, que representan, 
+respectivamente, a la persona emisora y a la persona
+receptora del regalo.
+
+
+
+\subsection*{Salida}
+Para cada caso, debes imprimir en una línea distinta 
+``Intercambio existoso."$\,$si la asignación de las 
+personas es correcta, o bien, ``Papelitos otra vez."$\,$si
+no lo es.
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Caso Único: $ 1 \leq T \leq 100 $, $ 1 \leq n 
+    \leq 10^3 $, $ 1 \leq p, q \leq n$   $\quad \;\;\;\;\;$ $100$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+4
+3
+1 1
+2 3
+3 2
+4
+1 2
+2 1
+3 4
+4 3
+4
+1 2
+2 3
+3 2
+4 1
+3
+1 2
+2 3
+3 1
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+Papelitos otra vez.
+Intercambio exitoso.
+Papelitos otra vez.
+Intercambio exitoso.
+\end{verbatim}
+
+\end{multicols}

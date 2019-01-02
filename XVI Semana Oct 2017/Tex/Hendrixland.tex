@@ -1,0 +1,88 @@
+\chapter*{Problema H - Hendrixland}
+
+Mr. Malvavisco es un ser muy perezoso. Justo ahora está de
+vacaciones en Hendrixland, y quiere recorrer todo lo que 
+su pereza y su tiempo le permitan. Para eso te ha pedido
+ayuda a ti. 
+
+Mr. Malvavisco tiene en su poder una lista de los lugares
+a los que le gustaría ir, representados, cada uno, con uno
+de los primeros $V$ números naturales distinto, así como 
+las conexiones inmediadas (las aristas) que existen entre 
+ellos. Como ya te dije, Mr. Malvavisco es muy flojo, así 
+que realmente no está dispuesto a perder su tiempo 
+intentando llegar a un lugar que no es alcanzable desde 
+alguno de los puntos de su lista, por lo que tú debes 
+avisarle antes de que lo intente y se enoje con todos 
+nosotros.
+
+
+
+\subsection*{Entrada}
+La primera línea, como siempre, será un entero $T$, el 
+número de casos que recibirás. Luego, cada caso comenzará
+con una línea compuesta por dos números naturales 
+separados por un espacio $V$ y $A$, el número de lugares y
+de conexiones inmediatas, respectivamente.
+Posteriormente, para cada caso habrá $A$ líneas compuestas
+de dos enteros $x, y$ tales que $1 \leq x, y \leq V$,
+describiendo así que existe una arista que conecta a $x$
+con $y$.
+
+
+
+\subsection*{Salida}
+Para cada caso, imprime en una línea distinta ``Go, Mr. 
+Malva!"$\,$si es posible llegar de cada punto en la lista
+de Mr. Malva a cualquier otro punto. En caso contrario,
+imprime ``Go to sleep, Mr. Malva.".
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 10^2 $, $ 1 \leq V \leq
+    10^2 $, $ 1 \leq A \leq 10^3 $    $\quad \;\;\;\;\;$ 
+    $30$ puntos.
+    \item Mediano: $ 1 \leq T \leq 10^2 $, $ 1 \leq V \leq
+    10^3 $, $ 1 \leq A \leq 10^4 $    $\quad \;\;\;\;\;$ 
+    $30$ puntos.
+    \item Grande: $ \;\, 1 \leq T \leq 10 $, $ 1 \leq V \leq
+    10^4 $, $ 1 \leq A \leq 10^5 $  $\quad \quad \quad$ 
+    $40$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+2
+3 2
+1 2
+2 3
+4 2
+1 2
+3 4
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+Go, Mr. Malva!
+Go to sleep, Mr. Malva.
+\end{verbatim}
+
+\end{multicols}
+
+
+
+\subsubsection*{Nota:}
+Considera las conexiones como bidireccionales, es decir,
+si se puede llegar del punto $x$ al punto $y$, entonces
+también es posible llegar del punto $y$ al punto $x$.

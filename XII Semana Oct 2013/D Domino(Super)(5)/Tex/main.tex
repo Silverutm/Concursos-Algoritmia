@@ -1,0 +1,80 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema D - Dominó}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+    \Large Problema D - Dominó
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundo
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Mauricio tiene $N$ piezas de domino en fila. Cada pieza se divide en dos partes iguales en tamaño, - la superior y la inferior -. Cada una de las partes contiene un número del 1 al 6.
+A Mauricio le encantan los números pares, así que quiere que la suma de los números de las mitades superiores y la suma de los números de las mitades inferiores sea par.
+
+Para lograr eso, Mauricio puede rotar las piezas de dominó 180 grados. Despues de una rotación las mitades cambian lugares. Esta acción toma 1 segundo. Ayuda a Mauricio a averiguar el tiempo mínimo que debe gastar girando piezas de dominó para que se cumpla lo que él quiere.
+
+
+\subsection*{Entrada}
+
+La primera línea contiene un entero $T(1<T<50)$, el número de casos de prueba.
+Para cada uno de los siguientes $T$ casos, hay una línea que contiene un entero $N(1<=N<=100)$, el número de piezas de dominó que tiene Mau. Las siguientes $N$ líneas contienen dos enteros $X_{i},Y_{i},(1<=X_{i},Y_{i}<=6)$ cada una, separados por un espacio. El número $X_{i}$ es el que esta escrito inicialmente en la mitad superior del i-ésimo dominó, mientras que $Y_{i}$ es el que está escrito en la mitad inferior. 
+
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+
+\subsection*{Salida}
+
+Para cada caso imprime solo una línea, esta deberá decir Caso T: seguido por el mínimo de segundos requeridos para realizar la tarea. T es el caso actual empezando a numerarlos desde 1. Si resulta imposible lograr tal tarea, imprime un '-1'(sin comilla).
+
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+2
+2
+4 2
+6 4
+1
+2 3
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+Caso 1 :0
+Caso 2 :-1
+\end{verbatim}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Caribbean Online Judge}
+\end{document}

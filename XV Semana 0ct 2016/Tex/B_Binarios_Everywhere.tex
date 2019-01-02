@@ -1,0 +1,86 @@
+\chapter*{Problema B - Binarios Everywhere}
+
+\begin{center}
+  \begin{tabular}{ | l | l | l | }
+    \hline
+    Tiepo Límite: 2u & Memoria Límite: 512Mb & Código Fuente: \texttt{binarioseverywhere.\{java|cpp|c|py\}} \\
+    \hline
+  \end{tabular}
+\end{center}
+
+El Mai quiere comprar un celular para jugar Monsterball Go, pero dado que hay demasiados celulares en el mercado no sabe cual comprarse, así que decidió encuestar a amigos que tienen celulares con Mosterball Go. Estos son sus resultados:
+
+\begin{center}
+\begin{tabular}{l|cccc}
+Amigo/Prestación   & Es negro & Es barato & Andriod & Antiagua \\
+\hline
+Hugo    & Sí & No & No & Sí \\
+Paco    & Sí & No & Sí & No \\
+Luis    & Sí & No & No & No \\
+Donald  & Sí & No & Sí & No \\
+\end{tabular}
+\end{center}
+
+Después de analizar sus resultados El Mai quedó convencido que su celular debe ser negro y no barato (todos sus amigos coincidieron en eso), también se convenció que no importa si tiene andriod o es antiagua (ya que sus amigos no concuerdan en eso).
+
+El Mai fue a la tienda y le mostraron muchos celulares, y te ha pedido tu ayuda para decidir que celulares podrían cumplir con los requerimientos que el busca.
+\subsection*{Entrada}
+
+La primera línea de entrada será un número $N$ $(1 \leq  N\leq 100)$, que es el número de casos de prueba, después vendrán $N$ casos. Cada caso comienza con una linea con dos números $A$ y $P$ que indican la cantidad de amigos que El Mai tiene y el número de preguntas que les hizo. Después vendrán A lineas cada una con P números cada uno. Si número $a_{ij}=1$ indica que el i-esimo amigo respondió que sí a la j-esima pregunta, si $a_{ij}=0$ entonces ese amigo respondió que no a esa pregunta. \\
+La siguiente linea tendrá un numero $C$, que indicará el numero de celulares que le mostraron en la tienda al Mai, Después vendrán $C$ lineas, cada una con P números siguiendo el formato de las respuestas que dieron los amigos del Mai.
+
+\subsection*{Salida}
+Para cada caso indica la cantidad de celulares que cumplen con los requisitos de El Mai
+
+\subsection*{Limites de los conjuntos de datos}
+
+\begin{itemize}
+\item Pequeño: $ 1\leq A, P, C \leq 100 $ $\quad \quad$ $30$ puntos.
+\item Mediano: $ 1\leq A, P, C \leq 200 $ $\quad \quad$ $30$ puntos.
+\item Grande: $\,\;\,  1\leq A, P, C \leq 500 $ $\quad \quad$ $40$ puntos.
+\end{itemize}
+\newpage
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+3
+4 4
+1 0 0 1
+1 0 1 0
+1 0 0 0
+1 0 1 0
+3
+1 0 1 1
+0 1 0 0
+1 0 1 0
+2 2
+1 1
+0 1
+1
+0 0
+1 10
+1 1 1 0 1 1 1 1 1 1
+8
+1 1 1 1 1 0 1 1 1 0
+1 1 1 1 1 1 1 1 1 1
+1 1 1 0 1 1 1 1 1 1
+1 0 0 1 1 1 1 0 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 0 1 1 1 1 1 0 0
+1 1 0 1 1 1 1 1 1 1
+1 1 0 1 1 1 1 1 1 1
+\end{verbatim}
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+2
+0
+1
+\end{verbatim}
+\end{multicols}
+
+\subsection*{Notas:}
+El primer caso se explica en la descripción del problema.
+Para el segundo caso, el único celular que hay en la entrada no cumple, puesto que todos los amigos de El Mai concuerdan con que es imperativo la presencia de la segunda característica, para que sea capaz de correr Monsterball Go.
+En el tercer caso, solo el tercer celular cumple con los requisitos de El Mai.

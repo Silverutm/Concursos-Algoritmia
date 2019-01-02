@@ -1,0 +1,118 @@
+\documentclass[10pt]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[b]{esvect}
+\usepackage[section]{placeins}
+\usepackage{url}
+\usepackage{minted}
+\usepackage{subcaption}
+\usepackage[section]{placeins}
+\usepackage{multicol}
+\usepackage{makeidx}
+\usepackage{glossaries}
+\usepackage{fancyhdr}
+\usepackage{kbordermatrix}% :'(
+\usepackage{mathtools}
+\usepackage{listings}
+
+\newtheorem{lema}{Lema}
+\newtheorem{defin}{Definición}
+\newtheorem{teo}{Teorema}
+\newtheorem{prop}{Proposición}
+\newtheorem{cor}{Corolario}
+\newtheorem{ej}{Ejemplo}
+
+%\setlength{\parskip}{5mm}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+\newcommand*{\plogo}{\includegraphics[scale=0.6]{algoritmia.png}} % Generic publisher logo
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
+\hbox{ % Horizontal box
+\hspace*{0.1\textwidth} % Whitespace to the left of the title page
+\rule{1pt}{\textheight} % Vertical line
+\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
+\parbox[b]{1\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+
+{\noindent\Huge\bfseries Editorial Concursos \\[0.5\baselineskip] de Programación}\\[2\baselineskip] % Title
+{\large \textit{Solución a los problemas de los concursos realizados por el grupo de Algoritmia durante el ciclo 105 A.C. - 2015 D.C.}}\\[4\baselineskip] % Tagline or further description
+{\Large \textsc{Grupo Universitario de Algoritmia y \\ Programación Competitiva}} % Author name 
+
+\vspace{0.05\textheight}
+{\Large \textsc{Universidad Nacional Autónoma de México}} % Author name
+
+\vspace{0.4\textheight} % Whitespace between the title block and the publisher
+{\noindent \plogo }\\[\baselineskip] % Publisher and logo
+}}
+\endgroup}
+
+%----------------------------------------------------------------------------------------
+%	BLANK DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+\begin{document}
+
+\frontmatter
+\pagestyle{plain}
+\begin{titlepage}
+	
+	\titleGM % This command includes the title page
+\end{titlepage}
+
+\pagestyle{fancy}
+\tableofcontents
+
+
+
+
+\renewcommand{\sectionmark}[1]{}
+\input{Intro.tex}
+
+\mainmatter
+\input{3erConcurso.tex}
+\input{SemanaMac12.tex}
+\input{4toConcurso.tex}
+\input{SemanaMac13.tex}
+\input{5toConcurso.tex}
+\input{SemanaMac14.tex}
+
+\backmatter
+\end{document}

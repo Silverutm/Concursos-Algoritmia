@@ -1,0 +1,111 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema H - Haciendo Ananagramas}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema H - Haciendo Ananagramas
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Muchos aficionados a los crucigramas suelen utilizar 
+anagramas (grupos de palabras con las mismas letras en 
+diferente orden) por ejemplo: AMOR, ROMA, OMAR, MORA,
+RAMO, ARMO y MARO. Sin embargo, no todas las palabras cumplen
+con este atributo, ya que no importa como trates de ordenar sus
+letras no podrás formar otra palabra. Estas palabras se llaman
+ananagramas, un ejemplo es SEXY.
+
+Es obvio que la definición anterior depende del dominio con el
+que nosotros estemos trabajando, tú podrías pensar que APARCAMIENTO
+es un ananagrama, pero cualquier médico te podría desmentir 
+fácilmente  ya que el te diría que existe METACARPIANO. Un posible
+dominio podría ser todo el idioma español, pero esto podría acarrear 
+algunos problemas. Nosotros podemos restringir el dominio, por ejemplo,
+Geografía, en cuyo caso NEPAL se vuelve un anagrama relativo
+(PANEL no esta en el mismo dominio), pero QUERETARO no lo es ya que
+puede transformarse a TERRAQUEO.
+
+Tú debes escribir un programa que lea un diccionario de un
+dominio restringido de palabras y determinar todos los posibles
+ananagramas relativos. Debes notar que las palabras de una sola
+letra son, ipso facto, ananagramas relativos ya que no se pueden 
+"reorganizar" de ningún otra forma. Nuestro diccionario no 
+contendrá más de mil palabras. 
+
+\subsection*{Entrada}
+
+La entrada consiste en una serie de lineas. Ninguna línea
+tendrá más de 80 caracteres de largo, pero puede contener
+cualquier número de palabras. Las palabras consisten de 
+hasta 20 caracteres (mayúsculas y minúsculas) letras y no se cortarán
+entre lineas. Los espacios pueden aparecer libremente 
+entre las palabras y por lo menos un espacio separa múltiples
+palabras en la misma linea. Tenga en cuenta que las palabras
+que contienen las mismas letras pero con diferente capitalización
+se consideran anagramas entre si, por ejemplo CoNsErVaDorA y 
+cOnvErsAdOra son anagramas. El archivo de entrada termina
+con una linea consistente del símbolo \#.
+
+\subsection*{Salida}
+
+La salida consistirá de una serie de lineas. Cada línea consistirá
+de una sola palabra que será un ananagrama relativo en el diccionario
+de entrada. Las palabras deberán ser puestas en orden lexicográfico
+(sensible a capitalización). Se asegura que siempre habrá por lo menos
+unananagrama relativo.
+
+\subsection*{Entrada ejemplo}
+\noindent \texttt{ladder came tape soon leader acme RIDE lone Dreis peat}~\\
+\texttt{ ScAlE orb  eye  Rides dealer  NotE derail LaCeS  drIed}~\\
+\texttt{noel dire Disk mace Rob dries}~\\
+\texttt{\#}~\\
+\noindent 
+
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+
+\subsection*{Salida Ejemplo}
+
+\noindent \texttt{Disk}~\\
+\texttt{NotE}~\\
+\texttt{derail}~\\
+\texttt{drIed}~\\
+\texttt{eye}~\\
+\texttt{ladder}~\\
+\texttt{soon}~\\
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Waterloo Local Contest 2005 September 24 (Richard Krueger)}
+\end{document}

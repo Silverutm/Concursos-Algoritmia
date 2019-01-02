@@ -1,0 +1,100 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema F -  Falsa Simulación}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema F -  Falsa Simulación
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+El siguiente problema consta de una simulación muy concreta... ¿o no?.
+Tendrán una matriz $M$ de tipo $1234$(filas) $\times 5678$(columnas). Está inicialmente llena con enteros
+desde el $1, 2, \dots, 1234 \times 5678$ de menor a mayor por filas.
+Existen 4 tipos de comandos:
+\begin{itemize}
+    \item ``R x y'' intercambia la $x$-ésima y $y$-ésima fila de $M$.
+    \item ``C x y'' intercambia la $x$-ésima y $y$-ésima columna de $M$.
+    \item ``Q x y'' imprime  $M(x,y)$.
+    \item ``W z'' imprime $x$ e $y$ donde $z=M(x,y)$.
+\end{itemize}
+
+\subsection*{Entrada}
+
+Te serán dadas una lista de comandos válidos. La entrada de termina con el fin de archivo.
+
+\subsection*{Salida}
+
+Para cada `W z'' imprime una línea con $x$ e $y$ separados por un espacio donde $z=M(x,y)$ y para cada ``Q x y'' imprime una línea con $M(x,y)$.
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+R 1 2
+Q 1 1
+Q 2 1
+W 1
+W 5679
+C 1 2
+Q 1 1
+Q 2 1
+W 1
+W 5679
+\end{verbatim}
+
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+5679
+1
+2 1
+1 1
+5680
+2
+2 2
+1 2
+\end{verbatim}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Sphere Online Judge}
+\end{document}

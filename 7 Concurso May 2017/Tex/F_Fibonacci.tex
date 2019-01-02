@@ -1,0 +1,63 @@
+\chapter*{Problema F - Fibonaccis y Malvaviscos}
+
+%\begin{center}
+%  \begin{tabular}{ | l | l | l | }
+%    \hline
+%   Tiepo Límite: 2u & Memoria Límite: 512mb & Código Fuente: %\texttt{findingekt.\{java|cpp|c|py\}} \\
+%    \hline
+%  \end{tabular}
+%\end{center}
+
+Malva es un malvavisco parlante al que le obsesionan los juegos con los números, y a quien le encanta ponerle retos a sus amiguitos. Cuando éstos logran resolver sus problemas, les regala un iPad, pero cuando no lo logran, se burla de ellos. 
+
+Este reto consiste en lo siguiente:
+
+Malva dice un número $n$. Entonces tú debes obtener el $n$-ésimo término
+de la serie de Fibonacci. Pero esto no acaba aquí. Malva nunca lo hace fácil
+(porque no cuenta con tantos recursos para comprar tantos iPad). Una vez 
+obtenido el $n$-ésimo término, debes sumar los dígitos del mismo. Si el número 
+resultante tiene más de un dígito, debes volver a sumar todos sus dígitos. 
+Así, repites este proceso hasta que tu resultado sea únicamente de un dígito. 
+
+A Malva le gusta que sigan sus instrucciones al pie de la letra, pero eso no es importante para mí, quien le dirá a Malva si lograste o no pasar su reto, así que si usas un procedimiento distinto, tranquilo, él no lo sabrá.Por último, considera $f_1=1$ y $f_2=1$.
+
+
+\subsection*{Entrada}
+
+La primera línea en la entrada será el número de casos, seguido de $T$ líneas, una para cada caso, únicamente compuestas por el número natural $n$.
+
+
+\subsection*{Salida}
+
+Para cada caso, imprime en una línea distinto el dígito que resulta en el reto de Malva para el $n$ dado.
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 30 $, $ 1 \leq n \leq 40 $ $\quad \quad \quad \;\,$ $30$ puntos.
+    \item Mediano: $ 1\leq T \leq 60 $, $ 1 \leq n \leq 90 $ $\quad \quad \quad \;\,$ $25$ puntos.
+    \item Grande: $ \,\; 1\leq T \leq 10^5 $, $ 1 \leq n \leq 10^6 $ $\quad \quad$ $45$ puntos.
+\end{itemize}
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+4
+6
+11
+12
+18
+\end{verbatim}
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+8
+8
+9
+1
+\end{verbatim}
+\end{multicols}
+
+\subsection*{Notas:}
+En el segundo caso, el 11avo elemento de la secuencia de Fibonacci es 89. Como tiene más de un dígito, sumamos 8+9=17. Luego, 17 también tiene más de un dígito, así que repetimos el proceso: 1+7=8. La salida finalmente es 8.

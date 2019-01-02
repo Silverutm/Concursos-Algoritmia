@@ -1,0 +1,62 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema A - A + B}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema A - A + B
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Para éste problema tienes que calcular A+B, los cuáles serán dados en la entrada. 
+
+\subsection*{Entrada}
+
+Recibirás varias parejas de números, A y B, mayores o iguales que 0, y menores de 32768. La entrada termina con dos ceros.
+
+\subsection*{Salida}
+
+Las salidas serán los resultados A+B. La última línea no se procesa	
+
+\subsection*{Entrada ejemplo}
+\noindent \texttt{1 2}~\\
+\texttt{3 4}~\\
+\texttt{0 0}~\\
+\noindent 
+
+\subsection*{Salida Ejemplo}
+
+\noindent \texttt{4}~\\
+\texttt{7}~\\
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+
+\end{document}

@@ -1,0 +1,52 @@
+\chapter*{Problema C - Cupo limitado}
+
+\begin{center}
+  \begin{tabular}{ | l | l | l | }
+    \hline
+    Tiepo Límite: 2u & Memoria Límite: 512mb & Código Fuente: \texttt{cupolimitado.\{java|cpp|c|py\}} \\
+    \hline
+  \end{tabular}
+\end{center}
+
+En la semana de MAC se realizan una copiosa cantidad de conferencias y actividades, la mayoría de ellas en el auditorio I. Debido a su alta demanda, en jefatura ya no saben a quien prestar el auditorio, ya que muchos eventos que ocurren a la misma hora han solicitado su uso y te han pedido que les ayudes a decidir a quien prestar el auditorio I.
+
+Dos eventos no pueden estar en al auditorio a la misma hora, aunque hayan comenzado o terminado en horas distintas. Los altos mandos de jefatura han decidido que prestes el auditorio de tal manera que la mayor cantidad de eventos posibles ocurran sin traslaparse, sin importar la duración de estos. Para esto se dará el tiempo (en minutos) en que cada evento planea ocupar el auditorio y el tiempo en que lo desocupará.
+
+\subsection*{Entrada}
+
+La primera línea de entrada será un número $C$ $(1 \leq  C\leq 100)$, que es la cantidad de casos de prueba. Cada caso de prueba comenzará con un numero n, el número de eventos que solicitan el auditorio, después vendrán n lineas, cada una con dos enteros $I_i F_i$, que indican el tiempo de inicio y final del $i-esimo$ evento, podemos decir que ese evento desea usar el auditorio I en el intervalo de tiempo $[I_i, F_i)$.
+
+\subsection*{Salida}
+Para cada caso imprime en una linea distinta la máxima cantidad de eventos que es posible tener en el auditorio I sin que se traslapen.
+
+\subsection*{Limites de los conjuntos de datos}
+
+\begin{itemize}
+\item Pequeño: $1 \leq n \leq 100, 1 \leq I_i< F_i \leq 10^5 $ $\quad \quad \quad \;$ $35$ puntos.
+\item Mediano: $1 \leq n \leq 100, 1 \leq I_i< F_i \leq 10^{10} $ $\quad \quad \quad$ $35$ puntos.
+\item Grande:  $\,\;\, 1 \leq n \leq 10000, 1 \leq I_i< F_i \leq 10^{12}  $  $\quad \quad$ $30$ puntos.
+\end{itemize}
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+3
+3
+1 4
+5 8
+3 6
+2
+6 8
+9 10
+1
+1 2
+\end{verbatim}
+\columnbreak
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+2
+2
+1
+\end{verbatim}
+\end{multicols}
+

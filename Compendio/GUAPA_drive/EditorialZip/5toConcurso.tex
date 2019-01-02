@@ -1,0 +1,369 @@
+\chapter{5"o Concurso Interno de Programación}
+\chaptermark{5"o Concurso Interno}
+
+\section{Problema A - Analizando Exámenes}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dados dos arreglos $A$ y $B$, de tamaño $n$, se te pide saber cuántos índices $i$ cumplen que $a[i] = b[i]$.
+\subsection*{Solución}
+Directa.
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+import java.util.*;
+ 
+class Amain
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        int a[] = new int[1005], b[] = new int[1005];
+        int n = sc.nextInt();
+         
+        for(int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+ 
+        for(int i = 0; i < n; i++)
+            b[i] = sc.nextInt();
+ 
+        int ans = 0;
+        for(int i = 0; i < n; i++)
+            ans += a[i] == b[i] ? 1 : 0;
+ 
+        System.out.println(ans);
+    }
+}
+\end{minted}
+
+\section{Problema B- Buscando matriz}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(N)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dada una serie de $N$ observaciones y a lo más $S$ tipos de pago, se quiere encontrar una matriz de transiciones entre estos estados. Éstas son las probabilidades de cada estado por cada entrada de la matriz. Esta matriz no es simétrica.
+
+\subsection*{Solución}
+Se recorre la cadena de observaciones, se identifica el tipo de observación $o_i$ y $o_{i-1}$, y en una matriz se cuentan dichas incidencias, esta incidencia debe ser del tipo $s= o_{i-1} \rightarrow s' = o_{i}$. Entonces por cada una de estas incidencias podemos hacer \texttt{mat[s][s']++}. Al final cada renglón de la matriz se normaliza por el total de observaciones del tipo $s$.
+
+
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{java}
+import java.util.*;
+
+class Bmain
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int tt = sc.nextInt();
+		 
+		while (tt-- > 0)
+		{
+			double mat[][] = new double[20][20], tot[] = new double[20];
+			int arr[] = new int[505];
+			int S, N;
+
+			N = sc.nextInt();
+			S = sc.nextInt();
+
+			for(int j = 0; j < N; j++)
+			{
+				arr[j] = sc.nextInt();
+				arr[j]--;
+			}
+
+			for(int j = 0; j < N-1; j++)
+			{
+				tot[arr[j]]++;
+				mat[arr[j]][arr[j+1]]++;
+			}
+
+			for(int i = 0; i < S; i++)
+			{
+				for(int j = 0; j < S; j++)
+				{
+					if(tot[i] > 0)
+						System.out.printf("%.2f ", mat[i][j] / tot[i]);
+					else
+						System.out.printf("%.2f ", mat[i][j]);
+				}
+				System.out.println();
+			}
+			System.out.println();
+		}
+	}
+}
+\end{minted}
+
+\section{Problema C - Contando nombres}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star \star$ \\
+\textbf{Temas:} Matemáticas \\
+\textbf{Complejidad:} $O(n^2)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dada una cadena de tamaño $n$, compuesta por letras minúsculas, se te pide saber cuántas cadenas diferentes puedes formar usando los caracteres de la cadena.
+\subsection*{Solución}
+Sabemos que podemos acomodar los $n$ caracteres de la cadena en $n!$ formas, creando este número de cadenas. Sin embargo existen algunas cadenas que se repiten, en especial, si $a_i$ es la cantidad que se repite el $i$-ésimo tipo de caracter de la cadena, entonces se repiten $a_1!a_2!...a_k!$ cadenas. Por lo tanto la respuesta es $\displaystyle \frac{n!}{a_1!a_2!...a_k!} = \displaystyle \binom{n}{a_1}\binom{n-a_1}{a_2}...\binom{n-a_1-...-a_{k-1}}{a_k}$
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <bits/stdc++.h>
+ 
+#define For(i, a, b) for(int i=a; i<b; ++i)
+#define INF (1<<30)
+#define MP make_pair
+#define MOD 1000000007
+ 
+using namespace std;
+ 
+typedef pair <int, int> ii;
+typedef long long ll;
+ 
+int C[205][205], v[30];
+ 
+int main()
+{
+    //std::ios_base::sync_with_stdio(false);
+ 
+    For(i, 0, 201)
+        For(j, 0, i+1)
+            C[i][j] = i == j or j == 0 ? 1 : (C[i-1][j] + C[i-1][j-1]) % MOD;
+ 
+    int tt;
+    scanf("%d", &tt);
+ 
+    while (tt--)
+    {
+        memset(v, 0, sizeof v);
+         
+        char s[205];
+        scanf("%s", s);
+ 
+        int n = strlen(s);
+        For(i, 0, n)
+            v[s[i]-'a']++;
+ 
+        int ans = 1;
+        For(i, 0, 'z'-'a'+1)
+        {
+            if (v[i] > 0)
+                ans = (ans*C[n][v[i]]) % MOD;
+            n -= v[i];
+        }
+ 
+        printf("%d\n", ans);
+    }
+ 
+    return 0;
+}
+\end{minted}
+
+\section{Problema D - Dados}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star$ \\
+\textbf{Temas:} Matemáticas \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dados $n$ dados, todos con $m$ caras, quieres saber cuál es la suma de las caras de los dados con mayor probabilidad de salir al lanzar todos los dados.
+\subsection*{Solución}
+Sea $a$ y $b$ el mínimo y máximo, respecticamente, valor posible para la suma. Entonces es fácil ver que la respuesta es $\displaystyle \frac{a+b}{2}$.
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <bits/stdc++.h>
+ 
+#define For(i, a, b) for(int i=(a); i<(b); ++i)
+#define INF 1000000000
+#define MP make_pair
+ 
+using namespace std;
+ 
+typedef pair <int, int> ii;
+typedef long long ll;
+ 
+double p[55][2505];
+ 
+int main()
+{
+    //std::ios_base::sync_with_stdio(false);
+     
+    int tt;
+    scanf("%d", &tt);
+ 
+    while (tt--)
+    {
+        int n, m;
+        scanf("%d %d", &n, &m);
+        printf("%d\n", n == 1 ? 1 : (n*m - n)/2 + n);
+    }
+ 
+    return 0;
+}
+\end{minted}
+
+\section{Problema E - Encriptando mensajes}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Implementación \\
+\textbf{Complejidad:} $O(n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dada una cadena $s$ y un entero $k$, se te pide que encriptes $s$ haciendo $x$ XOR $k$ para cada caracter $x$ de $s$.
+\subsection*{Solución}
+Directa.
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <cstdio>
+#include <iostream>
+#include <string>
+#define For(x,a,b) for(int x=(a); x<(b); x++)
+using namespace std;
+ 
+int main()
+{
+    int C,k;
+    string cad;
+ 
+    scanf("%d",&C);
+ 
+    For(c,0,C)
+    {
+        cin >> k;
+        getline(cin,cad);
+        getline(cin,cad);
+ 
+        For(i,0,cad.size())
+        {
+            printf("%c ",(cad[i]^k));
+        }
+        printf("\n");
+    }
+    return 0;
+}
+\end{minted}
+
+\section{Problema F - Focos}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star$ \\
+\textbf{Temas:} Matemáticas \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Se te da un arreglo de focos y un interruptor que, al accionarlo la $i$-ésima vez, cambia el estado de los focos que son múltiplos de $i$. Después de accionar $n$ veces el interruptor, quieres saber el estado del $n$-ésimo foco, el cuál está inicialmente apagado.
+\subsection*{Solución}
+Si el número de divisores de $n$ es par, el foco estará apagado, sino estará prendido. Un entero $n$ tiene un número par de divisores si y sólo si es un cuadrado perfecto.
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <bits/stdc++.h>
+ 
+#define For(i, a, b) for(int i=a; i<b; ++i)
+#define INF (1<<30)
+#define MP make_pair
+ 
+using namespace std;
+ 
+typedef pair <int, int> ii;
+typedef long long ll;
+ 
+int main()
+{
+    //std::ios_base::sync_with_stdio(false);
+ 
+    int tt;
+    scanf("%d", &tt);
+ 
+    while (tt--)
+    {
+        int n;
+        scanf("%d", &n);
+ 
+        int r = sqrt(n);
+        printf("%s\n", r*r == n ? "son unos genios" : "les hace falta estudiar");
+    }
+ 
+    return 0;
+}
+\end{minted}
+
+\section{Problema G - Grupos}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(nm)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dados $n$ grupos, donde deben haber $m$ alumnos, $nm$ alumnos y la personalidad $a_i$ del $i$-ésimo alumno, quieres saber si es posible asignar los alumnos a los grupos de tal forma que no haya un grupo con más de un alumno de la misma personalidad.
+\subsection*{Solución}
+Si existen $k > n$ alumnos con la misma personalidad, es imposible crear los grupos, en caso contrario es siempre posible.
+\subsection*{Código}
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <bits/stdc++.h>
+ 
+#define For(i, a, b) for(int i=a; i<b; ++i)
+#define INF (1<<30)
+#define MP make_pair
+ 
+using namespace std;
+ 
+typedef pair <int, int> ii;
+typedef long long ll;
+ 
+int a[100005];
+ 
+int main()
+{
+    //std::ios_base::sync_with_stdio(false);
+ 
+    int tt;
+    scanf("%d", &tt);
+ 
+    while (tt--)
+    {
+        memset(a, 0, sizeof a);
+ 
+        int n, m;
+        scanf("%d %d", &n, &m);
+ 
+        bool ok = true;
+        For(i, 0, n*m)
+        {
+            int x;
+            scanf("%d", &x);
+            a[x]++;
+            if (a[x] > n)
+                ok = false;
+        }
+ 
+        printf("%s\n", ok ? "si" : "no");
+    }
+ 
+    return 0;
+}
+\end{minted}

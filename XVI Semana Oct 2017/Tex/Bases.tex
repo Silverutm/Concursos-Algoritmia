@@ -1,0 +1,67 @@
+\chapter*{Problema B - Bases, Bases Everywhere}
+
+¿No les pasa que cuando se transportan de un lugar a otro
+buscan relaciones en todos los números que ven por ahí?
+A mí sí, y les quiero compartir mi obsesión.
+
+Les voy a explicar cuál es la dinámica de hoy: Tomo un
+número y sumo sus dígitos, luego tomo el número resultante
+y sumo sus dígitos. Repito este proceso hasta obtener un
+sólo dígito. 
+
+Cuando me di cuenta de que era muy fácil comencé a buscar 
+cadenas de números con las letras, con el propósito de 
+tener números en bases 11, 12, 13, 14, 15 y 16. A éstos
+números les aplico el mismo proceso. Así, tú debes decirme
+cuál es el caracter que me quedó al final.
+
+
+
+\subsection*{Entrada}
+La primera línea contendrá un número $T$, el número de 
+casos de entrada. Posteriormente vendrán $T$ líneas, cada 
+una con dos enteros positivos $n$ y $b$ separadas por un 
+espacio. $n$ es el entero cuyos dígitos se suman y $b$ es
+la base en que está.
+
+
+
+\subsection*{Salida}
+Para cada caso, imprime en una línea distinta y en base 
+$b$, el caracter resultante de mi obsesivo proceso.
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 10^3 $, $ 1 \leq n
+    \leq 10^8$   $\quad \;\;\;\;\;$ $80$ puntos.
+    \item Grande: $ \;\, 1 \leq T \leq 10^{3}$, $ 1 
+    \leq n \leq 10^{15} $ $\quad \quad$ $20$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+3
+BC38A 14
+395 11
+A39B39 16
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+5
+7
+F
+\end{verbatim}
+
+\end{multicols}

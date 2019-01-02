@@ -1,0 +1,48 @@
+\chapter*{Problema A - A ver}
+Al profesor F acaba de descubrir una nueva serie, la cual es como sigue:
+
+\[   
+f(n) = 
+     \begin{cases}
+       n &\quad \text{si } 1 \leq n \\
+       f(n - 1) + f(n-2) &\quad \text{si no}
+     \end{cases}
+\]
+
+Justo cuando se disponia a darte el nombre de la serie fue interrumpido y le dijeron que la serie ya existe y que se llama de \textit{Fibonacci}, y como al parecer saben demasiado, les ha pedido resolver la siguiente suma:
+
+$$ \sum_{i=0}^n f^2(i) $$
+
+\subsection*{Entrada}
+La primera línea de la entrada contendrá un número $T$, el número de casos. Luego vendrán $T$ líneas -una para
+cada caso; cada una estará compuesta por un número $n$,
+entero positivo.
+
+\subsection*{Salida}
+Para cada caso, imprime el valor de la suma, como la respuesta puede ser muy grande imprimela modulo $188888881$
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 10^3$, $ 1 \leq n \leq 10^2$   $\quad \;\;\;\;\;$ $20$ puntos.
+    \item Mediano: $ 1 \leq T \leq 10^3$, $ 1 \leq n \leq 10^5$   $\quad \;\;\;\;\;$ $20$ puntos.
+    \item Grande: $ 1 \leq T \leq 10^3$, $ 1 \leq n \leq 10^{18}$   $\quad \;\;\;\;\;$ $30$ puntos.
+\end{itemize}
+
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+1
+2
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+2
+\end{verbatim}
+\end{multicols}
+
+

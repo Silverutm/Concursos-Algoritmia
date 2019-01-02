@@ -1,0 +1,101 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema C - Coleccionista}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+    \Large Problema C - Coleccionista
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundo
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Hernán es un joven apasionado por los videojuegos, le gustan de todo género, desde shooters, plataformas, carreras y estrategia  hasta llegar a los de aventura. Uno sus juegos favoritos es el de Pokémon. Pokémon es un juego en el que tu objetivo es conseguir todos los monstruos disponibles(llamados pokémon) y las medallas de todos los gimnasios para así demostrar que has vencido a los mejores.\\
+
+Aunque a Hernán le encantan todas las versiones de este juego, desde Rojo y Azul hasta X y Y, él no siempre quiere capturar a todos los pokémon disponibles en algunas versiones, ya sea porque considera que algunos son débiles o pequeños, e incluso feos.\\
+
+Debido a esto(y a que no le gusta hacer algo tan fácil), te ha pedido que le ayudes con una sencilla tarea.\\
+
+Dados el número total de pokémon disponibles en cada versión y dos listas de pokémon, la primera sera la lista de los que ya posee y la segunda la lista de los que no le interesan, determina las siguientes dos cosas:
+
+\begin{itemize}
+\item Cuantos y cuales pokémon  le faltan por capturar (solo de los que le interesan).
+\item Cuantos y cuales pokémon que posee puede cambiar, esto es, los pokémon que ya tiene y no le interesan.
+\end{itemize}
+
+Los pokémon se identificaran por enteros para facilitar su procesamiento.\\
+
+Es sabido que Hernán no posee mas de una especie del mismo pokémon por versión.\\ 
+
+\subsection*{Entrada}
+
+La entrada consta de varios casos de prueba.
+
+Cada caso consta de 3 líneas, la primera línea un entero $N$, $10<=N<=1000$, que indica el total de pokémon en la versión del juego.
+
+La segunda línea contiene un entero $A$,$0<=A<=N$, el número de pokémon que Hernán ha capturado en esa versión, seguido por una lista de $A$ enteros que representan a estos pokémon. Todos estos numeros estan separados por un espacio.
+
+La tercera línea contiene un entero $X$,$0<=X<=N$, el total de pokemon que no le interesan a Hernan, seguido por $X$ enteros que representan a los mismos. Todos estos numeros estan separados por un espacio.
+
+Para facilitar su identificación, los pokémon estan representados por numeros desde $1$ hasta $N$.
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+%$$$$
+
+\subsection*{Salida}
+
+Para cada caso imprime dos líneas:
+\begin{itemize}
+\item La primera constará de un entero $F$ que representará el número de pokémon que le interesa capturar a Hernan y aún no tiene, seguido por $F$ enteros que representan estos pokémon impresos en orden ascendente.
+\item La segunda constará de un entero $C$ que representará el número de pokémon que Hernán puede cambiar, seguido por $C$ enteros que serán los pokémon cambiables impresos en orden ascendente.
+\end{itemize}
+$$$$
+$$$$
+$$$$
+$$$$
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+11
+5 3 5 9 10 11 
+6 2 3 4 5 9 11 
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+4 1 6 7 8
+4 3 5 9 11
+\end{verbatim}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Maximiliano Vera Luna - Grupo de Algoritmia Avanzada y Programación Competitiva}
+\end{document}

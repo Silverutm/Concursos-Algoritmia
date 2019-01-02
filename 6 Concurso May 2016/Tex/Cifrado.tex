@@ -1,0 +1,58 @@
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+%\bigskip
+\begin{center}
+	\Large Problema C - Cifrado Vineger
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundos
+\par\end{flushright}
+%\bigskip
+
+\textbf{Problema}\\
+La conspiración para tomar el poder en el país del de CEDETEC ha escalado a niveles nunca antes vistos. El grupo rebelde se comunica mediante mensajes cifrados. Tu tarea como espía súper secreto es descifrar lo que dicen los mensajes interceptados.\\
+Los rebeldes usan el Cifrado de Vineger para que nadie pueda leer sus mensajes. Dicho cifrado consiste en concatenar una palabra llave hasta tener la misma longitud que la frase original, para luego sumar letra a letra la llave y la frase. Los espacios son ignorados en la suma (se pasa a la siguiente letra de la frase).
+La frase resultante será el mensaje cifrado.
+Para realizar la suma, se asignan valores a las letras, empezando en 0 de la siguiente forma: a=0, b=1, c=2\ldots z=25 (la ñ es excluida), y se aplica la operación módulo 26 a la suma para evitar salirse por senderos prohibidos. 
+
+\textbf{Entrada}\\
+La primera línea contendrá un solo número $T$ ($1 \leq T \leq 1000$), que representa la cantidad de casos de prueba, seguida de $T$ casos de prueba.
+Cada caso de prueba contendrá dos líneas: la primera línea será la frase cifrada (compuesta de caracteres entre `a' y `z' [en minúsculas] y espacios; cada frase tendrá una longitud de, a lo más, 200 caracteres); la segunda línea será la llave que utilizaron para cifrarla (compuesta únicamente de caracteres de entre `a' y `z' [en minúsculas], sin espacios y con una longitud de, a lo más, 30 caracteres).
+
+\textbf{Salida}\\
+Para cada caso de prueba, imprime la frase original antes de ser cifrada
+
+\begin{multicols}{2}
+
+\textbf{Entrada Ejemplo}
+\begin{verbatim}
+2
+em hpvgw mblm aem bo wybes im vwnu smyqsf 
+wabbit
+v ay tnnrfbahs 
+namby
+\end{verbatim}
+
+\columnbreak %Column break point
+
+\textbf{Salida Ejemplo}
+\begin{verbatim}
+
+im gonna make him an offer he cant refuse 
+i am spartacus
+\end{verbatim}
+
+\end{multicols}
+
+\textbf{Notas}
+\begin{verbatim}
+    im gonna make him an offer he cant refuse 
+  + wa bbitw abbi twa bb itwab bi twab bitwab
+  ________________________________________
+    em hpvgw mblm aem bo wybes im vwnu smyqsf 
+\end{verbatim}
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Silverio Flores Moroni - Grupo de Algoritmia}

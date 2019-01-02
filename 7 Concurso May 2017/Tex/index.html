@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<!-- First they ignore you, then they laugh at you, then they fight you, then you win. - Mohandas Karamchand Gandhi -->
+<html lang="en">
+  <head>
+
+ 
+
+
+<!-- CDN Failsafe -->
+  
+
+
+
+
+
+<!-- use the latest IE browser -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+<!-- generating meta tags -->
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<!-- Typography -->
+<link rel="stylesheet" id="js-hr-typography" type="text/css" href="https://hrcdn.net/lib/typography/345134/hosts/https/hrcdn.net/7C1B0FD393AD7F74A.css" data-noprefix />
+  <link rel="stylesheet" media="all" href="https://hrcdn.net/hackerrank/assets/external_libraries-2d8c9f893adb9c3bcad88170e348279a.css" />
+  <link rel="stylesheet" media="all" href="https://hrcdn.net/hackerrank/assets/external-core-cdf3d78891cd8702a2e3d41a6f37be41.css" />
+  <link rel="stylesheet" media="all" href="https://hrcdn.net/hackerrank/assets/hackerrank-554402841f29b8461524e54b9f64903f.css" />
+    
+
+
+  <title>Programming problems and Competitions :: HackerRank</title>
+  <meta name="viewport" content="width=device-width">
+  <base href="https://www.hackerrank.com/">
+</head>
+
+<script src="https://hrcdn.net/hackerrank/assets/base-9c1fbd41eaf488758b4fbd25af7ffaee.js"></script>
+<!-- failsafe -->
+
+
+    <style type="text/css">
+    .container{
+        width: 100%;
+        padding: 0px 20px;
+    }
+    .navigation{
+        height: 72px;
+    }
+    .contests_landing{
+        background: url(/lib/contests/generic/contest_bg.jpg) no-repeat;
+        background-size: cover;
+    }
+    .contests_landing svg{
+        margin-top: 65px;
+    }
+    .presents{
+        margin-top: -15px;
+        display: block;
+        color: #fff;
+    }
+    .navigation{
+        text-align: center;
+        position: relative;
+    }
+    .navigation ul li{
+        list-style-type: none;
+        display: inline-block;
+    }
+    .navigation ul li a{
+        display: inline-block;
+        padding: 25px 16px;
+        font-size: 16px;
+        color: #333;
+    }
+    .right-side{
+        margin-left: 0px;
+    }
+    .right-side ul li{
+        list-style-type: none;
+        margin-bottom: 5px;
+    }
+    .sections{
+        padding: 60px 0px;
+    }
+    .ticks{
+        width: 30px;
+        margin-right: 20px;
+    }
+    .rules ul li, .scoring ul li{
+        list-style-type: none;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    .contest_header h1{
+        font-size: 36px;
+    }
+    .x-footer-number a{
+        color: #4691f6 !important;
+    }
+    .inner-block{
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .tpoint{
+        width: 80%;
+    }
+
+    nav{
+        box-shadow: 0px 6px 5px -3px #ddd;
+    }
+
+    /* This is for fixed header. */
+    .fixed{
+        position: fixed;
+        top: 0;
+        background: #ffffff;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 999;
+    }
+
+    /* This is v4 timer i think. will move to seperate view*/
+    .timer{
+      width: 65px;
+      display: inline-block;
+      background: #fff;
+      color: #333;
+      border-radius: 5px;
+      height: 52px;
+      padding: 6px 0px 1px 0px;
+    }
+    .timer span{
+      display: inline-block;
+      font-size: 14px;
+      line-height: normal;
+    }
+    .timer .num{
+      display: block;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .timer_box{
+      width: 300px;
+      margin: auto;
+      padding: 20px 0px;
+    }
+    /* time css ends*/
+
+    @media screen and (min-width:960px){
+        .container{
+            width: 960px;
+            padding: 0px;
+        }
+
+        .inner-block{
+            text-align: left;
+        }
+
+        .tpoint{
+            width: 910px;
+        }
+        .right-side{
+            margin-left: 20px;
+        }
+    }
+    .contest-time{
+        width: 285px;
+        height: 35px;
+    }
+    ul {
+        list-style-position: inside;
+    }
+
+    .inner-text-container {
+        margin-left: 30px;
+    }
+
+</style>
+<body id="contest_page">
+    <div class="contests_landing">
+        <div class="container--flex">
+            <div class="text-center">
+                <svg class="block-center" width="202" height="55">
+                    <image xlink:href="https://hrcdn.net/hackerrank/assets/brand/typemark--inverse60x200-c48cdc1a89e11bd342ee1183c0540661.svg" src="https://hrcdn.net/hackerrank/assets/brand/typemark--inverse60x200-92f032e686832add2fc107e137f5bf75.png" width="202" height="55"></image>
+                </svg>
+                <span class="presents">presents</span>
+            </div>
+            <div class="contest_header mjT text-center txt-white">
+                <h1 class="mlB">Concurso de Programación de la XV Semana de MAC</h1>
+
+                <div id="body-buttons">
+                    <style>
+    .facebook-button {
+        background: none repeat scroll 0% 0% #3B5998 !important;
+        padding: 10px 15px;
+    }
+
+    .contest-signup-stub {
+        width: 500px;
+        margin: auto;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .contest-signup-stub img.loader {
+        vertical-align: middle;
+        margin-left: 2px;
+    }
+
+    .social-wrap {
+        margin: 15px 0px;
+    }
+    .social-wrap .button {
+        padding: 7px;
+        border-radius: 3px;
+        color: #fbfbfb;
+        font-weight: bold;
+        position: relative;
+    }
+    .social-wrap .twitter {
+        padding-left: 34px;
+        background: #4099ff;
+        margin-right: 10px;
+    }
+    .social-wrap .facebook {
+        padding-left: 26px;
+        background: #3b5998;
+        margin-left: 10px;
+    }
+    .social-wrap .twitter img {
+        position: absolute;
+        top: 6px;
+        left: 5px;
+    }
+    .social-wrap .facebook img {
+        position: absolute;
+        top: 6px;
+        left: 8px;
+    }
+    .share-text {
+        margin: 15px 0;
+    }
+    textarea {
+        width: 100%;
+        resize: none;
+        height: 88px;
+    }
+    .fade {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+    }
+
+
+    /* Version specific css */
+        .contest-signup-stub {
+            color: white;
+            width: auto;
+        }
+        .txt-black {
+            color: black;
+        }
+       .message{
+            padding: 10px !important;
+            margin-top: 10px;
+        }
+
+</style>
+<div class="contest-signup-stub">
+    <span class="contest-messages">
+        <p class="message"></p>
+        <br>
+        <p class="error hide"></p>
+    </span>
+    <button class="btn btn-primary btn-large action-button btn-flat"></button>
+    <img class="loader hide" src="https://hrcdn.net/hackerrank/assets/ajax-view-loader-b39b0f523d38e9b7bbf73e575f14b922.gif">
+        <p class="pariticipating hide banner txt-black msT">You are registered for the contest.</p>
+    <div class="success-message hide">
+        <h3 class="text-center heading psT">Sweet, we've sent you an email confirming your registration!</h3>
+        <h5 class="text-center share-text">You can tell your friends about Concurso de Programación de la XV Semana de MAC</h5>
+        <textarea class="span11 block-center" >I just registered for Concurso de Programación de la XV Semana de MAC ( https://www.hackerrank.com/concurso-de-programacion-de-la-xv-semana-de-mac ). Join me @hackerrank</textarea>
+        <div class="social-wrap clearfix psT">
+            <a href="" class="twitter button" onClick="_gaq.push(['_trackEvent', 'HackerGamesPage', 'Click', 'Tweet it']);" data-analytics="Tweet"><img alt="" src="https://hrcdn.net/hackerrank/assets/twitter-bird-9ddade16a2a2bf6cd517243d3f24ec25.png" /><span> Tweet it</span></a>
+            <a href="" class="facebook button" onClick="_gaq.push(['_trackEvent', 'HackerGamesPage', 'Click', 'Share it']);" data-analytics="Facebook Share"><img alt="" src="https://hrcdn.net/hackerrank/assets/facebook-f-b38b55109a39eb36e6437f0b6060f3b6.png" /><span> Share it</span></a>
+        </div>
+        <a href="/domains?h_l=contest_landing_page&h_v=control" class="text-center btn btn-green msA mjT" data-analytics="LandingPagePracticeButton" data-attr1="concurso-de-programacion-de-la-xv-semana-de-mac">Practice</a>
+        <h3>
+            You might like to solve practice problems on HackerRank.
+        </h3>
+    </div>
+    <a class="show_login_dialog hide"></a>
+    <a class="show_signup_dialog hide"></a>
+</div>
+<script>
+    
+HR = {};
+HR.CONTEST_SLUG = 'concurso-de-programacion-de-la-xv-semana-de-mac';
+$(document).ready(function () {
+
+    var version = '4';
+    function Hacker() {
+        var hacker = {
+            id: 678529,
+            username: 'Silverutm'
+        };
+        var hacker_participating = true;
+
+        return {
+            signed_in: function () {
+                if (hacker === null) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+
+            username: function () {
+                if (hacker === null) {
+                    return null;
+                } else {
+                    return hacker.username;
+                }
+            },
+
+            id: function () {
+                if (hacker === null) {
+                    return null;
+                } else {
+                    return hacker.id;
+                }
+            },
+
+            participating: function (bool) {
+                if (typeof(bool) === "boolean") {
+                    hacker_participating = bool;
+                } else {
+                    return hacker_participating;
+                }
+            },
+
+            hacker: function(_hacker) {
+                if (typeof(_hacker) === "undefined" || _hacker === null) {
+                    return hacker;
+                } else {
+                    hacker = _hacker;
+                }
+            }
+        };
+    }
+
+    function Contest() {
+        // start time
+        var start_time = 1474569000;
+
+        // end time
+        var end_time = 1474581600;
+
+        return {
+            current_time: function () {
+                // current time
+                return Math.floor((new Date()).getTime() / 1000);
+            },
+
+            started: function () {
+                if (start_time === null) return true;
+
+                var current_time = this.current_time();
+                if (start_time > current_time) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+
+            ended: function () {
+                if (end_time === null) return false;
+
+                var current_time = this.current_time();
+                if (end_time > current_time) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+
+            no_endtime: function () {
+                return (end_time === null) ? true : false;
+            },
+
+            start_time: start_time,
+            end_time: end_time,
+            name: 'Concurso de Programación de la XV Semana de MAC',
+            slug: 'concurso-de-programacion-de-la-xv-semana-de-mac',
+            disable_signup: ''
+        };
+    }
+
+    function Display(contest, hacker) {
+        return {
+            get_time_string: function (diff) {
+                // don't you fuckin mess with the order
+                var days = Math.floor(diff / (24*60*60));
+                var _seconds = diff % (24*60*60);
+                var hours = Math.floor(_seconds / (60*60));
+                _seconds = _seconds % (60*60);
+                var minutes = Math.floor(_seconds / 60);
+                var seconds = _seconds % 60;
+
+                var time_string = "";
+                var show_the_rest = false;
+                if (days > 0 || show_the_rest) {
+                    show_the_rest = true;
+                    time_string += days + " Day" + (days != 1 ? "s" : "") + " ";
+                }
+
+                if (hours > 0 || show_the_rest) {
+                    show_the_rest = true;
+                    time_string += hours + " Hour" + (hours != 1 ? "s" : "") + " ";
+                }
+
+                if (minutes > 0 || show_the_rest) {
+                    show_the_rest = true;
+                    time_string += minutes + " Minute" + (minutes != 1 ? "s" : "") + " ";
+                }
+
+                time_string += seconds + " Second" + (seconds != 1 ? "s" : "") +" ";
+
+                return time_string;
+            },
+
+            get_time_obj: function (diff) {
+                // don't you fuckin mess with the order
+                var days = Math.floor(diff / (24*60*60));
+                var _seconds = diff % (24*60*60);
+                var hours = Math.floor(_seconds / (60*60));
+                _seconds = _seconds % (60*60);
+                var minutes = Math.floor(_seconds / 60);
+                var seconds = _seconds % 60;
+
+                return {
+                    days: days,
+                    hrs: hours,
+                    mins: minutes,
+                    secs: seconds
+                };
+            },
+
+            countdown_timer_v4: function (final_time) {
+                var current_time = Math.floor((new Date()).getTime() / 1000);
+                var diff = final_time - current_time;
+
+                var time_obj = this.get_time_obj(diff);
+
+                $('#count-secs-pf').html(time_obj.secs !=1 ? 'secs':'sec');
+                $('#count-mins-pf').html(time_obj.mins !=1 ? 'mins':'min');
+                $('#count-hrs-pf').html(time_obj.hrs !=1 ? 'hrs':'hour');
+                $('#count-days-pf').html(time_obj.days !=1 ? 'days':'day');
+                $('#count-days').html(time_obj.days);
+                $('#count-hrs').html(time_obj.hrs);
+                $('#count-mins').html(time_obj.mins);
+                $('#count-secs').html(time_obj.secs);
+
+                that = this;
+                if (diff > 1) {
+                    setTimeout(function(){
+                        that.countdown_timer_v4(final_time);
+                    }, 1000)
+                } else {
+                    setTimeout(function(){
+                        that.render();
+                    }, 1000)
+                }
+            },
+
+
+
+            countdown_timer: function (final_time, $el) {
+                var current_time = Math.floor((new Date()).getTime() / 1000);
+                var diff = final_time - current_time;
+
+                var time_string = this.get_time_string(diff);
+
+                $el.find('.countdown').html(time_string);
+
+                that = this;
+                if (diff > 1) {
+                    setTimeout(function(){
+                        that.countdown_timer(final_time, $el);
+                    }, 1000)
+                } else {
+                    setTimeout(function(){
+                        that.render();
+                    }, 1000)
+                }
+            },
+
+            facebook_mode: function () {
+                function getUrlVars() {
+                    var vars = {};
+                    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+                        vars[key] = value;
+                    });
+                    return vars;
+                }
+                return (getUrlVars()["utm_source"] == "fb");
+            },
+
+            facebook_text: function () {
+                return '<i class="icon-facebook"></i> Register with Facebook';
+            },
+
+            render: function () {
+                var $el = $(".contest-signup-stub");
+                var $message = $el.find(".message");
+                var $action_button = $el.find(".action-button");
+                var $br = $el.find("br");
+                var $participating = $el.find(".pariticipating");
+                var $loggedin_message = $el.find(".loggedin-message");
+                window.facebook_mode = this.facebook_mode;
+
+                if (hacker.signed_in()) {
+                    $loggedin_message.html("You are logged in as <b>" + hacker.username() + "</b>.").show();
+                }
+
+                if (!contest.started()) {
+                    // Contest Not Started
+                    // show countdown timer
+                    if (version == 4)
+                    {
+                        $(".contest-messages").hide();
+                        $('#block-timer-head').html('Starts in');
+                        this.countdown_timer_v4(contest.start_time);
+                    }
+                    else
+                    {
+                        $message.html("The contest starts in <span class='countdown'></span>");
+                        this.countdown_timer(contest.start_time, $message);
+                    }
+                    if (hacker.participating()) {
+                        $action_button.hide();
+                        $br.hide();
+                        $participating.show().html("Hey <b>" + hacker.username() + "</b>! You have been signed up for the contest!");
+                        $loggedin_message.hide();
+                    } else {
+                        $br.show();
+                        $action_button.show();
+                        $participating.hide();
+                        if (hacker.signed_in()) {
+                            $action_button.html("Sign Up");
+                        } else {
+                            if (this.facebook_mode()) {
+                                $action_button.html(this.facebook_text()).addClass("facebook-button");
+                            } else {
+                                $action_button.html("Sign Up");
+                            }
+                        }
+                        $action_button.unbind("click").bind("click", this.actionButtonClick);
+                    }
+
+                } else if (contest.started() && !contest.ended()) {
+                    // During The Contest
+                    // show countdown timer
+                    if (version == 4)
+                    {
+                        $message.hide();
+                    }
+                    if (!contest.no_endtime()) {
+                        if (version == 4) {
+                            this.countdown_timer_v4(contest.end_time);
+                            $('#block-timer-head').html('Ends in');
+                        }
+                        else {
+                            $message.html("The contest ends in <span class='countdown'></span>.");
+                            this.countdown_timer(contest.end_time, $message);
+                        }
+                    } else {
+                        $message.hide();
+                        if (version == 4) {
+                            $('#block-timer').hide();
+                        }
+                    }
+                    $br.show();
+                    $participating.hide();
+                    $action_button.show();
+                    if (hacker.signed_in()) {
+                        $action_button.html("Enter");
+                    } else {
+                        if (this.facebook_mode()) {
+                            $action_button.html(this.facebook_text()).addClass("facebook-button");
+                        } else {
+                            $action_button.html("Sign Up");
+                        }
+                    }
+                    $action_button.unbind("click").bind("click", this.actionButtonClick);
+
+                } else if (contest.ended()) {
+                    if (version == 4) {
+                        $('#block-timer').hide();
+                        this.countdown_timer_v4(3,0);
+                        $message.hide();
+                    }
+                    // After The Contest
+                    $message.html("The contest has ended. " + (hacker.signed_in() ? "Enter " : "Signup ") + " to solve archived challenges.");
+                    $br.show();
+                    $participating.hide();
+                    $action_button.show();
+                    if (hacker.signed_in()) {
+                        $action_button.html("Enter");
+                    } else {
+                        if (this.facebook_mode()) {
+                            $action_button.html(this.facebook_text()).addClass("facebook-button");
+                        } else {
+                            $action_button.html("Sign Up");
+                        }
+                    }
+                    $action_button.unbind("click").bind("click", this.actionButtonClick);
+
+                }
+
+                if(contest.disable_signup == 'true' && !hacker.participating()){
+                    $message.hide();
+                    $participating.show().html("This is a private contest.");
+                    $action_button.hide()
+                }
+
+                return this;
+            },
+
+            actionButtonClick: function (e) {
+                e.preventDefault();
+                var $el = $(".contest-signup-stub");
+                var $message = $el.find(".message");
+                var $action_button = $(e.currentTarget);
+                var $loader = $el.find("img.loader");
+                var $error = $el.find(".error");
+                var $success_message = $el.find(".success-message");
+                var $loggedin_message = $el.find(".loggedin-message");
+                $error.hide();
+                if (hacker.signed_in()) {
+                    if (!contest.started()) {
+                        $action_button.attr('disabled', 'disabled')
+                            .html("Signing you up...");
+                        $loader.show();
+                    } else if (contest.started() && !contest.ended()) {
+                        $action_button.attr('disabled', 'disabled')
+                            .html("Logging you in...");
+                        $loader.show();
+                    } else if (contest.ended()) {
+                        $action_button.attr('disabled', 'disabled')
+                            .html("Logging you in...");
+                        $loader.show();
+                    }
+                } else if (window.facebook_mode()) {
+                } else {
+                    $action_button.attr('disabled', 'disabled')
+                      .html("Redirecting...");
+                    $loader.show();
+                }
+
+                if (hacker.signed_in()) {
+                    // signup
+                    $.ajax({
+                        type: "POST",
+                        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                        url: '/auth/login/' + contest.slug,
+                        success: function(data) {
+                            $loader.hide();
+                            if (data.status) {
+                                if (data.hasOwnProperty('domain_restriction') && data.domain_restriction) {
+                                    $action_button.html("Redirecting...");
+                                    window.location.href = window.location.protocol + '//' + window.location.host + '/auth/domain_restriction/' + contest.slug;
+                                } else if (data.has_codesprint_reg_page) {
+                                    $action_button.html("Redirecting...");
+                                    window.location.href = window.location.protocol + '//' + window.location.host + '/register/' + contest.slug;
+                                } else if (data.ask_jobs_profile) {
+                                    $action_button.html("Redirecting...");
+                                    window.location.href = window.location.protocol + '//' + window.location.host + '/auth/details/' + contest.slug;
+                                } else {
+                                    if (contest.started()) {
+                                        $action_button.html("Redirecting...");
+                                        window.location.href = window.location.protocol + "//" + window.location.host + "/contests/" + contest.slug + "/challenges";
+                                    } else {
+                                        $action_button.hide();
+                                        $loggedin_message.hide();
+                                        $success_message.show();
+                                    }
+                                }
+                            } else {
+                                $action_button.removeAttr("disabled");
+                                if (!contest.started()) {
+                                    $action_button.html("Sign Up");
+                                } else {
+                                    $action_button.html("Enter");
+                                }
+
+                                if (data.errors.length == 1) {
+                                    $error.html(data.errors[0]);
+                                } else if (data.errors.length == 0) {
+                                    $error.html("Unknown Error");
+                                } else {
+                                    var error = '<ul class="left">';
+                                    for (i = 0; i < data.errors.length; i++) {
+                                        error += '<li>' + data.errors[i] + '</li>';
+                                    }
+                                    error += '</ul>';
+                                    $error.html(error);
+                                }
+                                $error.show();
+                                $action_button.html();
+                            }
+                        },
+                    });
+                } else if (window.facebook_mode()) {
+                    var w = 600;
+                    var h = 350;
+                    var left = (screen.width/2) - (w/2);
+                    var top = (screen.height/2) - (h/2);
+                    function login_callback (csrf_token) {
+                        $("meta[name=csrf-token]").attr("content", csrf_token);
+                        var href = document.location.protocol + "//" + document.location.host + "/auth/login/concurso-de-programacion-de-la-xv-semana-de-mac";
+                        document.location.href = href;
+                    };
+                    window.login_callback = login_callback;
+                    window.open("/hackers/auth/facebook?display=popup", "facebook_login", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+                } else {
+                    // redirect to signup page
+                    document.location.href = document.location.protocol + '//' + document.location.host + '/auth/signup/' + contest.slug;
+                }
+
+            }
+        }
+    }
+
+    ;(function() {
+        hr_metrics.init({
+            use_cookie: true,
+            uid_cookie_key: 'hackerrank_mixpanel_token',
+            uid_token_cookie_key: 'metrics_user_identifier',
+            session_cookie_key: 'session_id',
+            metrics_endpoint: 'https://metrics.hackerrank.com/metrics'
+        });
+    })();
+
+    var contest = Contest();
+    var hacker = Hacker();
+    var display = Display(contest, hacker);
+    display.render();
+});
+
+</script>
+
+
+                </div>
+
+                <h5 class="text-center mjT date-title"><span class="start-time"></span></h5>
+                <h5 class="text-center">to</h5>
+                <h5 class="text-center date-title"><span class="end-time"></span></h5>
+
+                    <div class="timer_box msT mjB" id="block-timer">
+                        <h5 class="psB" id ="block-timer-head">Starts in</h5>
+                        <div class="timer">
+                            <span class="num" id="count-days"></span>
+                            <span id="count-days-pf"></span>
+                        </div>
+                        <div class="timer">
+                            <span class="num" id="count-hrs"></span>
+                            <span id="count-hrs-pf"></span>
+                        </div>
+                        <div class="timer">
+                            <span class="num" id="count-mins"></span>
+                            <span id="count-mins-pf"></span>
+                        </div>
+                        <div class="timer">
+                            <span class="num" id="count-secs"></span>
+                            <span id="count-secs-pf"></span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <nav>
+            <ul>
+                    <li>
+                        <a href="" data-id="info">Info</a>
+                    </li>
+                    <li>
+                        <a href="" data-id="prizes">Prizes</a>
+                    </li>
+                <li>
+                    <a href="" data-id="scoring">Rules</a>
+                </li>
+                <li>
+                    <a href="" data-id="scoring">Scoring</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+        <div class="sections fill-grey" id="info">
+            <div class="container">
+                <div class="container text-center">
+                    <div  class="inner-block">
+                        <h1 class="text-center">Info</h1>
+                        <div class="span-md-16 span-xs-16 inner-text-container">
+                            <p class="pjT"><div class='hackdown-content'><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>Concurso para celebrar la XV semana de MAC</p></div></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sections" id="prizes">
+            <div class="container">
+                <div class="container text-center">
+                    <div  class="inner-block">
+                        <h1 class="text-center">Prizes</h1>
+                        <div class="span-md-16 span-xs-16 inner-text-container">
+                            <p class="pjT">*Premios en efectivo para los primeros lugares
+*Los que el patrocinador regale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="sections fill-grey" id="rules">
+        <div class="container rules">
+            <h1 class="text-center mjB">Rules</h1>
+            <div class="span-md-16 span-xs-16 inner-text-container">
+                <ul>
+                    <li>
+                        <div class="pull-left ticks txt-green">
+                            <i class="icon-ok"></i>
+                        </div>
+                        <div class="pull-left tpoint">
+                            Please refrain from discussing strategy during the contest.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pull-left ticks txt-green">
+                            <i class="icon-ok"></i>
+                        </div>
+                        <div class="pull-left tpoint">
+                            All submissions are run through a plagiarism detector. <em>Any</em> case of code plagiarism will disqualify <em>both</em> users from the contest.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pull-left ticks txt-green">
+                            <i class="icon-ok"></i>
+                        </div>
+                        <div class="pull-left tpoint">
+                            You can also code using our interface, which currently supports over 40 major languages. Learn about our environment and time limits <a href="https://hackerrank.com/environment">here</a>. If you are not yet familiar with our platform, check out <a href="https://hackerrank.com/challenges/solve-me-first">Solve Me First</a> to acquaint yourself with I/O.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pull-left ticks txt-green">
+                            <i class="icon-ok"></i>
+                        </div>
+                        <div class="pull-left tpoint">
+                            HackerRank admin decisions are <em>final</em>.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sections" id="scoring">
+        <div class="container scoring">
+            <h1 class="text-center mjB">Scoring</h1>
+            <div class="span-md-16 span-xs-16 inner-text-container">
+                <ul>
+                    <li>
+                        <div class="pull-left ticks txt-green">
+                            <i class="icon-ok"></i>
+                        </div>
+                        <div class="pull-left tpoint">
+                            Each challenge has a pre-determined score.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pull-left ticks txt-green">
+                            <i class="icon-ok"></i>
+                        </div>
+                        <div class="pull-left tpoint">
+                            Your score for a problem depends on the number of test cases your submission successfully passes.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pull-left ticks txt-green">
+                            <i class="icon-ok"></i>
+                        </div>
+                        <div class="pull-left tpoint">
+                            A participant's total score is the sum of the scores earned for each problem attempted. If you submitted more than one solution for a problem, only your highest score achieved will be used in this calculation.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pull-left ticks txt-green">
+                            <i class="icon-ok"></i>
+                        </div>
+                        <div class="pull-left tpoint">
+                            Participants are ranked by score, with the cumulative time taken (between the contest's start time and the time of your correct submission) used to break ties.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="plT plB static-footer white_footer fill-dark treatment-footer">
+  <div class="container--flex">
+    <div class="row mlT mlB">
+      <div class="span-xs-16 span-lg-2ofthree x-footer-links">
+        <div class="row">
+          <ul class="unstyled mlB span-xs-16 span-sm-third span-md-4">
+            <li><p class="color-alt-grey mmB"><a href="/aboutus"><strong>COMPANY</strong></p></a></li>
+            <li><a data-analytics="AboutUsLink" data-attr1="community_home" data-attr2="footer" href="/aboutus">About Us</a></li>
+            <li><a data-analytics="CareersLink" data-attr1="community_home" data-attr2="footer" href="/careers" target="_blank">Careers</a></li>
+            <li><a data-analytics="BlogLink" data-attr1="community_home" data-attr2="footer" href="http://blog.hackerrank.com" target="_blank">Blog</a></li>
+            <li><a data-analytics="PrivacyLink" data-attr1="community_home" data-attr2="footer" href="/work/privacy">Privacy Policy</a></li>
+            <li><a data-analytics="ContactUsLink" data-attr1="community_home" data-attr2="footer" href="/contactus">Contact Us</a></li>
+          </ul>
+          <ul class="unstyled mlB span-xs-16 span-sm-third span-md-4">
+            <li><p class="color-alt-grey mmB"><a href="/domains"><strong>DEVELOPERS</strong></p></a></li>
+            <li><a data-analytics="ScoringLink" data-attr1="community_home" data-attr2="footer" href="/scoring">Scoring</a></li>
+            <li><a data-analytics="EnvironmentLink" data-attr1="community_home" data-attr2="footer" href="/environment">Environment</a></li>
+            <li><a data-analytics="FAQLink" data-attr1="community_home" data-attr2="footer" href="/faq">FAQ</a></li>
+            <li><a data-analytics="ForSchoolsLink" data-attr1="community_home" data-attr2="footer" href="/school">For Schools</a></li>
+            <li><a data-analytics="SignUpLink" data-attr1="community_home" data-attr2="footer" href="/signup">Sign up</a></li>
+          </ul>
+          <ul class="unstyled mlB span-xs-16 span-sm-third span-md-4">
+            <li><p class="color-alt-grey mmB"><a href="/work"><strong>COMPANIES</strong></p></a></li>
+            <li><a data-analytics="SolutionsLink" data-attr1="community_home" data-attr2="footer" href="/work">Solutions</a></li>
+            <li><a data-analytics="CustomersLink" data-attr1="community_home" data-attr2="footer" href="/work/customers">Customers</a></li>
+            <li><a data-analytics="PricingLink" data-attr1="community_home" data-attr2="footer" href="/work/pricing">Pricing</a></li>
+            <li><a data-analytics="TryForFreeLink" data-attr1="community_home" data-attr2="footer" href="/work/signup">Try for Free</a></li>
+            <li><a data-analytics="TermsLink" data-attr1="community_home" data-attr2="footer" href="/work/tos">Terms of Service</a></li>
+          </ul>
+          <ul class="unstyled mlB span-xs-16 span-sm-third span-md-4">
+            <li><a href="/work/resources"><p class="color-alt-grey mmB"><strong>RESOURCES</strong></a></p></li>
+            <li><a data-analytics="ApiLink" data-attr1="community_home" data-attr2="footer" href="/work/apidocs">API</a></li>
+            <li><a data-analytics="GuidesLink" data-attr1="community_home" data-attr2="footer" href="/work/resources/guides">Guides</a></li>
+            <li><a data-analytics="VideosLink" data-attr1="community_home" data-attr2="footer" href="/work/resources/videos">Videos</a></li>
+            <li><a data-analytics="PartnersLink" data-attr1="community_home" data-attr2="footer" href="/work/partners">Partners</a></li>
+            <li><a data-analytics="EventsLink" data-attr1="community_home" data-attr2="footer" href="/work/events">Events</a></li>
+            <li><a data-analytics="NewsLink" data-attr1="community_home" data-attr2="footer" href="/work/resources/news">News</a></li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="span-xs-16 span-sm-16 span-lg-third x-footer-brand">
+        <a class="pull-left" href="/" data-analytics="LogoLink" data-attr1="community_home" data-attr2="footer">
+          <div class="static-content static-navigation-logo h-logo pull-left"></div>
+        </a>
+        <p class="pull-left text-left clearfix fw msT">(415) 900-4023<br>
+support@hackerrank.com</p>
+        <p class="pull-left text-left clearfix fw msB">&copy; 2017 HackerRank</p>
+        <div class="social-share-view-2 social-buttons block-center mjT clearfix">
+          <a data-analytics="FacebookFooterLink" data-attr1="community_home" data-attr2="footer" href="https://www.facebook.com/hackerrank" target="_blank" class="social-btn cursor facebook-share-btn pull-left txt-white">
+            <i class="icon-facebook txt-white"></i>
+          </a>
+          <a data-analytics="TwitterFooterLink" data-attr1="community_home" data-attr2="footer" href="https://twitter.com/hackerrank" target="_blank" class="social-btn cursor twitter-share-btn msL pull-left txt-white">
+            <i class="icon-twitter txt-white"></i>
+          </a>
+          <a data-analytics="LinkedinFooterLink" data-attr1="community_home" data-attr2="footer" href="https://www.linkedin.com/company/435210?trk=prof-exp-company-name" target="_blank" class="social-btn cursor linkedin-share-btn msL pull-left">
+            <i class="icon-linkedin txt-white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+    var timezone_abbr = function(date_input) {
+      var dateObject, olson_tz;
+      dateObject = date_input || new Date();
+      olson_tz = moment.tz.guess();
+      return moment().tz(olson_tz).format('z');
+    };
+
+    var starttime = new Date(0);
+    starttime.setUTCSeconds(1474569000);
+    $(".start-time").html(moment(starttime).format("MMM D YYYY") + ", " + moment(starttime).format("hh:mm a") + " " + timezone_abbr());
+
+    var endtime = new Date(0);
+    endtime.setUTCSeconds(1474581600);
+    $(".end-time").html(moment(endtime).format("MMM D YYYY") + ", " + moment(endtime).format("hh:mm a") + " " + timezone_abbr());
+});
+
+
+// This is for fixed header thing. please dont mess
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 500) {
+        $("nav").addClass("fixed");
+    }else{
+        $("nav").removeClass("fixed");
+    }
+});
+
+// Smooth scrolling :o
+$("nav li a").click(function(e){
+    e.preventDefault();
+    var offset = 20;
+    var dataid = $(this).data("id");
+    $('html, body').animate({
+        scrollTop: $("#"+dataid).offset().top - offset
+    }, 1000);
+});
+</script>
+
+    <div class="cdn-error-view" style="display:none;">
+  <div class="error-box-wrap">
+    <div class="error-icon">
+      <svg x="0px" y="0px" width="80px" height="80px" viewBox="0 0 367.011 367.01" style="enable-background:new 0 0 367.011 367.01;" xml:space="preserve">
+        <g>
+         <g>
+          <path d="M365.221,329.641L190.943,27.788c-1.542-2.674-4.395-4.318-7.479-4.318c-3.084,0-5.938,1.645-7.48,4.318L1.157,330.584    c-1.543,2.674-1.543,5.965,0,8.639c1.542,2.674,4.395,4.318,7.48,4.318h349.65c0.028,0,0.057,0,0.086,0    c4.77,0,8.638-3.863,8.638-8.639C367.011,332.92,366.342,331.1,365.221,329.641z M23.599,326.266L183.464,49.381l159.864,276.885    H23.599z"/>
+          <path d="M174.826,136.801v123.893c0,4.773,3.867,8.638,8.638,8.638c4.77,0,8.637-3.863,8.637-8.638V136.801    c0-4.766-3.867-8.637-8.637-8.637C178.693,128.165,174.826,132.036,174.826,136.801z"/>
+          <path d="M183.464,279.393c-5.922,0-10.725,4.8-10.725,10.722s4.803,10.729,10.725,10.729c5.921,0,10.725-4.809,10.725-10.729    C194.189,284.193,189.386,279.393,183.464,279.393z"/>
+         </g>
+        </g>
+      </svg>
+    </div>
+    <h2 class="error-title">Something went wrong!</h2>
+    <p class="error-message">Some error occured while loading page for you. Please try again.</p>
+    <div class="btn-wrap">
+      <a href="#"  onclick="window.location.reload(true);"><button class="btn-reload">Reload</button></a>
+    </div>
+  </div>
+</div>
+<script>
+  if(typeof cdnLoaded !== 'undefined' && cdnLoaded === false){
+    document.querySelector('.cdn-error-view').style.display = 'block';
+  }
+</script>
+
+
+
+    <script src="https://hrcdn.net/hackerrank/assets/external_libraries-bb2a2833b30c893d5c40bc5a5aa1cc65.js" crossorigin="anonymous"></script>
+    <script src="https://hrcdn.net/hackerrank/assets/fitvids/jquery.fitvids-c013bb400f044255628dadcf5a3dfd78.js" crossorigin="anonymous"></script>
+    <script src="https://hrcdn.net/hackerrank/assets/hr_metrics/lib/hr_metrics-1131097901e313629148f8663b201b05.js" crossorigin="anonymous"></script>
+    <script src="https://hrcdn.net/hackerrank/javascripts/ab_test.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- jsCookies -->
+
+
+<script type="text/javascript">
+  window.extern_script_delay = 0;
+  if (window.PRODUCT_NAMESPACE === 'hackerrank' && typeof($) === "function") {
+    $(window).on("load", function(){
+      if (('performance' in window) && ('timing' in window.performance)) {
+        dom_time = window.performance.timing.domInteractive - window.performance.timing.navigationStart;
+        if (dom_time > 12000) {
+          window.extern_script_delay = 3000;
+        } else if (dom_time > 7000) {
+          window.extern_script_delay = 2000;
+        } else if (dom_time > 6000) {
+          window.extern_script_delay = 1000;
+        }
+      }
+    });
+  }
+</script>
+
+<script>
+</script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  $(window).on("load", function() {
+    setTimeout(function() {
+    (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+    }, window.extern_script_delay);
+  });
+</script>
+
+<!-- Mixpanel -->
+<script type="text/javascript">
+  $(window).on("load", function() {
+    setTimeout(function() {
+    (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+    mixpanel.init("bcb75af88bccc92724ac5fd79271e1ff");
+
+      mixpanel.init("86cf4681911d3ff600208fdc823c5ff5", {}, "jobs_test");
+    mixpanel.identify(jsCookies.get("hackerrank_mixpanel_token"));
+    }, window.extern_script_delay);
+  });
+</script>
+
+<script type="text/javascript">
+  var heap = [];
+  var attrs = ["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"];
+  for (var attribute in attrs) {
+    heap[attrs[attribute]] = function () {};
+  }
+</script>
+
+
+
+
+
+<!-- Filepicker -->
+<script type="text/javascript">
+  $(window).on("load", function() {
+    setTimeout(function() {
+    (function(a){if(window.filepicker){return}var b=a.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===a.location.protocol?"https:":"http:")+"//api.filepicker.io/v2/filepicker.js";var c=a.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d={};d._queue=[];var e="pick,pickMultiple,pickAndStore,read,write,writeUrl,export,convert,store,storeUrl,remove,stat,setKey,constructWidget,makeDropPane".split(",");var f=function(a,b){return function(){b.push([a,arguments])}};for(var g=0;g<e.length;g++){d[e[g]]=f(e[g],d._queue)}window.filepicker=d})(document);
+    filepicker.setKey("ApehXMbvXTWqWab7OmMr9z");
+    }, window.extern_script_delay);
+  });
+</script>
+
+<script type="text/javascript">
+  $(window).on("load", function() {
+  setTimeout(function() {
+    (function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+    })();
+    }, window.extern_script_delay);
+  });
+</script>
+
+<!-- bizible -->
+<script>
+  $(window).on("load", function() {
+    setTimeout(function() {
+    (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.src = '//cdn.bizible.com/scripts/bizible.js';
+      s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+    }, window.extern_script_delay);
+  });
+</script>
+
+
+<script type="text/javascript">
+
+    !function(obj){window.hr_metrics=obj,obj.loaded=!0,obj.config=obj.config||{},obj._b=obj._b||[],obj.init=function(options){this.config=$.extend({product:null,use_cookie:!1,uid_cookie_key:null,session_cookie_key:null,session_id:null,uid_token:null,uid_token_cookie_key:null,uid:Math.floor(1e12*(1+Math.random())).toString(16),metrics_endpoint:null,batch_track_interval:2e3},this.config||{},options||{})},obj.get_session_id=function(){return this.config.session_id?this.config.session_id:this.config.session_cookie_key?$.cookie(this.config.session_cookie_key):null},obj.get_uid_data=function(){return this.config.use_cookie?{uid:$.cookie(this.config.uid_cookie_key),uid_token:$.cookie(this.config.uid_token_cookie_key)}:{uid:this.config.uid,uid_token:this.config.uid_token}},obj.get_session_params=function(){var session_params={session_landing_url:$.cookie("session_landing_url"),session_referrer:$.cookie("session_referrer"),session_referring_domain:$.cookie("session_referring_domain")};try{var utm_params=$.cookie("session_utm_params");utm_params&&(utm_params=JSON.parse(utm_params),session_params.session_utm_source=utm_params.s,session_params.session_utm_medium=utm_params.m,session_params.session_utm_campaign=utm_params.c)}catch(e){}return session_params},obj.track=function(event_name,event_value,attrs,use_beacon){var common_attrs={session_id:this.get_session_id()},attrs=$.extend({},attrs,common_attrs,this.get_session_params()),_tracking_data=$.extend({product:this.config.product,event_name:event_name,event_value:event_value,params:attrs},this.get_uid_data());this._post_tracking_data(_tracking_data,use_beacon)},obj.batch_track=function(event_name,event_value,attrs,use_beacon){this._EVENT_ARRAY=this._EVENT_ARRAY||[];var common_attrs={session_id:this.get_session_id()},attrs=$.extend({},attrs,common_attrs),_tracking_data={event_name:event_name,event_value:event_value,params:attrs};this._EVENT_ARRAY.push({time:(new Date).getTime(),url:document.location.href,track_data:_tracking_data}),this._event_batch_track_id||(this._event_batch_track_id=window.setInterval(function(that){return function(){that.batch_track_record()}}(this),this.config.batch_track_interval))},obj.batch_track_record=function(use_beacon){if("object"==typeof this._EVENT_ARRAY&&this._EVENT_ARRAY.length>0){var _tracking_data_array=this._EVENT_ARRAY;this._EVENT_ARRAY=[];var _tracking_data=$.extend({product:this.config.product,batch_request:"true",current_time:(new Date).getTime(),data_array:JSON.stringify(_tracking_data_array),session_params:JSON.stringify(this.get_session_params())},this.get_uid_data());this._post_tracking_data(_tracking_data,use_beacon)}},obj._post_tracking_data=function(data,use_beacon){var metrics_endpoint=this.config.metrics_endpoint;if(use_beacon===!0&&"object"==typeof window.navigator&&"function"==typeof window.navigator.sendBeacon){var jsonContent="params_stream="+encodeURIComponent(JSON.stringify(data)),_json_blob=new Blob([jsonContent],{type:"application/x-www-form-urlencoded; charset=UTF-8"});window.navigator.sendBeacon(metrics_endpoint,_json_blob)}else $.ajax({type:"POST",url:metrics_endpoint,crossDomain:!0,xhrFields:{withCredentials:!0},beforeSend:function(xhr){return!0},data:data})},function(o){if(Array.isArray(o._b)){for(var i=0;i<o._b.length;i++){var e=o._b[i];o[e[0]]&&"function"==typeof o[e[0]]&&o[e[0]].apply(o,e[1])}o._b=[]}}(obj)}(window.hr_metrics||{});
+
+  (function() {
+    hr_metrics.init({
+      product: 'hackerrank',
+      use_cookie: true,
+      uid_cookie_key: 'hackerrank_mixpanel_token',
+      uid_token_cookie_key: 'metrics_user_identifier',
+      session_cookie_key: 'session_id',
+      metrics_endpoint: 'https://metrics.hackerrank.com/metrics'
+    });
+  })();
+
+  //tracking hrutm_ parameters
+  $(window).on("load", function() {
+    (function(){
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      var trackingData;
+      for(var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if(sParameterName[0] == 'utm_source') {
+          trackingData = decodeURIComponent(escape(sParameterName[1]));
+          hr_metrics.track(trackingData.event_name, trackingData)
+        } else if (sParameterName[0] == 'ad-campaign' && sParameterName[1]=='Mkt1010415') {
+          if(typeof HR !== "undefined" && HR !== null && (!HR.PREFETCH_DATA.profile || !HR.PREFETCH_DATA.profile.created_at)){
+            document.cookie = "fb_ad_campaign_source="+sParameterName[1]+";path=/";
+          }
+        }
+      }
+    })();
+
+    if(typeof HR !== "undefined" && HR !== null && HR.PREFETCH_DATA && HR.PREFETCH_DATA.profile &&  HR.PREFETCH_DATA.profile.created_at) {
+      if($.cookie('fb_ad_campaign_source')) {
+        window._fbq.push(['track', '6023409928156', {'value':'0.01','currency':'USD'}]);
+        $.removeCookie('fb_ad_campaign_source', { path: '/' });
+      }
+    }
+  });
+</script>
+
+  <script type="text/javascript">
+    window.hr_metrics_extension_track = true;
+
+      !function(obj){window.hr_metrics=obj,obj.externalService=function(event_type,event_value,attrs,service){attrs="undefined"!=typeof attrs?attrs:{},attrs.session_id=this.get_session_id(),service="undefined"!=typeof service?service:"mixpanel:heap",external_services=service.split(":"),-1!=$.inArray("mixpanel",external_services)?mixpanel.push([event_type,event_value,attrs]):-1!=$.inArray("mixpanel_jobs",external_services)&&mixpanel.jobs_test&&mixpanel.jobs_test.push([event_type,event_value,attrs])},obj.app_track=function(key,attrs){window.APP_METRICS=window.APP_METRICS||[],common_attrs={uid:$.cookie("hackerrank_mixpanel_token")},attrs=$.extend({},attrs,common_attrs),window.APP_METRICS.push({key:key,meta_data:attrs}),window.app_track_interval_id||(window.app_track_interval_id=window.setInterval(hr_metrics._send_app_track_data,5e3))},obj._send_app_track_data=function(){if(window.APP_METRICS&&window.APP_METRICS.constructor===Array&&!(window.APP_METRICS.length<=0)){var track_data={data:window.APP_METRICS};window.APP_METRICS=[];var metrics_endpoint="https://metrics.hackerrank.com/app_metrics";window.HR&&window.HR.development&&(metrics_endpoint="/app_metrics"),"function"==typeof moment&&"function"==typeof moment.tz&&(track_data.local_timezone=moment.tz.guess()),track_data.default_cdn_url=jsCookies.get("default_cdn_url"),track_data.document_referrer=document.referrer,$.ajax({type:"POST",url:metrics_endpoint,crossDomain:!0,xhrFields:{withCredentials:!0},beforeSend:function(xhr){return!0},data:JSON.stringify(track_data),dataType:"json",contentType:"application/json"})}},obj.track_dwell_time=function(pathname,use_beacon){if(this._navigation_data&&this._navigation_data.page==pathname){var time_now=(new Date).getTime();this.batch_track("DwellTime",pathname,{attribute7:parseInt((time_now-(this._navigation_data.time||time_now))/1e3)},use_beacon)}},obj.set_navigation_data=function(pathname){this._navigation_data={page:pathname||document.location.pathname,time:(new Date).getTime()}},window.APP_METRIC_TRACKING_ENABLED&&"performance"in window&&"timing"in window.performance&&$(window).on("load",function(){setTimeout(function(){if(timing=window.performance.timing,obj={referring_url:window.location.pathname,fullLoadTime:timing.loadEventEnd-timing.navigationStart,loadTime:timing.loadEventEnd-timing.fetchStart,domReadyTime:timing.domComplete-timing.domInteractive,readyStart:timing.fetchStart-timing.navigationStart,redirectTime:timing.redirectEnd-timing.redirectStart,appcacheTime:timing.domainLookupStart-timing.fetchStart,unloadEventTime:timing.unloadEventEnd-timing.unloadEventStart,lookupDomainTime:timing.domainLookupEnd-timing.domainLookupStart,connectTime:timing.connectEnd-timing.connectStart,requestTime:timing.responseEnd-timing.requestStart,initDomTreeTime:timing.domInteractive-timing.responseEnd,loadEventTime:timing.loadEventEnd-timing.loadEventStart},"navigation"in window.performance&&"getEntries"in window.performance&&(obj.navigationType=window.performance.navigation.type,obj.navigationRedirectCount=window.performance.navigation.redirectCount,obj.fullLoadTime>8e3))try{var entries=window.performance.getEntries();entries[0].toJSON&&(obj.networkRequests=entries.map(function(e){return e.toJSON()}))}catch(e){}hr_metrics.app_track("page-load-metrics",obj)},1e3)}),$(window).on("load",function(){var _pathname=document.location.pathname,cdn_url_switched=jsCookies.get("cdn_url_switched");""!==cdn_url_switched&&jsCookies.destroy("cdn_url_switched"),hr_metrics.batch_track("PageLoad",_pathname+document.location.search,{attribute1:_pathname,attribute6:cdn_url_switched,cdn_url:jsCookies.get("cdn_url")})})}(window.hr_metrics||{}),function(){"function"==typeof $&&window.hr_metrics_extension_track&&$(window).on("load",function(){var _pathname=document.location.pathname;hr_metrics.track_dwell_time&&(hr_metrics.track_dwell_time(_pathname),hr_metrics.set_navigation_data()),$(window).on("beforeunload",function(){var _pathname=document.location.pathname;hr_metrics.batch_track("PageClose",_pathname+document.location.search,{attribute2:_pathname},!0),hr_metrics.track_dwell_time&&hr_metrics.track_dwell_time(_pathname,!0),window.typingTimeout&&(window.clearTimeout(window.typingTimeout),window.triggerTypingEvent&&window.typingEventEnabled&&window.triggerTypingEvent()),hr_metrics.batch_track_record(!0)})})}();
+  </script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<script>
+;(function(){
+  // Function to have a list of functions to load on fbAsyncInit
+  var toLoad = []
+  window.fbReady = function(func){
+    if( typeof func === 'function') {
+      if( window.FB ) {
+        func.call(window)
+      } else {
+        toLoad.push(func)
+      }
+    }
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '347499128655783',
+      xfbml      : true,
+      version    : 'v2.5',
+      caption    : 'HackerRank.com',
+    });
+
+    // Execute all the fbAsyncInit functions
+    toLoad.forEach(function(func){
+      func.call(window)
+    })
+  };
+})();
+$(window).on("load", function() {
+  setTimeout(function() {
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  }, window.extern_script_delay);
+});
+</script>
+<!-- Load Twitter SDK for JavaScript -->
+<script>
+window.twttr = (function() {
+  t = window.twttr || {};
+  if (typeof t.ready === 'undefined') {
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  }
+  return t;
+})();
+$(window).on("load", function() {
+  setTimeout(function() {
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://platform.twitter.com/widgets.js";
+       fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'twitter-wjs'));
+  }, window.extern_script_delay);
+});
+</script>
+
+<script type="text/javascript">
+    if (typeof($) == "function") {
+        $(document).ready(function() {
+            function we_are_hiring() {
+                lines = [
+                    "===============================================================================",
+                    ",--.  ,--.              ,--.                 ,------.                 ,--.     ",
+                    "|  '--'  | ,--,--. ,---.|  |,-. ,---. ,--.--.|  .--. ' ,--,--.,--,--, |  |,-.  ",
+                    "|  .--.  |' ,-.  || .--'|     /| .-. :|  .--'|  '--'.'' ,-.  ||      \\|     /  ",
+                    "|  |  |  |\\ '-'  |\\ `--.|  \\  \\\\   --.|  |   |  |\\  \\ \\ '-'  ||  ||  ||  \\  \\  ",
+                    "`--'  `--' `--`--' `---'`--'`--'`----'`--'   `--' '--' `--`--'`--''--'`--'`--' ",
+                    "===============================================================================",
+                    "  You opened the console! Know some code, do you? Want to work for one of the  ",
+                    "  best startups around? https://www.hackerrank.com/careers                     ",
+                    "==============================================================================="
+                ]
+                for (i = 0; i < lines.length; i ++) {
+                    console.log(lines[i]);
+                }
+            }
+            setTimeout(we_are_hiring, 5000);
+            if(window.trackJs) {
+              trackJs.track("Page Loaded");
+            }
+        });
+    }
+</script>
+
+<!-- Some Black Magic for Internet Explorer -->
+
+<!--[if lt IE 10]>
+<script src="https://hrcdn.net/hackerrank/assets/jquery-plugins/jQuery.XDomainRequest-dd31ce35d7f8ad068fa6ecc688661a9b.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!-- Chrome Frame for IE6 -->
+<!--[if lt IE 7 ]>
+ <script src="https://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+<script>
+    IE_BROWSER = true
+</script>
+<![endif]-->
+
+<!-- Track button clicks -->
+<script type="text/javascript">
+    $(document).on('click', 'a, button, input, select, i', null, function(e) {
+        var src = e.currentTarget, $src = $(e.currentTarget);
+        if ($src.attr('data-analytics')) {
+            action = 'Click'; data = $src.attr('data-analytics');
+        } else {
+            return;
+        }
+
+            hr_metrics.track(action, data, (function() {
+                var params={};
+                for (var _i=1; _i<=12; ++_i){
+                    var _attr = 'data-attr'+_i;
+                    if ($src.attr(_attr)){
+                        params['attribute'+_i] = $src.attr(_attr);
+                }}
+                var attributes = src.attributes, attr_length = src.attributes.length;
+                for (var i = 0; i < attr_length; i++){
+                  var attribute = attributes[i];
+                  if (attribute.name.indexOf('data-attr-') === 0){
+                    param_name = attribute.name.substr('data-attr-'.length);
+                    if (param_name.length > 0) {
+                      params[param_name] = attribute.value;
+                    }
+                  }
+                }
+                return params;
+            })());
+        // google analytics
+        _gaq.push(['_trackEvent', 'Events' , action, data])
+    });
+
+    $(document).on('AnalyticsEvent', function(e) {
+        action = e.event_type || false
+        data = e.event_name || false
+
+        if (!action || !data)
+          return
+
+        params = {}
+        params['attribute1'] = e.event_value || ""
+
+        if (window.HR && window.HR.current_page)
+          params['attribute2'] = window.HR.current_page
+
+        if (window.HR && window.HR.current_contest)
+          params['attribute3'] = window.HR.current_contest.get('name')
+
+            hr_metrics.track(action, data, params);
+        // google analytics
+        _gaq.push(['_trackEvent', 'Events' , action, data])
+    });
+</script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKNP883"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</html>

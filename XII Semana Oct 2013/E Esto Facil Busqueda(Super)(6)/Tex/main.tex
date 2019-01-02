@@ -1,0 +1,71 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema E - Ésto es fácil}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+    \Large Problema E - Ésto es fácil
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 0.5 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Éste problema es fácil, tienes que buscar 2 números en una lista, tal que sumados den otro número.
+
+\subsection*{Entrada}
+
+La primera línea tendrá un número T (0 $<$ T $<=$ 5000) el número de casos de prueba.\\[0.1cm]
+Las siguientes 3*T líneas contendrán los casos de prueba, cada caso de prueba tendrá 3 líneas, la primera línea un número n (1 $<$ n $<=$ 401) la cantidad de números que tendrá el arreglo, la segunda línea tendrá n números $K_i$ (0 $<$ i $<=$ n) (0 $<$ $K_i$ $<=$ 10000) los números sobre los cuáles tienes que buscar la pareja de números, y la tercera línea tendrá un número M (0 $<$ M $<=$ 20000) el número a buscar.
+
+\subsection*{Salida}
+
+Se imprimirán T líneas, una por cada caso de prueba, con la palabra $"$SI$"$ si es que existen 2 números que sumados den M, y $"$NO$"$ en caso contrario.
+
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+2 
+3
+1 2 3
+4
+5
+6 7 8 9 10
+11
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+SI
+NO
+
+\end{verbatim}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Sergio Adrián Lagunas Pinacho - UNAM FESA}
+\end{document}

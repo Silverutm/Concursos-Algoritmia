@@ -1,0 +1,51 @@
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+
+\begin{center}
+	\Large Problema B - Buscando Potencias
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 1 segundos
+\par\end{flushright}
+\vspace*{-1cm}
+
+\section*{Problema}
+Recientemente, Max se enfrentó a la difícil decisión de saber quién era su persona favorita de Oaxaca, así que decidió ponerles este problema a los dos principales contendientes por el título (Kenny y Sergio) para ver de una vez por todas quién era su favorito. ¿Quién podrá resolverlo primero? Obvio, Sergio\footnote{Sergio es conocido por modificar los problemas cuando nadie lo ve.}. Ahora al problema:
+
+Dado un número entero positivo $n$, expresarlo de la forma $(2^k)\times i$, donde $i$ es un número impar. Si pueden existir muchar formas de expresar $n$ de dicha forma, imprime aquélla en donde $k$ sea el máximo posible.
+
+¿Podrás resolverlo tú?
+
+\textbf{Entrada}\\
+La primera línea tendrá un número entero $1\leq T\leq 10^5$, que representará el número de casos de prueba.
+Seguirán $T$ líneas, cada una con un caso de prueba que será un número entero $n$ tal que $1 \leq n \leq 10^9$.
+
+\textbf{Salida}\\
+Para cada caso de prueba, imprimir $k$ e $i$, además del número de caso de prueba, en el formato del ejemplo.
+\begin{multicols}{2}
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+7
+1
+2
+8
+10
+26
+8967584
+1000000000
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+\begin{verbatim}
+Caso #1: (2^0)*1
+Caso #2: (2^1)*1
+Caso #3: (2^3)*1
+Caso #4: (2^1)*5
+Caso #5: (2^1)*13
+Caso #6: (2^5)*280237
+Caso #7: (2^9)*1953125
+\end{verbatim}
+\end{multicols}
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+\lyxaddress{Manuel Alcántara Juárez - Club PU++ Facultad de Ciencias, modicado por Edgar García - Grupo de Algoritmia}

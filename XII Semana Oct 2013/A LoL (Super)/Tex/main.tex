@@ -1,0 +1,70 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema A - A ? B}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+    \Large Problema A - Asombroso League of Legends
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+League of Legends es un juego clasificación MOBA (multiplayer online battle arena), en el que combaten varios campeones en enfrentamientos épicos, en los que el equipo que juegue mejor en equipo gana.\\[.01cm]
+En éste problema nos centraremos en 2 campeones, Lux y Volibear; Volibear está persiguiendo a Lux, la cuál tiene poca vida, tal que si Volibear alcanza a Lux, ésta morirá sin poder hacer nada al respecto.
+Afortunadamente, lux tiene un hechizo que le permite hacer que Volibear deje de moverse durante cierto tiempo(T); el hechizo lo puede usar cada C segundos.\\[0.1cm]
+Tu tarea consiste en, sabiendo las velocidades de los campeones (Lux y Volibear), el tiempo que el hechizo de lux deja atrapado a Volibear, y el enfriamiento de la habilidad de lux, determinar si Lux será alcanzada por Volibear o no.\\[0.1]
+
+
+\subsection*{Entrada}
+
+La primera línea contendrá un número N (0 $<$ N $<=$ 100), siendo N el número de casos de prueba.
+Cada una de las siguientes N líneas tendrá 4 enteros, V1, V2, T y C, (0 $<$ V1,V2 $<=$ 500) (0 $<$ T,C $<=$ 10) las velocidades de Volibear, Lux, el tiempo que el hechizo de Lux atrapa a Volibear, y el enfriamiento de su hechizo respectivamente.
+
+\subsection*{Salida}
+
+Para cada caso de prueba, se tendrá que imprimir una línea, imprimiendo $"$Se muere$"$ si Volibear alcanza a Lux, y $"$Se salva$"$ en caso contrario.
+
+\subsection*{Entrada Ejemplo}
+\begin{verbatim}
+2 
+10 300 1 2
+300 100 1 10
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+Se salva
+Se muere
+\end{verbatim}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Sergio Adrián Lagunas Pinacho - UNAM FESA}
+\end{document}

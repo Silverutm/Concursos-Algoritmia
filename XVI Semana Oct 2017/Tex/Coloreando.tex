@@ -1,0 +1,73 @@
+\chapter*{Problema C - Coloreando la FES}
+
+Alrededor de la FES vamos a colocar diversos puntos
+que pintaremos de algún color. Nosotros tendremos $k$
+colores para pintarlos de la forma en que se nos antoje.
+El chiste aquí es que, sin que tú los veas, nos digas 
+cuántos vértices tiene la figura geométrica más grande 
+que puedes asegurar que existe con el mismo color de 
+vértices. (En este caso, entendemos como la figura más 
+grande, la de mayor número de vértices.
+
+
+
+\subsubsection*{Nota:}
+No existen tres vértices colineales.
+
+
+
+\subsection*{Entrada}
+La primera línea será un número natural $T$ (el número 
+de casos que tendrás que leer), seguido de $T$ líneas
+conformadas por dos enteros positivos separados por un
+espacio $n$ y $k$; el primero representa el número de
+puntos que se coloquen y el segundo el número de colores
+que tendremos para pintarlos.
+
+
+
+\subsection*{Salida}
+Para cada caso, deberás imprimir en una línea distinta 
+el número de vértices que tiene la figura geométrica más
+grande que se puede formar con los vértices del mismo 
+color.
+
+
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 10^3 $, $ 1 \leq n,
+    k \leq 10^4$   $\quad \;\;\;\;\;$ $80$ puntos.
+    \item Grande: $ \;\, 1 \leq T \leq 10^3 $, $ 1 
+    \leq n, k \leq 10^{15} $ $\quad \quad$ $20$ puntos.
+\end{itemize}
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+5
+6 5
+6 2
+6 6
+5 2
+4 6
+\end{verbatim}
+
+\columnbreak
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+2
+3
+1
+3
+1
+\end{verbatim}
+
+\end{multicols}

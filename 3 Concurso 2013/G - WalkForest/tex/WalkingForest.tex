@@ -1,0 +1,83 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema G - Guiando a Mau por el Bosque}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema G - Guiando a Mau por el Bosque
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+El flojo Mau se estresa mucho en su trabajo. Para relajarse después de un día difícil a él le gusta caminar a casa. Para hacer las cosas aún mejores, su oficina está en un lado del bosque y su casa del otro. Una caminata tranquila por el bosque viendo los pájaros y las ardillas es muy agradable. El bosque es hermoso y el flojo Mau quiere tomar una ruta diferente cada día. Él también quiere llegar a su casa antes del anochecer, por lo que siempre toma un camino para avanzar hacia su casa. Él toma un camino de A a B si existe una ruta desde B a su casa que es más corta que cualquier ruta posible desde A. Calcula cuántas rutas diferentes puede tomar el flojo Mau desde su oficina a la casa.
+
+\subsection*{Entrada}
+
+La entrada contiene varios casos de prueba seguidos por una línea que contiene un 0. El flojo Mau ha numerado cada intersección de diferentes caminos, empezando con el 1. Su oficina está numerada con el 1 y su casa con el 2. La primera linea de cada caso contiene el número de intersecciones $N$ ($1 < N \leq 10^3$), y el número de caminos $M$. Las siguientes $M$ líneas contienen, cada una, un par de intersecciones y un entero $d$ ($1 \leq d \leq 1000$) indicando que hay un camino de longitud d entre dichas intersecciones. El flojo Mau puede atravezar un camino en cualquier dirección. Hay a lo más un camino entre cada par de intersecciones.
+
+\subsection*{Salida}
+
+Para cada caso de prueba debes imprimir un sólo entero módulo 1000000009 indicando el número de rutas diferentes que el flojo Mau puede tomar.
+
+\subsection*{Entrada ejemplo}
+\noindent \texttt{5 6}~\\
+\texttt{1 3 2}~\\
+\texttt{1 4 2}~\\
+\texttt{3 4 3}~\\
+\texttt{1 5 12}~\\
+\texttt{4 2 34}~\\
+\texttt{5 2 24}~\\\\
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+$$$$
+\texttt{7 8}~\\
+\texttt{1 3 1}~\\
+\texttt{1 4 1}~\\
+\texttt{3 7 1}~\\
+\texttt{7 4 1}~\\
+\texttt{7 5 1}~\\
+\texttt{6 7 1}~\\
+\texttt{5 2 1}~\\
+\texttt{6 2 1}~\\
+\texttt{0}~\\
+\noindent 
+
+\subsection*{Salida Ejemplo}
+
+\noindent \texttt{2}~\\
+\texttt{4}~\\
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Waterloo Local Contest 2005 September 24 (Richard Krueger)}
+\end{document}

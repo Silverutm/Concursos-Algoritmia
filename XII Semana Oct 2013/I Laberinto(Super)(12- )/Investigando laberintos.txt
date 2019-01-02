@@ -1,0 +1,51 @@
+Investigando Laberintos
+
+Límite de tiempo: 3 segundos
+
+Un laberinto es representado en una cuadrídula de dos dimensiones como está ilustrado en la figura 1. 
+Cada punto de la cuadrícula es representado por un carácter. Un carácter espacio (' ') representa los lugares en dónde puedes caminar.
+Las paredes del laberinto son representadas por lestras mayusculas (de 'A' a 'Z'), esto es, lugares dónde no puedes caminar.
+
+Tu tarea es, dado un punto de inicio dentro del laberinto, representado por un asterisco ('*'), debes de marcar todos los posibles lugares a dónde puedes llegar caminando con el carácter gato ('#'). El asterisco debe ser reemplazado por el carácter gato.
+
+La forma en que puedes caminar es 4 conexidad, esto significa que solo puedes moverte arriba, abajo, izquierda o derecha.
+
+Entrada
+
+La primera línea de entrada es T, el número de casos. La primera línea de cada caso son dos enteros, N y M, el número de renglones y el número de columnas de la cuadrícula respectivamente.
+Las siguientes N lineas contienen M carácteres, las cuales representan al laberinto.
+
+Salida
+
+N líneas de M carácteres cada una, las cuales representa a la cuadrícula marcada en la forma en que se indicó.
+Imprime una línea en blanco al final de cada caso.
+
+Entrada Ejemplo
+
+2
+5 5
+XXXXX
+X*  X
+X   X
+XX XX
+XXXXX
+5 9
+AAAAAAAAA
+C*  D   B
+C   D   B
+C   D   B
+EEEEEEEEE
+
+Salida Ejemplo
+
+XXXXX
+X###X
+X###X
+XX#XX
+XXXXX
+
+AAAAAAAAA
+C###D   B
+C###D   B
+C###D   B
+EEEEEEEEE

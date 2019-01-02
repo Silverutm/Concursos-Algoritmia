@@ -1,0 +1,361 @@
+\chapter{4"o Concurso Interno de Programación}
+\chaptermark{4"o Concurso Interno}
+
+\section{Problema A - Annie la Hija de la Obscuridad}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Dadas las posiciones de Annie y de un campeón en el plano, se nos pide saber si Annie es capaz de encadenar los tres hechizos que conoce al campeón enemigo. El problema nos dice que no habrá obstáculos entre ellos y que el lanzamiento de los hechizos es de manera instantánea.
+\subsection*{Solución}
+Lo que necesitamos para poder encadenar los tres hechizos es que la distancia entre Annie y el campeón sea menor o igual a 500$u$ ya que de éste modo los tres ataques pueden alcanzar al campeón.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include<bits/stdc++.h>
+ 
+using namespace std;
+ 
+#define FOR(i, a, b) for (int i = int(a); i < int(b); i++)
+#define REP(i, a) for (int i = 0; i < int(a); i++)
+#define INF 1000000000
+typedef pair<int, int> ii;
+typedef vector<int> vi;
+typedef vector<ii> vii;
+typedef long long ll;
+typedef vector<bool> vb;
+ 
+int casos, q;
+ii annie, campeon;
+ 
+int distancia_squared(ii u, ii v)
+{
+    return (u.first-v.first)*(u.first-v.first) + (u.second-v.second)*(u.second-v.second);
+}
+ 
+void querea()
+{
+    scanf("%d %d", &campeon.first, &campeon.second);
+    int dis_squ = distancia_squared(annie, campeon);
+    if( dis_squ <= 250000 )
+        printf("FULL COMBO\n");
+    else
+        printf("OUTPLAYED\n");
+ 
+}
+ 
+void solve()
+{
+    scanf("%d %d", &annie.first, &annie.second);
+    scanf("%d", &q);
+    REP(i, q)
+        querea();
+}
+ 
+int main()
+{
+    freopen("Annie.in", "r", stdin);
+    freopen("Annie.out", "w", stdout);
+    scanf("%d", &casos);
+    while(casos--)
+        solve();
+    return 0;
+}
+\end{minted}
+
+\section{Problema B - Colores}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+Nos dan un diccionario de colores cuyo código está en binario. En el problema se te da el código alterado (intercambiando unos y ceros) de un color y se te pide imprimir el color correspondiente del código original.
+\subsection*{Solución}
+Directa.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include<iostream>
+
+using namespace std;
+
+typedef vector<int> vi;
+typedef vector<pair<int,int> > vii;
+typedef vector<vi> vvi;
+#define rep(a,b) for(int a=0;a<b;a++)
+#define For(a,b,c) for(int a=b;a<c;a++)
+int main()
+{
+    std::ios_base::sync_with_stdio(false);
+    int n,a,b,c;
+    string v[8] = {"Negro","Naranja","Verde","Amarillo","Morado","Rojo","Azul","Blanco"};
+    cin>>n;
+    rep(i,n){
+        cin>>a>>b>>c;
+        cout<<v[4*a + 2*b + c]<<endl;
+    }
+    return 0;
+}
+\end{minted}
+
+\section{Problema C - CandyLand}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Sliding window \\
+\textbf{Complejidad:} $O(n)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+El problema se reduce a: dado un arreglo de $n$ enteros, encontrar el subarreglo de tamaño exactamente $k$, tal que la suma del subarreglo sea máxima.
+\subsection*{Solución}
+La solución $O(nk)$ es demasiado lenta para este problema. Sea \texttt{a[]} el arreglo de enteros. Si declaramos un arreglo \texttt{v[i]} $:= \sum_{j=1}^i$ \texttt{a[j]}, entonces la suma del subarreglo de tamaño $k$ empezando en la posición $i$ es: \texttt{v[i+k]-v[i-1]}. Con esta observación tenemos una solución $O(n)$.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+ 
+#define For(i, a, b) for(int i=a; i<b; ++i)
+#define INF (1<<30)
+ 
+using namespace std;
+ 
+int v[1000005];
+ 
+int main()
+{
+    int T;
+    scanf("%d", &T);
+ 
+    while (T--)
+    {
+        int N, K;
+        scanf("%d %d", &N, &K);
+ 
+        int res = -INF, ind = 1;
+        For(i, 1, N+1)
+        {
+            scanf("%d", &v[i]);
+            v[i] += v[i-1];
+        }
+ 
+        For(i, K, N+1)
+            if (v[i] - v[i-K] > res)
+                res = v[i]-v[i-K], ind = i-K+1;
+ 
+        printf("%d %d\n", ind, res);
+    }
+ 
+    return 0;
+}
+\end{minted}
+
+\section{Problema D - Raíces digitales}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(k)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+En el problema se define $S(n)$ como la suma de los dígitos de $n$ y
+\[
+rd(n) =
+\left\{
+	\begin{array}{ll}
+		S(n)     & \mbox{si } S(n) < 10 \\
+		rd(S(n)) & \mbox{si } S(n) \geq 10   \\
+	\end{array}
+\right.
+\]
+Se nos da $1 \leq k \leq 100$ y $1 \leq d \leq 9$, y se nos pide encontrar el número más pequeño $min$ y el número más grande $max$ tales que $rd(min) = rd(max) = d$ y tanto $min$ como $max$ contengan $k$ dígitos. 
+\subsection*{Solución}
+Éstos dos números se construyen de la siguiente manera:
+\begin{align*}
+& min = (1)(\underbrace{0\ ...\ 0 }_{k-2})(d-1) \\
+& max = (\underbrace{9\ ...\ 9}_{k-1})(d)
+\end{align*}
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{java}
+import java.util.*;
+import java.io.*;
+ 
+class D
+{
+    public static void main(String[] args)
+    {
+        MyScanner sc = new MyScanner();
+        int T = sc.nextInt();
+ 
+        while (T-- > 0)
+        {
+            int k = sc.nextInt(), d = sc.nextInt();
+ 
+            for(int i = 0; i < k-1; i++)
+                System.out.print(9);
+            System.out.println(d);
+ 
+            if (k > 1)
+                System.out.print(1);
+            for(int i = 1; i < k-1; i++)
+                System.out.print(0);
+            if (k > 1)
+                System.out.println(d-1);
+            else
+                System.out.println(d);
+        }
+    }
+};
+\end{minted}
+
+\section{Problema E - Buscando asiento}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star \star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+El problema nos dice que hay $A$ niños que se quieren sentar en $B$ asientos, sin embargo cada uno de los niños quiere sentarse en un asiento tal que sus dos vecinos estén desocupados. Los niños van sentándose uno por uno escogiendo cualquier asiento que cumpla con los requerimientos. Debemos ver si siempre es posible que estén agusto independientemente de cómo se vayan sentado (caso ``Si''), si depende de los asientos que escojan (caso ``Tal vez''), o sin importar que asientos escojan no es posible que estén agustos (caso ``No''). 
+\subsection*{Solución}
+\begin{enumerate}
+\item Caso ``No''. Si $A > \Big\lceil \frac{B}{2} \Big\rceil$. Pues la mejor forma en que se pueden ir sentando es dejando un espacio de separación, si así no es posible sentarlos, entonces no hay forma de que estén agusto.
+\item Caso ``Si''. Si $A \leq \Big\lceil \frac{B}{3} \Big\rceil$. La ``peor'' forma en la que se pueden acomodar los niños es si cada uno se coloca a dos asientos de separación de sus vecinos, ya que si se sientan a un asiento de separación sería la forma más ``compacta'', y si se sientan a más de dos, entonces un tercer niño puede sentarse en medio de ellos. Ésto se vería de la siguiente forma:
+\[
+...010\underbrace{010}_{3}010...
+\]
+
+Por lo tanto se puede apreciar que cada niño ``cubre'' tres asientos.
+\item Caso ``Tal vez''. Si $\Big\lceil \frac{B}{3} \Big\rceil < A \leq \Big\lceil \frac{B}{2} \Big\rceil$
+\end{enumerate}
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{java}
+import java.util.Scanner;
+ 
+class E
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        int T = sc.nextInt();
+         
+        while (T-- > 0)
+        {
+            int n = sc.nextInt(), s = sc.nextInt();
+ 
+            int limNo = s % 2 == 0 ? s / 2 : s / 2 + 1;
+            int limSi = s % 3 == 0 ? s / 3 : s / 3 + 1;
+ 
+            if (n > limNo)
+                System.out.println("No");
+            else if (n <= limSi)
+                System.out.println("Si");
+            else
+                System.out.println("Tal vez");
+        }
+    }
+};
+\end{minted}
+
+\section{Problema F - Fibonacci}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(1)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+En este caso se nos da una cadena de dígitos $F$ cuya construcción se parece a la sucesión de Fibonacci. La forma de construirla es sumar los dos últimos dígitos de la cadena y concatenar el resultado. Los primeros dígitos de la cadena son los siguientes:
+\[
+\underbrace{1123581347}_{10}112...
+\]
+Y se nos pide saber cuál es el $n$-ésimo dígito de la cadena $F$.
+\subsection*{Solución}
+Los dígitos señalados siempre se van a repetir, debido a que se toman los dos últimos dígitos para construir los siguientes. Por lo tanto sólo debemos guardar los diez primeros dígitos y el $n$-ésimo dígito de $F$ será $F[n\%10]$.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef vector<int> vi;
+typedef vector<pair<int,int> > vii;
+typedef vector<vi> vvi;
+#define rep(a,b) for(int a=0;a<b;a++)
+#define For(a,b,c) for(int a=b;a<c;a++)
+int main()
+{
+    std::ios_base::sync_with_stdio(false);
+    int n,x,v[10]={1,1,2,3,5,8,1,3,4,7};//1123581347
+    cin>>n;
+    while(n--)
+    {
+        cin>>x;
+        x--;
+        printf("%d\n",v[x%10]);
+    }
+    return 0;
+}
+\end{minted}
+
+\section{Problema G - Código}
+
+\hfill
+\begin{tabular}{@{}l@{}}
+\textbf{Dificultad:} $\star$ \\
+\textbf{Temas:} Ad-hoc \\
+\textbf{Complejidad:} $O(NM)$
+\end{tabular}
+
+\subsection*{Entendiendo el problema}
+En el problema se nos da una $S$ cadena de tamaño $N\times M$ codificada. La forma en que se codifico la cadena fue metiéndola en una matriz de tamaño $N \times M$ y rotarla 90 grados en sentido del reloj. Después de ésto se agarran los caracteres dentro de la matriz rotada en orden de arriba hacia abajo y de izquierda a derecha. La tarea consiste en decodificar el mensaje.
+\subsection*{Solución}
+ Para hacerlo hay que meter la cadena en una matriz de $M \times N$, rotarla 90 grados en sentido contrario al reloj e imprimir los caracteres en el mismo orden. Esto se puede lograr con puro manejo de índices.
+\subsection*{Código}
+
+\begin{minted}[breaklines,fontsize=\footnotesize,linenos]{cpp}
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+#include<string>
+using namespace std;
+int main()
+{
+    int t,m,n;
+    string s;
+    cin>>t;
+    while(t--)
+    {
+        cin>>m>>n;
+        cin>>s;
+        for(int i=m-1;i>=0;i--)
+            for(int j=0;j<n;j++)
+                cout<<s[i+m*j];
+        cout<<endl;
+    }
+ 
+    return 0;
+}
+\end{minted}

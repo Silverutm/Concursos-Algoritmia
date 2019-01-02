@@ -1,0 +1,68 @@
+\chapter*{Problema E - Están entre Nosotros}
+%ÁÉÍÓÚÑáéíóúñ  ``  ''
+Antes de poder entrar a la sala para participar en el concurso de programación, a todos los concursantes se les hizo formarse en una línea, y se les asignó un número de mesa distinto (no necesariamente en forma ascendente o descendente), mismos que componen un arreglo de enteros.
+
+A mi hámster (que es una genio) le gustan mucho las series de televisión, y una de sus favoritas le dio la idea de crear este problema. Ella elige una secuencia mágica, llamada ``la secuencia de los Elegidos", y se pregunta si ésta es subsecuencia del arreglo que forman las personas en la fila.
+
+
+
+%A mi hámster (que es una genio) le gustan mucho las secuencias númericas, y se pregunta si la secuencia de ``los Elegidos'' es una subsecuencia de la secuencia formada por las personas en la fila.
+
+%La secuencia de ``los Elegidos'' es una secuencia que mi hermosísima hámster vio en una de sus series de televisión favoritas.
+
+
+
+
+
+\subsection*{Entrada}
+
+La primera línea de entrada es un número $T$ (el número de
+casos de prueba). Siguen los $T$ casos: cada uno está
+compuesto por tres renglones, el primero de ellos tiene dos numeros: $S$ y   $E$, el número de concursantes y el tamaño de la secuencia de ``los Elegidos'', respectivamente; en el segundo renglón vendrá la secuencia formada por los concursantes y en el tercero la de ``los Elegidos".
+
+
+
+
+\subsection*{Salida}
+
+Para cada caso de entrada deberás imprimir en una línea distinta ``Estan entre nosotros'' si la secuencia de ``los Elegidos'' es subsecuencia de la secuencia formada por los concursantes o ``You always knew'' en caso contrario (sin acento y sin comillas).
+
+\subsection*{Límites de los conjuntos de datos}
+
+\begin{itemize}
+    \item Pequeño: $ 1 \leq T \leq 1000 $, $ 1 \leq S, E
+    \leq 100$, $1 \leq s_i, e_j \leq 100$   $\quad \;\;\;\;\;$ $40$ puntos.
+    \item Mediano: $ 1 \leq T \leq 100 $, $ 1 \leq S, E
+    \leq 10^{3}$, $1 \leq s_i, e_j \leq 10^9$   $\quad \;\;\; \quad$ $30$ puntos.
+    \item Grande: $ \;\, 1 \leq T \leq 20$, $ 1 
+    \leq S, E \leq 10^{5} $, $1 \leq s_i, e_j \leq 10^{15}$ $\quad \;\;\;\;\; \quad$ $30$ puntos.
+\end{itemize}
+
+
+
+
+\begin{multicols}{2}
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+2
+7 6
+4 8 15 12 16 23 42
+4 8 15 16 23 42
+3 3
+1 2 3
+3 2 1
+\end{verbatim}
+
+\columnbreak
+
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+Estan entre nosotros
+You always knew
+\end{verbatim}
+
+\end{multicols}

@@ -1,0 +1,84 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=0cm,headsep=1cm,footskip=1cm}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\date{}
+
+\begin{document}
+
+\title{Problema G - Geómetra Hermann}
+
+\includegraphics[scale=0.6]{logo} \hspace*{9.00cm}
+\includegraphics[scale=0.5]{dsc} 
+\bigskip
+\begin{center}
+	\Large Problema G - Geómetra Hermann
+\end{center}
+
+\begin{flushright}
+Límite de tiempo: 3 segundos
+\par\end{flushright}
+\bigskip
+
+\section*{Problema}
+
+Durante el siglo XIX el matemático Hermann Minkowski investigó acerca de
+un tipo de geometría no euclidiana, llamada geometría de taxi. En la geometría
+de taxi la distacia entre dos puntos $T_1(x_1,y_1)$ y $T_2(x_2, y_2)$ es definida
+como $D(T_1, T_2) = |x_1-x_2|+|y_1-y_2|$. Cualquier otra definición se define
+igual que en la geometría euclidiana, incluyendo la definición del círculo: Un
+círculo es el conjunto de todos los puntos en un plano a una distancia 
+dada(radio) de un punto dado(centro del círculo). Nosotros estamos interesados
+en la diferencia de las areas de dos círculos con radio $R$, uno de los cuales 
+está dado en un espacio normal(euclideano) y el otro en una geometría de taxi.
+Dicha tarea te ha sido encomendada a ti.
+ 
+
+\subsection*{Entrada}
+
+Cada línea tendrá un solo número entero $1 \leq R \leq 10000$.
+Deberaś leer hasta el final del archivo.
+
+\subsection*{Salida}
+
+Para cada caso deberás imprimir dos  líneas, la primera contendrá el area
+del círculo con radio $R$ en una geometría euclidiana y la segunda línea será
+el area del círculo con radio $R$ en una geometría de taxi.Tu salida deberá ser redondeada a 4 lugares decimales.
+Además puedes asumir de manera segura de usando valores flotantes de precisión doble y $\pi$ igual 3.141592653589793 será suficiente.
+
+\subsection*{Entrada Ejemplo}
+
+\begin{verbatim}
+21
+9384
+887
+\end{verbatim}
+
+\subsection*{Salida Ejemplo}
+
+\begin{verbatim}
+1385.4424
+882.0000
+276646940.0487
+176118912.0000
+2471707.7105
+1573538.0000
+\end{verbatim}
+
+\noindent \rule[0.5ex]{1\columnwidth}{1pt}
+
+
+\lyxaddress{Edgar García Rodríguez-Grupo de Algoritmia Avanzada y Programación Competitiva}
+\end{document}
